@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Google tag (gtag.js) - Deferred for performance -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PEQN4034Y8"></script>
+    <script>
+      // Defer Google Analytics until user interaction
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // Load GA only after page interaction or delay
+      const loadGA = () => {
+        gtag('js', new Date());
+        gtag('config', 'G-PEQN4034Y8');
+      };
+
+      // Load GA after 3 seconds or on first user interaction
+      const initGA = () => {
+        loadGA();
+        document.removeEventListener('click', initGA);
+        document.removeEventListener('scroll', initGA);
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+          setTimeout(initGA, 3000);
+          document.addEventListener('click', initGA);
+          document.addEventListener('scroll', initGA);
+        });
+      } else {
+        setTimeout(initGA, 3000);
+        document.addEventListener('click', initGA);
+        document.addEventListener('scroll', initGA);
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="/icons/favicon-32x32.webp" />
+    <link rel="icon" type="image/webp" sizes="16x16" href="/icons/favicon-16x16.webp" />
+    <link rel="icon" type="image/webp" sizes="192x192" href="/icons/icon-192x192.webp" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="/icons/icon-512x512.webp" />
+    <link rel="apple-touch-icon" href="/icons/icon-180x180.webp" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180x180.webp" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-192x192.webp" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/icons/icon-192x192.webp" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.webp" />
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Meta tags for PWA -->
+    <meta name="theme-color" content="#fbbf24" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="DOMO28" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="DOMO28 - Expert domotique Maroc, maison intelligente, serrures intelligentes Casablanca, caméras surveillance. Devis gratuit 24h !" />
+    <meta name="description" content="DOMO28 - خبير في الذكاء المنزلي المغرب، المنزل الذكي، أقفال ذكية الدار البيضاء، كاميرات مراقبة. عرض أسعار مجاني 24 ساعة !" lang="ar" />
+    <meta name="keywords" content="domotique Maroc, maison intelligente Maroc, domotique Casablanca, smart home Maroc, automatisation maison Maroc, alarme connectée Maroc, caméra surveillance Maroc, serrure intelligente Maroc, système sécurité connecté, surveillance maison Maroc, économie énergie domotique, thermostat intelligent Maroc, gestion énergie maison, éclairage automatique Maroc, villa connectée Maroc, appartement intelligent Casablanca, installation domotique Rabat, prix domotique Maroc, installation domotique maison Casablanca, prix système maison intelligente Maroc, meilleure entreprise domotique Casablanca, comment installer domotique maison Maroc, المنزل الذكي المغرب, أتمتة المنزل المغرب, أنظمة الذكاء المنزلي, المنزل الذكي الدار البيضاء, أنظمة أمان ذكية المغرب, كاميرات مراقبة ذكية, أقفال ذكية المغرب, أنظمة حماية المنزل, ترشيد الطاقة بالمنزل الذكي, thermostat ذكي المغرب, إدارة الطاقة في المنزل, فيلا ذكية المغرب, شقة ذكية الدار البيضاء, تركيب أنظمة ذكية, أسعار الأنظمة الذكية المغرب, مكونات المنزل الذكي السعر المغرب, أفضل شركة ذكاء منزلي الدار البيضاء, كيفية تركيب نظام منزل ذكي" />
+    <meta name="author" content="DOMO28" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="fr" />
+    <meta name="google-site-verification" content="rbRgr4yLGW3dBHKcyXHrZ_cq1I8bsN6QSKxt7ikirDY" />
+    <!-- Bing Webmaster Tools Verification -->
+    <!-- Replace YOUR_BING_VERIFICATION_CODE with the actual code from Bing Webmaster Tools -->
+    <link rel="canonical" href="https://www.domo28.ma/" />
+    <meta name="geo.region" content="MA" />
+    <meta name="geo.country" content="Morocco" />
+    <meta name="geo.placename" content="Casablanca" />
+    <meta name="geo.position" content="33.5731;-7.5898" />
+    <meta name="ICBM" content="33.5731, -7.5898" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Domotique Maroc - Maison Intelligente Casablanca | DOMO28" />
+    <meta property="og:description" content="Expert domotique Maroc, maison intelligente, serrures intelligentes Casablanca, caméras surveillance. Devis gratuit 24h !" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://domo28.ma" />
+    <meta property="og:image" content="https://domo28.ma/images/logo_resized.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="DOMO28" />
+    <meta property="og:locale" content="fr_MA" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DOMO28 - Domotique Maroc | Serrures Intelligentes, Caméras Surveillance Casablanca" />
+    <meta name="twitter:description" content="Leader domotique Maroc. Installation serrures intelligentes, caméras surveillance, contrôle accès, éclairage LED, agriculture intelligente Casablanca Rabat Marrakech." />
+    <meta name="twitter:image" content="https://domo28.ma/images/logo_resized.webp" />
+    
+    
+    <!-- Preload LCP image for better performance -->
+    <link rel="preload" href="/images/WhatsApp%20Image%202025-09-11%20at%2015.47.22.webp" as="image" fetchpriority="high">
+
+    <!-- Critical CSS inlined for immediate rendering -->
+    <link rel="stylesheet" href="/src/index.css">
+
+    <!-- Fonts with preconnect, preload critical fonts, and display=swap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preload critical font weights for better performance -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"></noscript>
+    <!-- Defer non-critical fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <title>Domotique Maroc - Maison Intelligente Casablanca | DOMO28</title>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DOMO28",
+      "description": "Expert en domotique complète au Maroc. Serrures intelligentes, caméras surveillance, contrôle d'accès, rideaux automatiques, éclairage intelligent, portes automatiques, agriculture intelligente. Installation professionnelle de solutions de maison connectée.",
+      "url": "https://domo28.ma",
+      "logo": "https://domo28.ma/images/logo_resized.webp",
+      "image": "https://domo28.ma/images/logo_resized.webp",
+      "telephone": "+212660245937",
+      "email": "badr.assanoussi@domo28.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MA",
+        "addressRegion": "Casablanca",
+        "addressLocality": "Casablanca"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Casablanca"
+        },
+        {
+          "@type": "City",
+          "name": "Rabat"
+        },
+        {
+          "@type": "City",
+          "name": "Marrakech"
+        },
+        {
+          "@type": "City",
+          "name": "Tanger"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/domo_28/",
+        "https://web.facebook.com/profile.php?id=61582655861695"
+      ],
+      "foundingDate": "2024",
+      "slogan": "Votre Maison De Demain"
+    }
+    </script>
+
+    <!-- Additional Structured Data for Services -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Installation Serrure Intelligente Maroc",
+      "description": "Installation professionnelle de serrures intelligentes au Maroc avec reconnaissance biométrique, Face ID, empreinte digitale et NFC.",
+      "provider": {
+        "@type": "Organization",
+        "name": "DOMO28"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Casablanca"},
+        {"@type": "City", "name": "Rabat"},
+        {"@type": "City", "name": "Marrakech"},
+        {"@type": "City", "name": "Tanger"}
+      ],
+      "serviceType": "Installation serrures intelligentes"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Domotique Casablanca",
+      "description": "Services complets de domotique à Casablanca : maison connectée, caméras surveillance, contrôle d'accès, éclairage intelligent.",
+      "provider": {
+        "@type": "Organization",
+        "name": "DOMO28"
+      },
+      "areaServed": {"@type": "City", "name": "Casablanca"},
+      "serviceType": "Domotique"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Caméras Surveillance Maroc",
+      "description": "Installation de systèmes de caméras surveillance analogiques et IP au Maroc avec marques Hikvision, Ezviz.",
+      "provider": {
+        "@type": "Organization",
+        "name": "DOMO28"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Casablanca"},
+        {"@type": "City", "name": "Rabat"},
+        {"@type": "City", "name": "Marrakech"},
+        {"@type": "City", "name": "Tanger"}
+      ],
+      "serviceType": "Caméras de surveillance"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Contrôle d'Accès Maroc",
+      "description": "Systèmes de contrôle d'accès avancés avec biométrie, cartes RFID et applications mobiles au Maroc.",
+      "provider": {
+        "@type": "Organization",
+        "name": "DOMO28"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Casablanca"},
+        {"@type": "City", "name": "Rabat"},
+        {"@type": "City", "name": "Marrakech"},
+        {"@type": "City", "name": "Tanger"}
+      ],
+      "serviceType": "Contrôle d'accès"
+    }
+    </script>
+  </head>
+  <body>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=743181434847592&ev=PageView&noscript=1"
+    /></noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '743181434847592');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+  </body>
+</html>
