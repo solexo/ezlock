@@ -18,10 +18,10 @@ const Footer = () => {
           {/* Logo et description */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
-              <img 
+              <img
                 src="/images/logob.webp"
-                alt="DOMO28 Logo" 
-                className="w-32 h-32 object-contain"
+                alt="DOMO28 Logo"
+                className="w-32 h-32 object-contain rounded-full"
               />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
