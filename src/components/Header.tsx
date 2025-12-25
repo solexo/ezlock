@@ -75,7 +75,7 @@ const Header = () => {
             <img
               src="/images/logob.webp"
               alt="DOMO28 Logo"
-              className="w-32 h-32 object-cover rounded-full"
+              className="w-24 h-24 object-cover rounded-full"
               loading="eager"
               fetchPriority="high"
               width="128"
