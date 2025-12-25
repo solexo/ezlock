@@ -6,9 +6,9 @@ $outputPath = "public\images\logo_resized.webp"
 # Load original image
 $originalImage = [System.Drawing.Image]::FromFile((Resolve-Path $sourcePath))
 
-# Target size for og:image
-$targetWidth = 1200
-$targetHeight = 630
+# Target size for header logo
+$targetWidth = 256
+$targetHeight = 256
 
 # Calculate aspect ratio
 $originalAspect = $originalImage.Width / $originalImage.Height

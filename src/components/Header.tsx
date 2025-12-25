@@ -72,17 +72,19 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <div className="flex items-center">
-            <img
-              src="/images/logob.webp"
-              alt="DOMO28 Logo"
-              className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-full"
-              loading="eager"
-              fetchPriority="high"
-              width="128"
-              height="128"
-              srcSet="/images/logob.webp 128w"
-              sizes="(max-width: 640px) 80px, (max-width: 768px) 112px, 128px"
-            />
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-yellow-400 shadow-lg hover:shadow-xl transition-all duration-300">
+              <img
+                src="/images/logob.webp"
+                alt="DOMO28 Logo"
+                className="w-full h-full object-cover rounded-full"
+                loading="eager"
+                fetchPriority="high"
+                width="128"
+                height="128"
+                srcSet="/images/logob.webp 128w"
+                sizes="(max-width: 640px) 80px, (max-width: 768px) 112px, 128px"
+              />
+            </div>
           </div>
 
           {/* Navigation desktop */}
