@@ -21,7 +21,7 @@ const Footer = () => {
               <img
                 src="/images/logob.webp"
                 alt="DOMO28 Logo"
-                className="w-32 h-32 object-contain rounded-full"
+                className="w-32 h-32 object-cover rounded-full"
               />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
