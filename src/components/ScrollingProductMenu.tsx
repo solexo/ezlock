@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const products = [
   { id: 'i40', image: '/images/i40%20(2).webp' },
@@ -28,19 +29,26 @@ const ScrollingProductMenu = () => {
         <div className="overflow-hidden">
           <div className="flex animate-scroll">
             {products.concat(products).map((product, index) => (
-              <div key={`${product.id}-${index}`} className="flex-shrink-0 w-64 mx-4">
-                <img
-                  src={product.image}
-                  alt={`Produit ${product.id}`}
-                  className="w-full h-48 object-contain bg-white rounded-lg shadow-md hover:scale-105 transition-transform duration-300 p-2"
-                  loading={index === 0 ? "eager" : "lazy"}
-                  fetchPriority={index === 0 ? "high" : "auto"}
-                  width="256"
-                  height="192"
-                  srcSet={`${product.image} 256w`}
-                  sizes="256px"
-                />
-              </div>
+              <Link 
+                key={`${product.id}-${index}`}
+                to={`/product/${product.id}`}
+                className="flex-shrink-0 w-64 mx-4 cursor-pointer group"
+              >
+                <div className="relative rounded-lg overflow-hidden h-48 bg-white">
+                  <img
+                    src={product.image}
+                    alt={`Produit ${product.id}`}
+                    className="w-full h-full object-contain shadow-md group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 p-2"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    fetchPriority={index === 0 ? "high" : "auto"}
+                    width="256"
+                    height="192"
+                    srcSet={`${product.image} 256w`}
+                    sizes="256px"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 rounded-lg"></div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

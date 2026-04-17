@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Shield, Smartphone, Key } from 'lucide-react';
 
 const SerrureIntelligente = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Smart lock products
+  const smartLocks = [
+    { name: 'X13 AI', image: '/images/x13ai.webp' },
+    { name: 'K5', image: '/images/k5.webp' },
+    { name: 'K10', image: '/images/k10.webp' },
+    { name: 'I30', image: '/images/i30.webp' },
+    { name: 'I40', image: '/images/i40 (2).webp' },
+  ];
+
+  // Auto-loop carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % smartLocks.length);
+    }, 3000); // Change image every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   const whatsappContact = () => {
     window.open('https://wa.me/212660245937', '_blank');
   };
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -15,27 +35,62 @@ const SerrureIntelligente = () => {
           Retour à l'accueil
         </Link>
 
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Serrure Intelligente <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">Maroc</span>
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-            Installation professionnelle de serrures intelligentes au Maroc. Sécurité avancée avec Face ID, empreinte digitale et NFC.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <button
-              onClick={whatsappContact}
-              className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
-            >
-              Devis Gratuit
-            </button>
-            <button
-              onClick={() => window.location.href = '#services'}
-              className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-700 transition-all duration-300"
-            >
-              En Savoir Plus
-            </button>
+        {/* Hero Section with Carousel on Left */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-center">
+          {/* Left Side - Carousel */}
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-sm h-96 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center relative">
+              <img
+                src={smartLocks[currentIndex].image}
+                alt={smartLocks[currentIndex].name}
+                className="w-full h-full object-contain p-8 transition-all duration-500"
+              />
+            </div>
+            
+            {/* Carousel Indicators */}
+            <div className="flex gap-2 mt-6 justify-center">
+              {smartLocks.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentIndex 
+                      ? 'bg-yellow-500 w-8' 
+                      : 'bg-gray-400 dark:bg-gray-600 hover:bg-gray-500'
+                  }`}
+                  aria-label={`Show lock ${index + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* Product Name */}
+            <h3 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white">
+              {smartLocks[currentIndex].name}
+            </h3>
+          </div>
+
+          {/* Right Side - Text Content */}
+          <div className="text-center lg:text-left">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Serrure Intelligente <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">Maroc</span>
+            </h1>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto lg:mx-0 mb-8">
+              Installation professionnelle de serrures intelligentes au Maroc. Sécurité avancée avec Face ID, empreinte digitale et NFC.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
+              <button
+                onClick={whatsappContact}
+                className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+              >
+                Devis Gratuit
+              </button>
+              <button
+                onClick={() => window.location.href = '#services'}
+                className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-700 transition-all duration-300"
+              >
+                En Savoir Plus
+              </button>
+            </div>
           </div>
         </div>
 

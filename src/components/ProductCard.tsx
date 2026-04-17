@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Smartphone, Fingerprint, CreditCard, Key, Lock, Eye, Hash, Bluetooth, Camera, Lightbulb, Wifi, Tv, Wind, Moon, Zap, Cloud, Bell, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Smartphone, Fingerprint, CreditCard, Key, Lock, Eye, Hash, Bluetooth, Camera, Lightbulb, Wifi, Tv, Wind, Moon, Zap, Cloud, Bell, Clock, ArrowRight } from 'lucide-react';
 import { trackPurchase, trackProspect } from '../utils/facebookConversions';
 
 interface Product {
@@ -200,6 +201,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <span>💬</span>
             <span>Demander un devis</span>
           </button>
+
+          <Link
+            to={product.url}
+            className="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 touch-manipulation"
+          >
+            <span>Voir les détails</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
 

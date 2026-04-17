@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Volume2, Music, Wifi, ShoppingCart, FileText } from 'lucide-react';
 
@@ -8,7 +8,7 @@ import L1Pro8 from '/images/sound/L1pro8.webp';
 import SmartSoundBar from '/images/sound/Smart Sound Bar.webp';
 import SmartUltraSoundbar from '/images/sound/Smart Ultra Soundbar.webp';
 import Cube from '/images/sound/cube.webp';
-import Acoustimass3 from '/images/sound/Caisson%20de%20Bass%20Acoustimass3.webp';
+import Acoustimass3 from '/images/sound/Caisson de Bass Acoustimass3.webp';
 import SmartUltraCaisson from '/images/sound/Smart Ultra Caisson 700.webp';
 import CaissonBasFlush from '/images/sound/Caisson de bass flush.webp';
 import DM2C from '/images/sound/DM2C.webp';
@@ -56,7 +56,7 @@ const productsData = [
   {
     nameFr: 'Acoustimass 3',
     nameEn: 'Acoustimass 3',
-    image: '/images/sound/Caisson%20de%20Bass%20Acoustimass3.webp',
+    image: '/images/sound/Acoustimass3.webp',
     descriptionFr: 'Caisson de basses Acoustimass 3 pour son surround',
     descriptionEn: 'Acoustimass 3 subwoofer for surround sound',
     priceFr: '3900 DH TTC',
@@ -210,6 +210,24 @@ const productsData = [
 
 const SoundSystem = () => {
   const [selectedLang, setSelectedLang] = useState('Fr');
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Featured sound products for carousel
+  const featuredProducts = [
+    { name: 'Smart Soundbar', image: '/images/sound/Smart Sound Bar.webp' },
+    { name: 'Smart Ultra Soundbar', image: '/images/sound/Smart Ultra Soundbar.webp' },
+    { name: 'Acoustimass 3', image: '/images/sound/Caisson%20de%20Bass%20Acoustimass3.webp' },
+    { name: 'L1 PRO 16', image: '/images/sound/L1_Pro16.webp' },
+    { name: 'Bose Music Amplifier', image: '/images/sound/Bose Music Amplifier.webp' },
+  ];
+
+  // Auto-loop carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % featuredProducts.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const whatsappContact = (productName = '') => {
     const message = productName 
@@ -225,11 +243,11 @@ const SoundSystem = () => {
     
     return (
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-        <div className="relative h-64 overflow-hidden bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+        <div className="relative h-64 overflow-hidden bg-gray-200 dark:bg-gray-700">
           <img
             src={product.image}
             alt={name}
-            className="w-full h-full object-contain transition-transform duration-300 hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
             onError={(e) => {
               e.target.src = '/images/sound/cube.webp';
             }}
@@ -298,29 +316,64 @@ const SoundSystem = () => {
           </div>
         </div>
 
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            {selectedLang === 'Fr' ? 'Système Son' : 'Sound System'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">{selectedLang === 'Fr' ? 'Domotique' : 'Automation'}</span>
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-            {selectedLang === 'Fr' 
-              ? 'Installation professionnelle de systèmes audio domotiques au Maroc. Contrôle intelligent de votre musique et ambiance sonore.'
-              : 'Professional installation of smart audio systems in Morocco. Intelligent control of your music and sound ambiance.'}
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <button
-              onClick={() => whatsappContact()}
-              className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
-            >
-              {selectedLang === 'Fr' ? 'Devis Gratuit' : 'Free Quote'}
-            </button>
-            <button
-              onClick={() => window.location.href = '#products'}
-              className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-700 transition-all duration-300"
-            >
-              {selectedLang === 'Fr' ? 'Nos Produits' : 'Our Products'}
-            </button>
+        {/* Hero Section with Carousel on Left */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-center">
+          {/* Left Side - Carousel */}
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-sm h-96 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center relative">
+              <img
+                src={featuredProducts[currentIndex].image}
+                alt={featuredProducts[currentIndex].name}
+                className="w-full h-full object-contain p-8 transition-all duration-500"
+              />
+            </div>
+            
+            {/* Carousel Indicators */}
+            <div className="flex gap-2 mt-6 justify-center">
+              {featuredProducts.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentIndex 
+                      ? 'bg-yellow-500 w-8' 
+                      : 'bg-gray-400 dark:bg-gray-600 hover:bg-gray-500'
+                  }`}
+                  aria-label={`Show product ${index + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* Product Name */}
+            <h3 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white">
+              {featuredProducts[currentIndex].name}
+            </h3>
+          </div>
+
+          {/* Right Side - Text Content */}
+          <div className="text-center lg:text-left">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              {selectedLang === 'Fr' ? 'Système Son' : 'Sound System'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">{selectedLang === 'Fr' ? 'Domotique' : 'Automation'}</span>
+            </h1>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto lg:mx-0 mb-8">
+              {selectedLang === 'Fr' 
+                ? 'Installation professionnelle de systèmes audio domotiques au Maroc. Contrôle intelligent de votre musique et ambiance sonore.'
+                : 'Professional installation of smart audio systems in Morocco. Intelligent control of your music and sound ambiance.'}
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
+              <button
+                onClick={() => whatsappContact()}
+                className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+              >
+                {selectedLang === 'Fr' ? 'Devis Gratuit' : 'Free Quote'}
+              </button>
+              <button
+                onClick={() => window.location.href = '#products'}
+                className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-700 transition-all duration-300"
+              >
+                {selectedLang === 'Fr' ? 'Nos Produits' : 'Our Products'}
+              </button>
+            </div>
           </div>
         </div>
 
