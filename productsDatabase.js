@@ -40,7 +40,7 @@ const productsDatabase = {
   'Acoustimass 3': {
     nameFr: 'Acoustimass 3',
     nameEn: 'Acoustimass 3',
-    image: path.join(__dirname, 'public', 'Acoustimass3.webp'),
+    image: path.join(__dirname, 'public', 'Caisson de Bass Acoustimass3.webp'),
     segment: 'residential',
     descriptionFr: 'Caisson de basses Acoustimass 3 pour son surround',
     descriptionEn: 'Acoustimass 3 subwoofer for surround sound',

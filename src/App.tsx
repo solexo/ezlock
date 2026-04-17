@@ -24,6 +24,13 @@ const AppContent = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // Force dark mode for premium aesthetic
+    document.documentElement.classList.add('dark');
+    document.documentElement.style.colorScheme = 'dark';
+    localStorage.setItem('theme', 'dark');
+  }, []);
+
+  useEffect(() => {
     // Dynamic canonical tag for SPA routing
     const canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     const baseUrl = 'https://domo28.ma';
@@ -56,6 +63,11 @@ const AppContent = () => {
       document.title = titles[currentPath];
     }
   }, [location]);
+
+  useEffect(() => {
+    // Scroll to top when route changes
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300">

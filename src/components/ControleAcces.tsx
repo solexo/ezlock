@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Lock, Users, Building } from 'lucide-react';
 import ProductCard from './ProductCard';
 
 const ControleAcces = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Featured access control products
+  const accessProducts = [
+    { name: 'Contrôle d\'Accès CA1/CA2', image: '/images/ca2.webp' },
+    { name: 'Interrupteurs Tactiles INTA/INTB', image: '/images/intb.webp' },
+    { name: 'Biométrie Avancée', image: '/images/ca2.webp' },
+    { name: 'RFID Card Systems', image: '/images/intb.webp' },
+    { name: 'Mobile Access Control', image: '/images/ca2.webp' },
+  ];
+
+  // Auto-loop carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % accessProducts.length);
+    }, 3000); // Change image every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   const whatsappContact = () => {
     window.open('https://wa.me/212660245937', '_blank');
   };
@@ -45,14 +64,53 @@ const ControleAcces = () => {
           Retour à l'accueil
         </Link>
 
+        {/* Hero Section - Title, Description, Image, CTA */}
         <div className="text-center mb-16">
+          {/* Title */}
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Contrôle d'Accès <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">Maroc</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+
+          {/* Description */}
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
             Systèmes de contrôle d'accès avancés au Maroc. Solutions pour entreprises et résidences avec biométrie, cartes RFID et applications mobiles.
           </p>
+
+          {/* Animated Image Carousel */}
+          <div className="flex flex-col items-center mb-12">
+            <div className="w-full max-w-sm h-96 bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center relative">
+              <img
+                src={accessProducts[currentIndex].image}
+                alt={accessProducts[currentIndex].name}
+                className="w-full h-full object-contain p-8 transition-all duration-500"
+              />
+            </div>
+
+            {/* Carousel Indicators */}
+            <div className="flex gap-2 mt-6 justify-center">
+              {accessProducts.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentIndex
+                      ? 'bg-yellow-500 w-8'
+                      : 'bg-gray-400 dark:bg-gray-600 hover:bg-gray-500'
+                  }`}
+                  aria-label={`Show product ${index + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* Product Name */}
+            <h3 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white">
+              {accessProducts[currentIndex].name}
+            </h3>
+          </div>
+
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+
             <button
               onClick={whatsappContact}
               className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
@@ -63,12 +121,12 @@ const ControleAcces = () => {
               onClick={() => window.location.href = '#services'}
               className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-700 transition-all duration-300"
             >
-              Nos Solutions
+              En Savoir Plus
             </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div id="services" className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
             <Lock className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Sécurité Biométrique</h3>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Phone, Mail, Clock, Shield, Award, Instagram, Facebook } from 'lucide-react';
+import { Phone, Mail, Clock, Shield, Award, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
 
@@ -12,162 +12,157 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 dark:bg-black text-white transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Logo et description */}
+    <footer className="relative bg-dark-bg border-t border-slate-800/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-12">
+          {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center mb-4">
-              <img
-                src="/images/logob.webp"
-                alt="DOMO28 Logo"
-                className="w-32 h-32 object-cover rounded-full"
-              />
-            </div>
-            <p className="text-gray-400 mb-6 max-w-md">
-              Spécialiste en serrures intelligentes et domotique. Nous sécurisons votre domicile 
-              avec des solutions technologiques avancées et un service d'installation professionnel.
-            </p>
-            <div className="flex space-x-4">
-              <div className="flex items-center space-x-2 text-sm text-gray-400">
-                <Shield className="w-4 h-4 text-green-500" />
-                <span>Installation incluse</span>
+            <div className="flex items-center mb-6">
+              <div className="w-16 h-16 rounded-lg border border-blue-accent/50 overflow-hidden">
+                <img
+                  src="/images/logob.webp"
+                  alt="DOMO28 Logo"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-400">
-                <Award className="w-4 h-4 text-blue-500" />
+              <div className="ml-4">
+                <div className="font-hero text-xl text-text-primary">DOMO28</div>
+                <div className="text-sm text-text-secondary">Smart Home Maroc</div>
+              </div>
+            </div>
+            <p className="text-text-secondary mb-6 max-w-md leading-relaxed">
+              Spécialiste domotique Maroc. Solutions intelligentes pour maisons connectées sécurisées.
+            </p>
+            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-6 text-sm">
+              <div className="flex items-center space-x-2 text-text-secondary">
+                <Shield className="w-4 h-4 text-blue-accent" />
+                <span>Installation Pro</span>
+              </div>
+              <div className="flex items-center space-x-2 text-text-secondary">
+                <Award className="w-4 h-4 text-blue-accent" />
                 <span>Garantie 2 ans</span>
               </div>
             </div>
           </div>
 
-          {/* Contact rapide */}
+          {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Phone className="w-4 h-4" />
-                <span>+212 660 24 59 37</span>
+            <h3 className="font-heading text-lg text-text-primary mb-6">Contact</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3 group cursor-pointer">
+                <Phone className="w-4 h-4 text-blue-accent flex-shrink-0 mt-1" />
+                <div className="text-text-secondary group-hover:text-blue-accent transition-colors text-sm">
+                  +212 660 245 937
+                </div>
               </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Phone className="w-4 h-4" />
-                <span>+212 669 15 42 35</span>
+              <div className="flex items-start space-x-3 group cursor-pointer">
+                <Phone className="w-4 h-4 text-blue-accent flex-shrink-0 mt-1" />
+                <div className="text-text-secondary group-hover:text-blue-accent transition-colors text-sm">
+                  +212 669 154 235
+                </div>
               </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Mail className="w-4 h-4" />
-                <span>badr.assanoussi@domo28.com</span>
+              <div className="flex items-start space-x-3 group cursor-pointer">
+                <Mail className="w-4 h-4 text-blue-accent flex-shrink-0 mt-1" />
+                <div className="text-text-secondary group-hover:text-blue-accent transition-colors text-sm break-all">
+                  info@domo28.com
+                </div>
               </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Mail className="w-4 h-4" />
-                <span>ali.belgamra@domo28.com</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Clock className="w-4 h-4" />
-                <span>Lun-Sam 8h-18h</span>
+              <div className="flex items-start space-x-3">
+                <Clock className="w-4 h-4 text-blue-accent flex-shrink-0 mt-1" />
+                <div className="text-text-secondary text-sm">
+                  Lun-Sam 8h-18h
+                </div>
               </div>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Nos Services</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="/serrure-intelligente" className="hover:text-yellow-400 transition-colors">Serrures intelligentes</a></li>
-              <li><a href="/domotique-casablanca" className="hover:text-yellow-400 transition-colors">Domotique</a></li>
-              <li><a href="/cameras-surveillance" className="hover:text-yellow-400 transition-colors">Caméras surveillance</a></li>
-              <li><a href="/controle-acces" className="hover:text-yellow-400 transition-colors">Contrôle d'accès</a></li>
-              <li>Installation professionnelle</li>
-              <li>Maintenance & SAV</li>
-              <li>Conseil en domotique</li>
-              <li>Formation utilisateur</li>
-              <li>Support technique</li>
+            <h3 className="font-heading text-lg text-text-primary mb-6">Services</h3>
+            <ul className="space-y-3">
+              {[
+                { label: 'Serrures Intelligentes', href: '/serrure-intelligente' },
+                { label: 'Domotique', href: '/domotique-casablanca' },
+                { label: 'Caméras', href: '/cameras-surveillance' },
+                { label: 'Contrôle d\'Accès', href: '/controle-acces' },
+                { label: 'Système Son', href: '/systeme-son' },
+              ].map((item, index) => (
+                <li key={index}>
+                  <a 
+                    href={item.href} 
+                    className="text-text-secondary hover:text-blue-accent transition-colors text-sm"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Réseaux sociaux */}
+          {/* Social */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Suivez-nous</h3>
-            <div className="space-y-3">
+            <h3 className="font-heading text-lg text-text-primary mb-6">Suivez-nous</h3>
+            <div className="space-y-4">
               <button
                 onClick={openInstagram}
-                className="flex items-center space-x-3 text-gray-400 hover:text-pink-400 transition-colors group"
+                className="flex items-center space-x-3 group w-full p-3 rounded-lg border border-slate-800/30 hover:border-blue-accent/50 hover:bg-blue-accent/5 transition-all"
               >
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Instagram className="w-5 h-5 text-white" />
+                <div className="p-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg">
+                  <Instagram className="w-4 h-4 text-white" />
                 </div>
-                <div>
-                  <div className="font-medium">Instagram</div>
-                  <div className="text-sm">@domo_28</div>
+                <div className="text-left">
+                  <div className="text-sm font-semibold text-text-primary">Instagram</div>
+                  <div className="text-xs text-text-secondary">@domo_28</div>
                 </div>
               </button>
               
               <button
                 onClick={openFacebook}
-                className="flex items-center space-x-3 text-gray-400 hover:text-blue-400 transition-colors group"
+                className="flex items-center space-x-3 group w-full p-3 rounded-lg border border-slate-800/30 hover:border-blue-accent/50 hover:bg-blue-accent/5 transition-all"
               >
-                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Facebook className="w-5 h-5 text-white" />
+                <div className="p-2 bg-blue-600 rounded-lg">
+                  <Facebook className="w-4 h-4 text-white" />
                 </div>
-                <div>
-                  <div className="font-medium">Facebook</div>
-                  <div className="text-sm">DOMO28</div>
+                <div className="text-left">
+                  <div className="text-sm font-semibold text-text-primary">Facebook</div>
+                  <div className="text-xs text-text-secondary">DOMO28</div>
                 </div>
               </button>
             </div>
           </div>
         </div>
 
-        {/* Intégrations */}
-        <div className="mt-6 sm:mt-8 md:mt-12 mb-4 sm:mb-6 md:mb-8 px-2 sm:px-4">
-          <h3 className="text-sm sm:text-base md:text-lg font-semibold text-center mb-3 sm:mb-4 md:mb-6">Compatible avec</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-3 sm:gap-4 md:gap-6 max-w-5xl mx-auto">
-            <div className="flex items-center justify-center space-x-2 bg-gray-800 p-2 sm:p-3 rounded-lg">
-              <img src="/images/tuya.webp" alt="Tuya Smart Home" className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" loading="lazy" width="32" height="32" />
-              <span className="font-bold text-white text-xs sm:text-xs md:text-sm">Tuya Smart Home</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-gray-800 p-2 sm:p-3 rounded-lg">
-              <img src="/images/googleassistant.webp" alt="Google Assistant" className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" loading="lazy" width="32" height="32" />
-              <span className="font-bold text-white text-xs sm:text-xs md:text-sm">Google Assistant</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-gray-800 p-2 sm:p-3 rounded-lg">
-              <img src="/images/google home.webp" alt="Google Home" className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" loading="lazy" width="32" height="32" />
-              <span className="font-bold text-white text-xs sm:text-xs md:text-sm">Google Home</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-gray-800 p-2 sm:p-3 rounded-lg">
-              <img src="/images/alexa.webp" alt="Amazon Alexa" className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" loading="lazy" width="32" height="32" />
-              <span className="font-bold text-white text-xs sm:text-xs md:text-sm">Amazon Alexa</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-gray-800 p-2 sm:p-3 rounded-lg">
-              <img src="/images/smartlife.webp" alt="Smart Life" className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" loading="lazy" width="32" height="32" />
-              <span className="font-bold text-white text-xs sm:text-xs md:text-sm">Smart Life</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-gray-800 p-2 sm:p-3 rounded-lg">
-              <img src="/images/tplink.webp" alt="TP-Link" className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" loading="lazy" width="32" height="32" />
-              <span className="font-bold text-white text-xs sm:text-xs md:text-sm">TP-Link</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-gray-800 p-2 sm:p-3 rounded-lg">
-              <img src="/images/ewlink.webp" alt="EW Link" className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" loading="lazy" width="32" height="32" />
-              <span className="font-bold text-white text-xs sm:text-xs md:text-sm">EW Link</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-gray-800 p-2 sm:p-3 rounded-lg">
-              <img src="/images/airbnb.webp" alt="Airbnb" className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" loading="lazy" width="32" height="32" />
-              <span className="font-bold text-white text-xs sm:text-xs md:text-sm">Airbnb</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-gray-800 p-2 sm:p-3 rounded-lg">
-              <img src="/images/booking.webp" alt="Booking.com" className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" loading="lazy" width="32" height="32" />
-              <span className="font-bold text-white text-xs sm:text-xs md:text-sm">Booking.com</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-gray-800 p-2 sm:p-3 rounded-lg">
-              <img src="/images/sonoff.webp" alt="Sonoff" className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" loading="lazy" width="32" height="32" />
-              <span className="font-bold text-white text-xs sm:text-xs md:text-sm">Sonoff</span>
-            </div>
+        {/* Integrations */}
+        <div className="mb-12 pb-12 border-t border-slate-800/30">
+          <h3 className="text-center font-heading text-lg text-text-primary mb-8 mt-12">Compatible avec</h3>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-3 max-w-4xl mx-auto">
+            {[
+              'tuya', 'googleassistant', 'google home', 'alexa', 'smartlife',
+              'tplink', 'ewlink', 'airbnb', 'booking', 'sonoff'
+            ].map((platform, index) => (
+              <div
+                key={index}
+                className="card-elevated p-3 flex items-center justify-center h-16 sm:h-20 group cursor-pointer"
+              >
+                <img
+                  src={`/images/${platform}.webp`}
+                  alt={platform}
+                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Barre de séparation */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm">
+        {/* Bottom bar */}
+        <div className="border-t border-slate-800/30 pt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <div className="text-text-secondary text-sm text-center sm:text-left">
               © 2025 DOMO28. Tous droits réservés.
+            </div>
+            <div className="text-text-secondary text-xs mt-4 sm:mt-0">
+              Solutions Smart Home Maroc
             </div>
           </div>
         </div>

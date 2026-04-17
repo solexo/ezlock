@@ -2,10 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Polices professionnelles */
+/* Root dark mode setup */
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background-color: #020617;
+  color: #ffffff;
+}
+
+/* Professional Typography */
 @layer base {
   html {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply bg-dark-bg text-text-primary;
   }
 
   .font-display {
@@ -29,6 +43,78 @@
     font-weight: 800;
     letter-spacing: -0.03em;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* Component utilities */
+@layer components {
+  /* Blue glow button */
+  .btn-glow {
+    @apply relative px-6 py-3 font-semibold text-white bg-blue-accent rounded-lg overflow-hidden transition-all duration-300;
+  }
+
+  .btn-glow:hover {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-glow::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-blue-accent opacity-0 transition-opacity duration-300;
+    pointer-events: none;
+  }
+
+  .btn-glow:hover::before {
+    @apply opacity-20;
+  }
+
+  /* Card with subtle border and glow */
+  .card-glass {
+    @apply relative bg-glass backdrop-blur-xs border border-slate-700 rounded-2xl overflow-hidden transition-all duration-300;
+  }
+
+  .card-glass:hover {
+    @apply border-blue-accent;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  /* Elevated card */
+  .card-elevated {
+    @apply relative bg-dark-secondary border border-slate-800 rounded-2xl overflow-hidden transition-all duration-300;
+  }
+
+  .card-elevated:hover {
+    @apply border-blue-accent;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px);
+  }
+
+  /* Glow text */
+  .text-glow-blue {
+    @apply text-blue-accent;
+  }
+
+  /* Gradient background */
+  .bg-gradient-smart {
+    background: linear-gradient(135deg, #020617 0%, #0F172A 50%, #1E293B 100%);
+  }
+
+  /* Glassmorphism effect */
+  .glass-effect {
+    @apply bg-dark-secondary/30 backdrop-blur-md border border-slate-700/30;
+  }
+
+  /* Blue accent border */
+  .border-accent {
+    @apply border-blue-accent border-l-4;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Mobile button fixes */
@@ -46,12 +132,39 @@
 
   /* Fix for iOS Safari button issues */
   button:active {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    -webkit-tap-highlight-color: rgba(59, 130, 246, 0.1);
   }
 
   /* Ensure touch targets are at least 44px */
   .touch-target {
     min-height: 44px;
     min-width: 44px;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-blue-accent rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue-hover;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-blue-accent text-white;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-blue-accent ring-offset-2 ring-offset-dark-bg rounded;
   }
 }

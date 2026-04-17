@@ -11,12 +11,7 @@ const Hero = () => {
   };
 
   const whatsappContact = () => {
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    if (isMobile) {
-      window.location.href = 'whatsapp://send?phone=212660245937';
-    } else {
-      window.open('https://wa.me/212660245937', '_blank');
-    }
+    window.open('https://wa.me/212660245937', '_blank');
   };
 
   const features = [
@@ -38,9 +33,9 @@ const Hero = () => {
   ];
 
   return (
-    <section 
-      id="accueil" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-28"
+    <section
+      id="accueil"
+      className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-24 lg:pt-28"
     >
       {/* Premium gradient background */}
       <div className="absolute inset-0 bg-gradient-smart"></div>
@@ -52,16 +47,16 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="space-y-8 sm:space-y-12 lg:space-y-16">
+        <div className="space-y-6 sm:space-y-10 lg:space-y-16">
           {/* Main heading */}
           <div className="space-y-4 sm:space-y-6 text-center animate-fade-in-up">
-            <h1 className="font-hero text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight">
+            <h1 className="font-hero text-2xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight">
               <span className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 bg-clip-text text-transparent">
                 Votre Maison Intelligente de Demain
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-text-secondary max-w-2xl sm:max-w-3xl mx-auto leading-relaxed px-4">
               Transformez votre habitat avec les solutions domotiques les plus avancées.
               <span className="text-blue-accent font-semibold"> Sécurité, confort, efficacité énergétique.</span>
             </p>
@@ -69,6 +64,16 @@ const Hero = () => {
             {/* Product menu */}
             <div className="pt-4 sm:pt-6 lg:pt-8">
               <ScrollingProductMenu />
+            </div>
+
+            {/* Promotional text right after animation */}
+            <div className="mt-6 sm:mt-8">
+              <p className="text-sm sm:text-base text-text-secondary max-w-3xl mx-auto leading-relaxed px-4 text-center">
+                🏠 <strong>Leader domotique Maroc</strong> - DOMO28 transforme votre maison en habitat intelligent.
+                🔐 Installation serrures intelligentes, 📹 caméras surveillance, 🚪 contrôle d'accès, 🪟 rideaux automatiques,
+                💡 éclairage LED intelligent, 🚪 portes automatiques, 🌱 agriculture intelligente et 📱 contrôle centralisé.
+                ⚡ Installation professionnelle domotique Maroc - Devis gratuit 24h !
+              </p>
             </div>
           </div>
 
@@ -123,23 +128,23 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8 sm:pt-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 pt-6 sm:pt-8 lg:pt-12">
             <button
               onClick={scrollToProducts}
-              className="btn-glow group w-full sm:w-auto flex items-center justify-center space-x-3 text-lg font-semibold px-8 py-4"
+              className="btn-glow group w-full sm:w-auto flex items-center justify-center space-x-3 text-base sm:text-lg font-semibold px-6 sm:px-8 py-3 sm:py-4"
             >
               <span>Découvrir Produits</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </button>
 
             <button
               onClick={whatsappContact}
-              className="relative w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-glow-lg overflow-hidden group"
+              className="relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-glow-lg overflow-hidden group"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative flex items-center justify-center space-x-2">
                 <span>Devis GRATUIT</span>
-                <span className="text-lg group-hover:scale-110 transition-transform">⚡</span>
+                <span className="text-base sm:text-lg group-hover:scale-110 transition-transform">⚡</span>
               </span>
             </button>
           </div>

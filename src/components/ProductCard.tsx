@@ -104,16 +104,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       `Bonjour ! Je suis intéressé(e) par la ${product.name}. Pourriez-vous me donner plus d'informations et un devis ?`
     );
 
-    // Check if mobile device
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      // Use whatsapp:// URL scheme for mobile apps
-      window.location.href = `whatsapp://send?phone=212660245937&text=${message}`;
-    } else {
-      // Use web WhatsApp for desktop
-      window.open(`https://wa.me/212660245937?text=${message}`, '_blank');
-    }
+    window.open(`https://wa.me/212660245937?text=${message}`, '_blank');
   };
 
   const handleWhatsAppPurchase = async (e: React.MouseEvent | React.TouchEvent) => {
@@ -126,54 +117,46 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       `Bonjour ! Je souhaite acheter la ${product.name}. Pouvez-vous me donner le prix et les modalités d'achat ?`
     );
 
-    // Check if mobile device
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      // Use whatsapp:// URL scheme for mobile apps
-      window.location.href = `whatsapp://send?phone=212660245937&text=${message}`;
-    } else {
-      // Use web WhatsApp for desktop
-      window.open(`https://wa.me/212660245937?text=${message}`, '_blank');
-    }
+    window.open(`https://wa.me/212660245937?text=${message}`, '_blank');
   };
 
   return (
-    <div className="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-110 overflow-hidden border border-gray-100 dark:border-gray-700 h-full flex flex-col cursor-pointer" onClick={() => window.location.href = product.url}>
-      {/* Image du produit */}
-      <div className="relative h-80 overflow-hidden flex-shrink-0 bg-transparent">
+    <div className="group card-elevated flex flex-col h-full cursor-pointer transition-all duration-500 overflow-hidden" onClick={() => window.location.href = product.url}>
+      {/* Product Image Container */}
+      <div className="relative h-80 overflow-hidden flex-shrink-0 bg-dark-tertiary/50">
+        <div className="absolute inset-0 bg-gradient-glow opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
         <img
           src={productImages[currentImageIndex]}
           alt={product.name}
-          className="w-full h-full object-contain p-6 group-hover:scale-125 transition-transform duration-500 ease-out bg-transparent cursor-pointer"
+          className="w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-500 ease-out relative z-10"
           onClick={handleImageClick}
           loading="lazy"
           fetchPriority={product.id === 'i29' ? "high" : "auto"}
           width="272"
           height="272"
-          srcSet={`${productImages[currentImageIndex]} 272w`}
-          sizes="272px"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
 
-      {/* Contenu */}
-      <div className="p-6 dark:bg-gray-800 flex-grow flex flex-col">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-yellow-400 transition-colors duration-500">
+      {/* Content */}
+      <div className="p-6 flex-grow flex flex-col bg-dark-secondary/50">
+        <h3 className="text-xl font-heading text-text-primary mb-2 group-hover:text-blue-accent transition-colors duration-300">
           {product.name}
         </h3>
         
-        <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+        <p className="text-text-secondary text-sm mb-4 flex-grow line-clamp-3">
           {product.description}
         </p>
 
-        {/* Caractéristiques */}
-        <div className="space-y-2 mb-6">
-          <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Caractéristiques :</h4>
-          <div className="flex flex-wrap gap-3">
+        {/* Features */}
+        <div className="space-y-3 mb-6">
+          <h4 className="font-semibold text-text-secondary text-xs uppercase tracking-wider">Caractéristiques</h4>
+          <div className="flex flex-wrap gap-2">
             {product.features.map((feature, index) => (
-              <div key={index} className="flex items-center space-x-1 bg-gray-50 dark:bg-gray-700 px-3 py-1.5 rounded-full text-xs text-gray-600 dark:text-gray-300">
-                <div className="text-yellow-400">
+              <div 
+                key={index} 
+                className="flex items-center space-x-1 bg-dark-tertiary/40 border border-slate-700/50 px-3 py-1.5 rounded-lg text-xs text-text-secondary hover:border-blue-accent/50 transition-colors"
+              >
+                <div className="text-blue-accent">
                   {getFeatureIcon(feature)}
                 </div>
                 <span>{feature}</span>
@@ -182,66 +165,69 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
         </div>
 
-        {/* Boutons d'action */}
-        <div className="space-y-3 mt-auto">
+        {/* Action Buttons */}
+        <div className="space-y-3 mt-auto pt-4 border-t border-slate-800/50">
           <button
             onClick={handleWhatsAppPurchase}
             onTouchStart={handleWhatsAppPurchase}
-            className="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 touch-manipulation"
+            className="w-full relative px-4 py-3 bg-gradient-blue-accent text-white font-semibold rounded-lg overflow-hidden group/btn transition-all duration-300 hover:shadow-glow-blue active:scale-95"
           >
-            <span>🛒</span>
-            <span>Acheter maintenant</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-accent/0 via-blue-accent/20 to-blue-accent/0 group-hover/btn:via-blue-accent/40 transition-all"></div>
+            <span className="relative flex items-center justify-center space-x-2">
+              <span>🛒 Acheter</span>
+            </span>
           </button>
 
           <button
             onClick={handleWhatsAppContact}
             onTouchStart={handleWhatsAppContact}
-            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 touch-manipulation"
+            className="w-full px-4 py-3 border border-blue-accent/50 text-blue-accent hover:bg-blue-accent/10 hover:border-blue-accent font-semibold rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
           >
-            <span>💬</span>
-            <span>Demander un devis</span>
+            <span>💬 Devis</span>
           </button>
 
           <Link
             to={product.url}
-            className="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 touch-manipulation"
+            className="w-full px-4 py-3 bg-dark-tertiary/40 border border-slate-700/50 text-text-primary hover:border-blue-accent/50 hover:text-blue-accent font-semibold rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
           >
-            <span>Voir les détails</span>
+            <span>Détails</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
 
-      {/* Galerie d'images modale */}
+      {/* Image Gallery Modal */}
       {showImageGallery && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setShowImageGallery(false)}>
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 max-w-4xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">{product.name}</h3>
+        <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowImageGallery(false)}>
+          <div className="card-elevated max-w-4xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between p-6 border-b border-slate-800/30">
+              <h3 className="text-xl font-heading text-text-primary">{product.name}</h3>
               <button 
                 onClick={() => setShowImageGallery(false)}
-                className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl"
+                className="text-text-secondary hover:text-blue-accent text-2xl transition-colors"
               >
                 ×
               </button>
             </div>
             
-            <div className="mb-4">
+            <div className="p-6">
               <img 
                 src={productImages[currentImageIndex]} 
                 alt={`${product.name} - Image ${currentImageIndex + 1}`}
-                className="w-full h-96 object-contain rounded-lg"
+                className="w-full h-96 object-contain"
               />
             </div>
             
             {productImages.length > 1 && (
-              <div className="flex justify-center space-x-2">
+              <div className="flex justify-center space-x-3 p-6 border-t border-slate-800/30">
                 {productImages.map((image, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentImageIndex ? 'bg-yellow-500' : 'bg-gray-300 dark:bg-gray-600'
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      index === currentImageIndex 
+                        ? 'bg-blue-accent w-8' 
+                        : 'bg-slate-700 hover:bg-slate-600'
                     }`}
                   />
                 ))}

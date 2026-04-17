@@ -56,7 +56,7 @@ const productsData = [
   {
     nameFr: 'Acoustimass 3',
     nameEn: 'Acoustimass 3',
-    image: '/images/sound/Acoustimass3.webp',
+    image: '/images/sound/Caisson%20de%20Bass%20Acoustimass3.webp',
     descriptionFr: 'Caisson de basses Acoustimass 3 pour son surround',
     descriptionEn: 'Acoustimass 3 subwoofer for surround sound',
     priceFr: '3900 DH TTC',
@@ -316,18 +316,30 @@ const SoundSystem = () => {
           </div>
         </div>
 
-        {/* Hero Section with Carousel on Left */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-center">
-          {/* Left Side - Carousel */}
-          <div className="flex flex-col items-center">
-            <div className="w-full max-w-sm h-96 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center relative">
+        {/* Hero Section - Title, Description, Image, CTA */}
+        <div className="text-center mb-16">
+          {/* Title */}
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            {selectedLang === 'Fr' ? 'Système Son' : 'Sound System'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">{selectedLang === 'Fr' ? 'Domotique' : 'Automation'}</span>
+          </h1>
+
+          {/* Description */}
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
+            {selectedLang === 'Fr'
+              ? 'Installation professionnelle de systèmes audio domotiques au Maroc. Contrôle intelligent de votre musique et ambiance sonore.'
+              : 'Professional installation of smart audio systems in Morocco. Intelligent control of your music and sound ambiance.'}
+          </p>
+
+          {/* Animated Image Carousel */}
+          <div className="flex flex-col items-center mb-12">
+            <div className="w-full max-w-sm h-96 bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center relative">
               <img
                 src={featuredProducts[currentIndex].image}
                 alt={featuredProducts[currentIndex].name}
                 className="w-full h-full object-contain p-8 transition-all duration-500"
               />
             </div>
-            
+
             {/* Carousel Indicators */}
             <div className="flex gap-2 mt-6 justify-center">
               {featuredProducts.map((_, index) => (
@@ -335,8 +347,8 @@ const SoundSystem = () => {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentIndex 
-                      ? 'bg-yellow-500 w-8' 
+                    index === currentIndex
+                      ? 'bg-yellow-500 w-8'
                       : 'bg-gray-400 dark:bg-gray-600 hover:bg-gray-500'
                   }`}
                   aria-label={`Show product ${index + 1}`}
@@ -350,30 +362,21 @@ const SoundSystem = () => {
             </h3>
           </div>
 
-          {/* Right Side - Text Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              {selectedLang === 'Fr' ? 'Système Son' : 'Sound System'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">{selectedLang === 'Fr' ? 'Domotique' : 'Automation'}</span>
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto lg:mx-0 mb-8">
-              {selectedLang === 'Fr' 
-                ? 'Installation professionnelle de systèmes audio domotiques au Maroc. Contrôle intelligent de votre musique et ambiance sonore.'
-                : 'Professional installation of smart audio systems in Morocco. Intelligent control of your music and sound ambiance.'}
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
-              <button
-                onClick={() => whatsappContact()}
-                className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                {selectedLang === 'Fr' ? 'Devis Gratuit' : 'Free Quote'}
-              </button>
-              <button
-                onClick={() => window.location.href = '#products'}
-                className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-700 transition-all duration-300"
-              >
-                {selectedLang === 'Fr' ? 'Nos Produits' : 'Our Products'}
-              </button>
-            </div>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+
+            <button
+              onClick={() => whatsappContact()}
+              className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+            >
+              {selectedLang === 'Fr' ? 'Devis Gratuit' : 'Free Quote'}
+            </button>
+            <button
+              onClick={() => window.location.href = '#products'}
+              className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-700 transition-all duration-300"
+            >
+              {selectedLang === 'Fr' ? 'Nos Produits' : 'Our Products'}
+            </button>
           </div>
         </div>
 

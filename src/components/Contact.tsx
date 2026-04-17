@@ -4,117 +4,128 @@ import { trackProspect } from '../utils/facebookConversions';
 
 const Contact = () => {
   const whatsappContact = async () => {
-    // Track prospect event
     await trackProspect();
-
-    // Check if mobile device
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
     if (isMobile) {
-      // Use whatsapp:// URL scheme for mobile apps
       window.location.href = 'whatsapp://send?phone=212660245937';
     } else {
-      // Use web WhatsApp for desktop
       window.open('https://wa.me/212660245937', '_blank');
     }
   };
 
+  const benefits = [
+    { icon: Clock, label: 'Devis sous 24h', color: 'bg-blue-accent/10' },
+    { icon: Users, label: 'Équipe d\'experts', color: 'bg-blue-accent/10' },
+    { icon: MapPin, label: 'Déplacement gratuit', color: 'bg-blue-accent/10' },
+    { icon: Mail, label: 'Suivi personnalisé', color: 'bg-blue-accent/10' },
+  ];
+
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-black transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* En-tête */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Contactez <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-yellow-400">Nos Experts</span>
+    <section id="contact" className="relative py-20 sm:py-24 bg-gradient-smart overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-blue-accent/5 rounded-full blur-3xl opacity-10 -translate-y-1/2"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16 sm:mb-20">
+          <h2 className="font-hero text-4xl sm:text-5xl lg:text-6xl text-text-primary mb-4 sm:mb-6">
+            Contactez Nos <span className="bg-gradient-to-r from-blue-accent to-blue-300 bg-clip-text text-transparent">Experts</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Notre équipe est à votre disposition pour répondre à toutes vos questions 
-            et vous accompagner dans votre projet de sécurisation.
+          <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+            Notre équipe DOMO28 est à votre disposition pour répondre à vos questions et accompagner votre projet.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Informations de contact */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Contact Info */}
           <div className="space-y-8 flex flex-col justify-center">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                Parlons de votre projet
+              <h3 className="font-heading text-3xl sm:text-4xl text-text-primary mb-4">
+                Parlons de Votre Projet
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg leading-relaxed">
-                Devis gratuit, conseils personnalisés et installation professionnelle. 
-                Contactez-nous dès maintenant pour sécuriser votre domicile.
+              <p className="text-text-secondary text-lg leading-relaxed">
+                Devis gratuit, conseils personnalisés, installation professionnelle. 
+                Contactez-nous pour sécuriser votre maison intelligente.
               </p>
             </div>
 
-            {/* Moyens de contact */}
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
-                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-white" />
+            {/* Contact Methods */}
+            <div className="space-y-4">
+              <div className="card-elevated p-6 group">
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-blue-accent/10 rounded-lg group-hover:bg-blue-accent/20 transition-colors">
+                    <Phone className="w-6 h-6 text-blue-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-heading text-text-primary mb-1">Téléphone</h4>
+                    <p className="text-blue-accent font-semibold text-lg">+212 660 245 937</p>
+                    <p className="text-blue-accent font-semibold text-lg">+212 669 154 235</p>
+                    <p className="text-text-secondary text-sm mt-1">Lun-Sam 8h-18h</p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <h4 className="font-semibold text-gray-900 dark:text-white">Téléphone</h4>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium text-lg">+212 660 24 59 37</p>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium text-lg">+212 669 15 42 35</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Lun-Ven 8h-18h, Sam 9h-17h</p>
+              </div>
+
+              <div className="card-elevated p-6 group">
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-green-500/10 rounded-lg group-hover:bg-green-500/20 transition-colors">
+                    <MessageCircle className="w-6 h-6 text-green-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-heading text-text-primary mb-1">WhatsApp</h4>
+                    <p className="text-green-400 font-semibold text-lg">Chat direct</p>
+                    <p className="text-text-secondary text-sm mt-1">Réponse rapide en semaine</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Avantages */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-              <div className="flex items-center space-x-3 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
-                <Clock className="w-5 h-5 text-yellow-500" />
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Devis sous 24h</span>
-              </div>
-              <div className="flex items-center space-x-3 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                <Users className="w-5 h-5 text-blue-500" />
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Équipe d'experts</span>
-              </div>
-              <div className="flex items-center space-x-3 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                <MapPin className="w-5 h-5 text-green-500" />
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Déplacement gratuit</span>
-              </div>
-              <div className="flex items-center space-x-3 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-                <Mail className="w-5 h-5 text-purple-500" />
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Suivi personnalisé</span>
-              </div>
+            {/* Benefits Grid */}
+            <div className="grid grid-cols-2 gap-4 mt-8">
+              {benefits.map((benefit, index) => {
+                const Icon = benefit.icon;
+                return (
+                  <div key={index} className={`${benefit.color} border border-blue-accent/20 rounded-lg p-4 flex items-center space-x-3 hover:border-blue-accent/50 transition-colors`}>
+                    <Icon className="w-5 h-5 text-blue-accent flex-shrink-0" />
+                    <span className="text-sm font-medium text-text-primary">{benefit.label}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
-          {/* Call-to-action principal */}
-          <div className="bg-gradient-to-br from-black to-yellow-400 rounded-2xl p-8 md:p-12 text-white flex flex-col justify-center">
-            <div className="text-center space-y-6">
-              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto">
-                <MessageCircle className="w-10 h-10" />
+          {/* CTA Section */}
+          <div className="card-elevated bg-gradient-blue-accent relative overflow-hidden p-8 md:p-12 flex flex-col justify-center">
+            {/* Glow overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-accent/10 to-transparent opacity-50"></div>
+
+            <div className="relative z-10 text-center space-y-8">
+              <div className="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto">
+                <MessageCircle className="w-10 h-10 text-white" />
               </div>
               
-              <h3 className="text-2xl md:text-3xl font-bold leading-tight">
-                Prêt à sécuriser votre domicile ?
+              <h3 className="font-hero text-3xl sm:text-4xl text-white leading-tight">
+                Sécurisez Votre Maison Maintenant
               </h3>
               
-              <p className="text-white/90 text-lg leading-relaxed">
-                Contactez-nous maintenant pour un devis gratuit et personnalisé. 
-                Nos experts vous conseillent et vous accompagnent dans votre projet.
+              <p className="text-blue-100 text-lg leading-relaxed">
+                Contactez-nous pour un devis gratuit. Nos experts vous conseillent et accompagnent votre projet domotique.
               </p>
 
-              <div className="space-y-4">
-                <button
-                  onClick={whatsappContact}
-                  className="w-full bg-white text-yellow-500 py-4 px-6 rounded-xl font-bold text-lg hover:bg-gray-50 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-3 touch-manipulation"
-                >
-                  <span>💬</span>
-                  <span>Demander un devis gratuit</span>
-                </button>
-                
-                <div className="text-center text-white/80">
-                  <p className="text-sm">Réponse garantie sous 2h en semaine</p>
-                </div>
+              <button
+                onClick={whatsappContact}
+                className="w-full bg-white text-blue-accent hover:bg-slate-50 font-bold text-lg py-4 px-6 rounded-lg transition-all duration-300 hover:shadow-glow-lg active:scale-95 flex items-center justify-center space-x-3"
+              >
+                <MessageCircle className="w-5 h-5" />
+                <span>Devis Gratuit</span>
+              </button>
+              
+              <div className="text-white/90 text-sm">
+                <p>✓ Réponse sous 2h en semaine</p>
               </div>
 
-              <div className="flex items-center justify-center space-x-6 text-sm text-white/80 flex-wrap gap-2">
-                <span>✓ Devis gratuit</span>
-                <span>✓ Installation incluse</span>
+              <div className="flex items-center justify-center space-x-3 text-sm text-white/80 flex-wrap gap-2">
+                <span>✓ Gratuit</span>
+                <span>✓ Installation Pro</span>
                 <span>✓ Garantie 2 ans</span>
               </div>
             </div>
