@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Volume2, Music, Wifi, ShoppingCart, FileText } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 // Import images
 import L1Pro16 from '/images/sound/L1_Pro16.webp';
@@ -209,8 +210,8 @@ const productsData = [
 ];
 
 const SoundSystem = () => {
-  const [selectedLang, setSelectedLang] = useState('Fr');
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { selectedLang } = useLanguage();
 
   // Featured sound products for carousel
   const featuredProducts = [
@@ -263,7 +264,7 @@ const SoundSystem = () => {
           <div className="flex gap-3">
             <button
               onClick={() => whatsappContact(name)}
-              className="flex-1 bg-gradient-to-r from-yellow-400 to-yellow-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+               className="flex-1 bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
             >
               <FileText className="w-4 h-4" />
               {selectedLang === 'Fr' ? 'Devis' : 'Quote'}
@@ -285,50 +286,17 @@ const SoundSystem = () => {
     <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Back Button */}
-        <Link to="/" className="inline-flex items-center text-yellow-500 hover:text-yellow-600 mb-8">
+        <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-accent mb-8">
           <ArrowLeft className="w-5 h-5 mr-2" />
           {selectedLang === 'Fr' ? 'Retour à l\'accueil' : 'Back to Home'}
         </Link>
 
-        {/* Language Selector */}
-        <div className="flex justify-end mb-8">
-          <div className="flex gap-2 bg-white dark:bg-gray-800 p-2 rounded-lg">
-            <button
-              onClick={() => setSelectedLang('Fr')}
-              className={`px-4 py-2 rounded font-semibold transition-all ${
-                selectedLang === 'Fr'
-                  ? 'bg-yellow-500 text-white'
-                  : 'text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700'
-              }`}
-            >
-              FR
-            </button>
-            <button
-              onClick={() => setSelectedLang('En')}
-              className={`px-4 py-2 rounded font-semibold transition-all ${
-                selectedLang === 'En'
-                  ? 'bg-yellow-500 text-white'
-                  : 'text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700'
-              }`}
-            >
-              EN
-            </button>
-          </div>
-        </div>
-
-        {/* Hero Section - Title, Description, Image, CTA */}
+        {/* Hero Section - Title, Image, Description, CTA */}
         <div className="text-center mb-16">
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            {selectedLang === 'Fr' ? 'Système Son' : 'Sound System'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">{selectedLang === 'Fr' ? 'Domotique' : 'Automation'}</span>
-          </h1>
-
-          {/* Description */}
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
-            {selectedLang === 'Fr'
-              ? 'Installation professionnelle de systèmes audio domotiques au Maroc. Contrôle intelligent de votre musique et ambiance sonore.'
-              : 'Professional installation of smart audio systems in Morocco. Intelligent control of your music and sound ambiance.'}
-          </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              {selectedLang === 'Fr' ? 'Système Son' : 'Sound System'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300">{selectedLang === 'Fr' ? 'Domotique' : 'Automation'}</span>
+            </h1>
 
           {/* Animated Image Carousel */}
           <div className="flex flex-col items-center mb-12">
@@ -348,7 +316,7 @@ const SoundSystem = () => {
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentIndex
-                      ? 'bg-yellow-500 w-8'
+                      ? 'bg-blue-accent w-8'
                       : 'bg-gray-400 dark:bg-gray-600 hover:bg-gray-500'
                   }`}
                   aria-label={`Show product ${index + 1}`}
@@ -362,18 +330,25 @@ const SoundSystem = () => {
             </h3>
           </div>
 
+          {/* Description */}
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
+            {selectedLang === 'Fr'
+              ? 'Installation professionnelle de systèmes audio domotiques au Maroc. Contrôle intelligent de votre musique et ambiance sonore.'
+              : 'Professional installation of smart audio systems in Morocco. Intelligent control of your music and sound ambiance.'}
+          </p>
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
 
             <button
               onClick={() => whatsappContact()}
-              className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               {selectedLang === 'Fr' ? 'Devis Gratuit' : 'Free Quote'}
             </button>
             <button
               onClick={() => window.location.href = '#products'}
-              className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-700 transition-all duration-300"
+              className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-blue-accent hover:bg-blue-50 dark:hover:bg-gray-700 transition-all duration-300"
             >
               {selectedLang === 'Fr' ? 'Nos Produits' : 'Our Products'}
             </button>
@@ -383,7 +358,7 @@ const SoundSystem = () => {
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
-            <Volume2 className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+            <Volume2 className="w-12 h-12 text-blue-accent mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
               {selectedLang === 'Fr' ? 'Audio Haute Qualité' : 'High Quality Audio'}
             </h3>
@@ -394,7 +369,7 @@ const SoundSystem = () => {
             </p>
           </div>
           <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
-            <Music className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+            <Music className="w-12 h-12 text-blue-accent mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
               {selectedLang === 'Fr' ? 'Contrôle Musical' : 'Music Control'}
             </h3>
@@ -405,7 +380,7 @@ const SoundSystem = () => {
             </p>
           </div>
           <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
-            <Wifi className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+            <Wifi className="w-12 h-12 text-blue-accent mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
               {selectedLang === 'Fr' ? 'Connexion WiFi' : 'WiFi Connection'}
             </h3>
@@ -466,7 +441,7 @@ const SoundSystem = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-yellow-400 to-yellow-600 p-8 md:p-12 rounded-2xl text-white">
+        <div className="text-center bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 p-8 md:p-12 rounded-2xl text-white">
           <h3 className="text-2xl font-bold mb-4">
             {selectedLang === 'Fr' 
               ? 'Prêt à Révolutionner Votre Expérience Audio ?'
@@ -479,7 +454,7 @@ const SoundSystem = () => {
           </p>
           <button
             onClick={() => whatsappContact()}
-            className="bg-white text-yellow-600 px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="bg-white text-blue-accent px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             {selectedLang === 'Fr' ? 'Obtenir un Devis Gratuit' : 'Get a Free Quote'}
           </button>

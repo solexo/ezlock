@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Shield, Smartphone, Key } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const SerrureIntelligente = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { selectedLang } = useLanguage();
 
   // Smart lock products
   const smartLocks = [
@@ -30,22 +32,17 @@ const SerrureIntelligente = () => {
     <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Back Button */}
-        <Link to="/" className="inline-flex items-center text-yellow-500 hover:text-yellow-600 mb-8">
+        <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-400 mb-8">
           <ArrowLeft className="w-5 h-5 mr-2" />
           Retour à l'accueil
         </Link>
 
-        {/* Hero Section - Title, Description, Image, CTA */}
+        {/* Hero Section - Title, Image, Description, CTA */}
         <div className="text-center mb-16">
           {/* Title */}
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Serrure Intelligente <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">Maroc</span>
+            {selectedLang === 'Fr' ? 'Serrure Intelligente' : 'Smart Lock'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300">{selectedLang === 'Fr' ? 'Maroc' : 'Morocco'}</span>
           </h1>
-
-          {/* Description */}
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
-            Installation professionnelle de serrures intelligentes au Maroc. Sécurité avancée avec Face ID, empreinte digitale et NFC.
-          </p>
 
           {/* Animated Image Carousel */}
           <div className="flex flex-col items-center mb-12">
@@ -65,7 +62,7 @@ const SerrureIntelligente = () => {
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentIndex
-                      ? 'bg-yellow-500 w-8'
+                      ? 'bg-blue-accent w-8'
                       : 'bg-gray-400 dark:bg-gray-600 hover:bg-gray-500'
                   }`}
                   aria-label={`Show lock ${index + 1}`}
@@ -79,17 +76,22 @@ const SerrureIntelligente = () => {
             </h3>
           </div>
 
+          {/* Description */}
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
+            {selectedLang === 'Fr' ? 'Installation professionnelle de serrures intelligentes au Maroc. Sécurité avancée avec Face ID, empreinte digitale et NFC.' : 'Professional installation of smart locks in Morocco. Advanced security with Face ID, fingerprint and NFC.'}
+          </p>
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button
               onClick={whatsappContact}
-              className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
-              Devis Gratuit
+               {selectedLang === 'Fr' ? 'Devis Gratuit' : 'Free Quote'}
             </button>
             <button
               onClick={() => window.location.href = '#services'}
-              className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-700 transition-all duration-300"
+              className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-blue-accent hover:bg-blue-50 dark:hover:bg-gray-700 transition-all duration-300"
             >
               En Savoir Plus
             </button>
@@ -99,21 +101,21 @@ const SerrureIntelligente = () => {
         {/* Features */}
         <div id="services" className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
-            <Shield className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+            <Shield className="w-12 h-12 text-blue-accent mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Sécurité Avancée</h3>
             <p className="text-gray-600 dark:text-gray-300">
               Technologie de reconnaissance faciale, empreinte digitale et NFC pour une sécurité maximale.
             </p>
           </div>
           <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
-            <Smartphone className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+            <Smartphone className="w-12 h-12 text-blue-accent mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Contrôle Mobile</h3>
             <p className="text-gray-600 dark:text-gray-300">
               Gérez votre serrure depuis votre smartphone avec notre application dédiée.
             </p>
           </div>
           <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
-            <Key className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+            <Key className="w-12 h-12 text-blue-accent mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Installation Pro</h3>
             <p className="text-gray-600 dark:text-gray-300">
               Installation par nos techniciens certifiés avec garantie 2 ans incluse.

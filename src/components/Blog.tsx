@@ -39,14 +39,14 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <Link to="/" className="inline-flex items-center text-yellow-500 hover:text-yellow-600 mb-8">
+        <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-400 mb-8">
           <ArrowLeft className="w-5 h-5 mr-2" />
           Retour à l'accueil
         </Link>
 
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Blog <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">Domotique</span>
+             Blog <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300">Domotique</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Tutoriels, guides et conseils pour votre domotique au Maroc. Apprenez à installer et optimiser vos systèmes intelligents.
@@ -66,19 +66,19 @@ const Blog = () => {
                   <User className="w-4 h-4 ml-4 mr-1" />
                   {article.author}
                 </div>
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 hover:text-yellow-500 transition-colors">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 hover:text-blue-accent transition-colors">
                   <Link to={`/blog/${article.id}`}>{article.title}</Link>
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {article.excerpt}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {article.tags.map((tag) => (
-                    <span key={tag} className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200">
-                      <Tag className="w-3 h-3 mr-1" />
-                      {tag}
-                    </span>
-                  ))}
+                   {article.tags.map((tag) => (
+                     <span key={tag} className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">
+                       <Tag className="w-3 h-3 mr-1" />
+                       {tag}
+                     </span>
+                   ))}
                 </div>
               </div>
             </article>
@@ -91,7 +91,7 @@ const Blog = () => {
           </p>
           <button
             onClick={whatsappContact}
-            className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             S'abonner à la Newsletter
           </button>

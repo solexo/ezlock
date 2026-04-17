@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { ArrowRight, Smartphone, Lock, Zap } from 'lucide-react';
 import ScrollingProductMenu from './ScrollingProductMenu';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero = () => {
+  const { selectedLang, setSelectedLang } = useLanguage();
   const scrollToProducts = () => {
     const element = document.getElementById('produits');
     if (element) {
@@ -17,18 +19,18 @@ const Hero = () => {
   const features = [
     {
       icon: Smartphone,
-      title: 'Contrôle Centralisé',
-      description: 'Gérez votre maison depuis une seule app',
+      title: selectedLang === 'Fr' ? 'Contrôle Centralisé' : 'Centralized Control',
+      description: selectedLang === 'Fr' ? 'Gérez votre maison depuis une seule app' : 'Manage your home from a single app',
     },
     {
       icon: Lock,
-      title: 'Sécurité Avancée',
-      description: 'Face ID, Empreinte & Authentification',
+      title: selectedLang === 'Fr' ? 'Sécurité Avancée' : 'Advanced Security',
+      description: selectedLang === 'Fr' ? 'Face ID, Empreinte & Authentification' : 'Face ID, Fingerprint & Authentication',
     },
     {
       icon: Zap,
-      title: 'Installation Pro',
-      description: 'Configuration complète et garantie',
+      title: selectedLang === 'Fr' ? 'Installation Pro' : 'Professional Installation',
+      description: selectedLang === 'Fr' ? 'Configuration complète et garantie' : 'Complete configuration and warranty',
     },
   ];
 
@@ -45,20 +47,48 @@ const Hero = () => {
       <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-blue-accent/10 rounded-full blur-3xl opacity-20 animate-float-delayed"></div>
       <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-accent/5 rounded-full blur-3xl opacity-10 -translate-x-1/2 -translate-y-1/2"></div>
 
-      {/* Content */}
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="space-y-6 sm:space-y-10 lg:space-y-16">
+       {/* Content */}
+       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+         {/* Language Selector */}
+         <div className="absolute top-0 right-0 sm:right-4 lg:right-8 flex gap-2 bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm p-2 rounded-lg">
+           <button
+             onClick={() => setSelectedLang('Fr')}
+             className={`px-3 sm:px-4 py-1 sm:py-2 rounded text-sm font-semibold transition-all ${
+               selectedLang === 'Fr'
+                 ? 'bg-blue-accent text-white'
+                 : 'text-text-primary hover:bg-white/20'
+             }`}
+           >
+             FR
+           </button>
+           <button
+             onClick={() => setSelectedLang('En')}
+             className={`px-3 sm:px-4 py-1 sm:py-2 rounded text-sm font-semibold transition-all ${
+               selectedLang === 'En'
+                 ? 'bg-blue-accent text-white'
+                 : 'text-text-primary hover:bg-white/20'
+             }`}
+           >
+             EN
+           </button>
+         </div>
+
+         <div className="space-y-6 sm:space-y-10 lg:space-y-16">
           {/* Main heading */}
           <div className="space-y-4 sm:space-y-6 text-center animate-fade-in-up">
             <h1 className="font-hero text-2xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight">
               <span className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 bg-clip-text text-transparent">
-                Votre Maison Intelligente de Demain
+                {selectedLang === 'Fr' ? 'Votre Maison de Demain' : 'Your Home of Tomorrow'}
               </span>
             </h1>
 
             <p className="text-base sm:text-lg lg:text-xl text-text-secondary max-w-2xl sm:max-w-3xl mx-auto leading-relaxed px-4">
-              Transformez votre habitat avec les solutions domotiques les plus avancées.
-              <span className="text-blue-accent font-semibold"> Sécurité, confort, efficacité énergétique.</span>
+              {selectedLang === 'Fr'
+                ? 'Transformez votre habitat avec les solutions domotiques les plus avancées.'
+                : 'Transform your home with the most advanced home automation solutions.'}
+              <span className="text-blue-accent font-semibold">
+                {selectedLang === 'Fr' ? ' Sécurité, confort, efficacité énergétique.' : ' Security, comfort, energy efficiency.'}
+              </span>
             </p>
 
             {/* Product menu */}

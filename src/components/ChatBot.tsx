@@ -810,7 +810,7 @@ Ex: "i30", "smart switch", "caméra", "thermostat", "alarme"
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 touch-manipulation z-50"
+           className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 touch-manipulation z-50"
           aria-label="Ouvrir le chat assistant"
           title="Ouvrir le chat assistant"
         >
@@ -822,7 +822,7 @@ Ex: "i30", "smart switch", "caméra", "thermostat", "alarme"
       {isOpen && (
         <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-[calc(100vw-2rem)] sm:w-96 h-[calc(100vh-2rem)] sm:h-[600px] max-h-[700px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 z-50 flex flex-col">
           {/* Header */}
-          <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-3 sm:p-4 rounded-t-2xl flex items-center justify-between">
+          <div className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white p-3 sm:p-4 rounded-t-2xl flex items-center justify-between">
             <div className="flex items-center space-x-2 sm:space-x-3">
               <Bot className="w-5 h-5 sm:w-6 sm:h-6" />
               <div>
@@ -849,7 +849,7 @@ Ex: "i30", "smart switch", "caméra", "thermostat", "alarme"
                   className={`max-w-[85%] sm:max-w-[80%] p-2 sm:p-3 rounded-2xl ${
                     message.isBot
                       ? 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white'
-                      : 'bg-gradient-to-r from-yellow-500 to-yellow-600 text-white'
+                       : 'bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white'
                   }`}
                 >
                   <div className="flex items-start space-x-1 sm:space-x-2">
@@ -900,11 +900,11 @@ Ex: "i30", "smart switch", "caméra", "thermostat", "alarme"
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Tapez votre message..."
-                className="flex-1 px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-gray-700 dark:text-white"
+                 className="flex-1 px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-accent dark:bg-gray-700 dark:text-white"
               />
               <button
                 onClick={handleSendMessage}
-                className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-2 rounded-full hover:shadow-lg active:scale-95 transition-all duration-300 touch-manipulation"
+                className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white p-2 rounded-full hover:shadow-lg active:scale-95 transition-all duration-300 touch-manipulation"
               >
                 <Send className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>

@@ -170,7 +170,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <button
             onClick={handleWhatsAppPurchase}
             onTouchStart={handleWhatsAppPurchase}
-            className="w-full relative px-4 py-3 bg-gradient-blue-accent text-white font-semibold rounded-lg overflow-hidden group/btn transition-all duration-300 hover:shadow-glow-blue active:scale-95"
+             className="w-full relative px-4 py-3 bg-blue-600 text-white font-semibold rounded-lg overflow-hidden group/btn transition-all duration-300 hover:shadow-glow-blue active:scale-95"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-accent/0 via-blue-accent/20 to-blue-accent/0 group-hover/btn:via-blue-accent/40 transition-all"></div>
             <span className="relative flex items-center justify-center space-x-2">
@@ -178,13 +178,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </span>
           </button>
 
-          <button
-            onClick={handleWhatsAppContact}
-            onTouchStart={handleWhatsAppContact}
-            className="w-full px-4 py-3 border border-blue-accent/50 text-blue-accent hover:bg-blue-accent/10 hover:border-blue-accent font-semibold rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-          >
-            <span>💬 Devis</span>
-          </button>
+           <button
+             onClick={handleWhatsAppContact}
+             onTouchStart={handleWhatsAppContact}
+             className="w-full relative px-4 py-3 bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white font-semibold rounded-lg overflow-hidden group/btn transition-all duration-300 hover:shadow-glow-blue active:scale-95"
+           >
+             <div className="absolute inset-0 bg-gradient-to-r from-blue-accent/0 via-blue-accent/20 to-blue-accent/0 group-hover/btn:via-blue-accent/40 transition-all"></div>
+             <span className="relative flex items-center justify-center space-x-2">
+               <span>💬 Devis</span>
+             </span>
+           </button>
 
           <Link
             to={product.url}

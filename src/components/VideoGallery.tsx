@@ -64,12 +64,12 @@ const VideoGallery = () => {
   };
 
   return (
-    <section id="videos" className="py-20 bg-gradient-to-br from-gray-50 to-yellow-50 dark:from-black dark:to-gray-900 transition-colors duration-300">
+    <section id="videos" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-black dark:to-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* En-tête */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-yellow-400">Vidéos</span>
+            Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-blue-accent">Vidéos</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             🎥 <strong>Découvrez nos réalisations en action !</strong> 
@@ -115,7 +115,7 @@ const VideoGallery = () => {
 
               {/* Contenu */}
               <div className="p-6">
-                <h3 className="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-yellow-400 transition-colors">
+                <h3 className="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-accent transition-colors">
                   {video.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
@@ -137,7 +137,7 @@ const VideoGallery = () => {
 
         {/* Call-to-action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-gray-50 to-yellow-50 dark:from-black dark:to-gray-700 p-8 md:p-12 rounded-2xl max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-gray-50 to-blue-50 dark:from-black dark:to-gray-700 p-8 md:p-12 rounded-2xl max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               📱 Suivez-nous sur Instagram !
             </h3>

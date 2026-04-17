@@ -44,9 +44,9 @@ const Services = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 sm:mb-20">
-          <h2 className="font-hero text-4xl sm:text-5xl lg:text-6xl text-text-primary mb-4 sm:mb-6">
-            Nos <span className="bg-gradient-to-r from-blue-accent to-blue-300 bg-clip-text text-transparent">Services</span>
-          </h2>
+           <h2 className="font-hero text-4xl sm:text-5xl lg:text-6xl text-text-primary mb-4 sm:mb-6">
+             Nos <span className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 bg-clip-text text-transparent">Services</span>
+           </h2>
           <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
             Service domotique complet : installation, formation, garantie, et support technique 7j/7.
           </p>
