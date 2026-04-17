@@ -170,48 +170,56 @@ const Header = () => {
             <nav className="px-4 py-4 space-y-2">
               <Link
                 to="/"
+                onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium"
               >
                 Accueil
               </Link>
               <Link
                 to="/serrure-intelligente"
+                onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium"
               >
                 Serrure Intelligente
               </Link>
               <Link
                 to="/domotique-casablanca"
+                onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium"
               >
                 Domotique Maroc
               </Link>
               <Link
                 to="/cameras-surveillance"
+                onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium"
               >
                 Caméras Surveillance
               </Link>
               <Link
                 to="/controle-acces"
+                onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium"
               >
                 Contrôle d'Accès
               </Link>
               <Link
                 to="/systeme-son"
+                onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium"
               >
                 Système Son
               </Link>
               <Link
                 to="/blog"
+                onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium"
               >
                 Blog
               </Link>
               <Link
                 to="/about"
+                onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium"
               >
                 À Propos
