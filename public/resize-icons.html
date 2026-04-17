@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOMO28 Icon Resizer</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .icon-preview { 
+            margin: 20px 0; 
+            text-align: center;
+        }
+        canvas { 
+            border: 2px solid #ddd; 
+            margin: 10px; 
+            border-radius: 8px;
+        }
+        .download-btn { 
+            background: #007bff; 
+            color: white; 
+            padding: 12px 24px; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            margin: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .download-btn:hover {
+            background: #0056b3;
+        }
+        .size-label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .instructions {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 DOMO28 Icon Resizer</h1>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Wait for the logo to load below</li>
+                <li>Click "Download" for each size you need</li>
+                <li>Replace the files in <code>/public/icons/</code> folder</li>
+                <li>Test on iPhone by adding to home screen</li>
+            </ol>
+        </div>
+        
+        <div class="icon-preview">
+            <div class="size-label">📱 180x180 (iPhone Home Screen)</div>
+            <canvas id="canvas180" width="180" height="180"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadIcon(180)">Download 180x180.png</button>
+        </div>
+        
+        <div class="icon-preview">
+            <div class="size-label">🤖 192x192 (Android)</div>
+            <canvas id="canvas192" width="192" height="192"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadIcon(192)">Download 192x192.png</button>
+        </div>
+        
+        <div class="icon-preview">
+            <div class="size-label">💻 512x512 (High Resolution)</div>
+            <canvas id="canvas512" width="512" height="512"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadIcon(512)">Download 512x512.png</button>
+        </div>
+    </div>
+
+    <script>
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        
+        img.onload = function() {
+            console.log('Logo loaded:', img.width, 'x', img.height);
+            drawIcon(180);
+            drawIcon(192);
+            drawIcon(512);
+        };
+        
+        img.onerror = function() {
+            console.error('Failed to load logo');
+            alert('Failed to load logo. Make sure the image path is correct.');
+        };
+        
+        img.src = '/images/logob.webp';
+
+        function drawIcon(size) {
+            const canvas = document.getElementById(`canvas${size}`);
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas with white background
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, size, size);
+            
+            // Calculate dimensions to fit logo properly in square
+            // Use 90% of canvas size to leave some padding
+            const logoSize = Math.floor(size * 0.9);
+            const x = Math.floor((size - logoSize) / 2);
+            const y = Math.floor((size - logoSize) / 2);
+            
+            // Draw the logo centered
+            ctx.drawImage(img, x, y, logoSize, logoSize);
+            
+            console.log(`Drew ${size}x${size} icon with logo size ${logoSize}x${logoSize}`);
+        }
+
+        function downloadIcon(size) {
+            const canvas = document.getElementById(`canvas${size}`);
+            const link = document.createElement('a');
+            link.download = `icon-${size}x${size}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            console.log(`Downloaded ${size}x${size} icon`);
+        }
+    </script>
+</body>
+</html>
+
