@@ -11,11 +11,10 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [selectedLang, setSelectedLang] = useState<Language>(() => {
-    // Check localStorage or browser language
+    // Check localStorage or default to French
     const saved = localStorage.getItem('language') as Language;
     if (saved) return saved;
-    const browserLang = navigator.language;
-    return browserLang.startsWith('en') ? 'En' : 'Fr';
+    return 'Fr';
   });
 
   useEffect(() => {

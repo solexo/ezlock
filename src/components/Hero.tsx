@@ -49,29 +49,6 @@ const Hero = () => {
 
        {/* Content */}
        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-         {/* Language Selector */}
-         <div className="absolute top-0 right-0 sm:right-4 lg:right-8 flex gap-2 bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm p-2 rounded-lg">
-           <button
-             onClick={() => setSelectedLang('Fr')}
-             className={`px-3 sm:px-4 py-1 sm:py-2 rounded text-sm font-semibold transition-all ${
-               selectedLang === 'Fr'
-                 ? 'bg-blue-accent text-white'
-                 : 'text-text-primary hover:bg-white/20'
-             }`}
-           >
-             FR
-           </button>
-           <button
-             onClick={() => setSelectedLang('En')}
-             className={`px-3 sm:px-4 py-1 sm:py-2 rounded text-sm font-semibold transition-all ${
-               selectedLang === 'En'
-                 ? 'bg-blue-accent text-white'
-                 : 'text-text-primary hover:bg-white/20'
-             }`}
-           >
-             EN
-           </button>
-         </div>
 
          <div className="space-y-6 sm:space-y-10 lg:space-y-16">
           {/* Main heading */}
