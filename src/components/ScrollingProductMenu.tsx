@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const products = [
-  { id: 'x13ai', image: '/images/x13ai.webp' },
+  { id: 'x1ai', image: '/images/x1ai.webp' },
   { id: 'i40', image: '/images/i40%20(2).webp' },
   { id: 'i30', image: '/images/i30.webp' },
   { id: 'i29', image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.22.webp' },

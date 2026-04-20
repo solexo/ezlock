@@ -9,10 +9,10 @@ const ProductPage: React.FC = () => {
   // Import products from ProductGallery
   const products = [
     {
-      id: 'x13ai',
-      name: 'X13 Ai 🔐 7 Méthodes d\'Ouverture Intelligentes',
-      image: '/images/x13ai.webp',
-      url: '/product/x13ai',
+      id: 'x1ai',
+      name: 'X1 Ai 🔐 7 Méthodes d\'Ouverture Intelligentes',
+      image: '/images/x1ai.webp',
+      url: '/product/x1ai',
       features: [
         'Reconnaissance Faciale (AI) ultra-précise',
         'Empreinte Digitale 360°',
@@ -22,7 +22,7 @@ const ProductPage: React.FC = () => {
         'Application mobile (Wi-Fi & Bluetooth)',
         'Ouverture par paume intelligente (AI Palm ID)'
       ],
-      description: 'Grâce à son système AI avancé, la X13 reconnaît les visages avec une précision exceptionnelle, s\'adapte à la luminosité et apprend vos habitudes pour un confort d\'utilisation optimal. ✨ Design et Performance Écran tactile HD élégant et intuitif. Corps en alliage d\'aluminium résistant et raffiné. Installation simple et compatible avec la plupart des portes. Batterie longue durée avec alerte intelligente de faible charge.'
+      description: 'Grâce à son système AI avancé, la X1 reconnaît les visages avec une précision exceptionnelle, s\'adapte à la luminosité et apprend vos habitudes pour un confort d\'utilisation optimal. ✨ Design et Performance Écran tactile HD élégant et intuitif. Corps en alliage d\'aluminium résistant et raffiné. Installation simple et compatible avec la plupart des portes. Batterie longue durée avec alerte intelligente de faible charge.'
     },
     {
       id: 'i40',
