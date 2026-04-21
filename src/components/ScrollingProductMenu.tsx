@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Smartphone, Zap } from 'lucide-react';
 
@@ -26,9 +26,20 @@ const products = [
 ];
 
 const ScrollingProductMenu = () => {
+  const [currentProductIndex, setCurrentProductIndex] = useState(0);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // Product animation effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentProductIndex((prevIndex) => (prevIndex + 1) % featuredProducts.length);
+    }, 3000); // Change product every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [featuredProducts.length]);
 
   const whatsappContact = () => {
     window.open('https://wa.me/212601534301', '_blank');
@@ -64,18 +75,40 @@ const ScrollingProductMenu = () => {
         <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-red-500/5 rounded-full blur-3xl opacity-20 animate-float-delayed"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Logo */}
+          {/* Animated Product Showcase */}
           <div className="flex justify-center mb-8">
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-lg border border-red-500/50 overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-red-500">
-              <img
-                src="/images/logob.webp"
-                alt="Ez lock Logo"
-                className="w-full h-full object-cover"
-                loading="eager"
-                fetchPriority="high"
-                width="128"
-                height="128"
-              />
+            <div className="relative">
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-2xl border-2 border-red-500/30 overflow-hidden shadow-2xl bg-white transition-all duration-500">
+                <img
+                  src={featuredProducts[currentProductIndex]?.image}
+                  alt={featuredProducts[currentProductIndex]?.name}
+                  className="w-full h-full object-contain p-6 transition-all duration-700 ease-in-out"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+                {/* Product overlay */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                  <h3 className="text-white font-bold text-sm sm:text-base text-center">
+                    {featuredProducts[currentProductIndex]?.name}
+                  </h3>
+                </div>
+              </div>
+
+              {/* Product indicators */}
+              <div className="flex justify-center mt-4 space-x-2">
+                {featuredProducts.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentProductIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === currentProductIndex
+                        ? 'bg-red-500 w-6'
+                        : 'bg-gray-300 hover:bg-red-300'
+                    }`}
+                    aria-label={`View ${featuredProducts[index]?.name}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 
