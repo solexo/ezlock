@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="flex items-center mb-6">
               <div className="w-16 h-16 rounded-lg border border-red-500/50 overflow-hidden">
                 <img
-                  src="/images/logob.webp"
+                  src="/images/logobb.webp"
                   alt="Ez lock Logo"
                   className="w-full h-full object-cover"
                 />

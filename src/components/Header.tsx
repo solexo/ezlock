@@ -50,7 +50,7 @@ const Header = () => {
             <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-lg border border-red-500/50 overflow-hidden transition-all duration-300 group-hover:shadow-glow-blue group-hover:border-red-500">
               <div className="absolute inset-0 bg-gradient-glow"></div>
               <img
-                src="/images/logob.webp"
+                src="/images/logobb.webp"
                 alt="Ez lock Logo"
                 className="w-full h-full object-cover"
                 loading="eager"
