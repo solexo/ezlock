@@ -36,7 +36,7 @@ const ScrollingProductMenu = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Logo in place of the text */}
         <div className="flex justify-center mb-6">
-          <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-lg border border-red-500/50 overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-red-500">
+          <div className="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-lg border border-red-500/50 overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-red-500">
             <img
               src="/images/logob.webp"
               alt="Ez lock Logo"
@@ -131,9 +131,9 @@ const ScrollingProductMenu = () => {
           </div>
         </div>
 
-        {/* Moved text below products */}
-        <div className="text-center mt-8">
-          <h2 className="text-2xl font-title">
+        {/* Moved text below products with animation */}
+        <div className="text-center mt-12 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl font-title">
             <span className="text-red-500">Découvrez</span>{' '}
             <span className="text-black font-bold">nos</span>{' '}
             <span className="text-red-500">produits</span>
