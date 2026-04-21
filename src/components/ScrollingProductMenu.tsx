@@ -34,9 +34,20 @@ const ScrollingProductMenu = () => {
   return (
     <section className="py-8 bg-gray-100 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-2xl font-title text-gray-900 mb-6">
-          Découvrez nos produits
-        </h2>
+        {/* Logo in place of the text */}
+        <div className="flex justify-center mb-6">
+          <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-lg border border-red-500/50 overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-red-500">
+            <img
+              src="/images/logob.webp"
+              alt="Ez lock Logo"
+              className="w-full h-full object-cover"
+              loading="eager"
+              fetchPriority="high"
+              width="128"
+              height="128"
+            />
+          </div>
+        </div>
         <div className="flex justify-center items-start space-x-1 sm:space-x-2 lg:space-x-4">
           {/* Column 1 - Scroll Up */}
           <div className="relative h-80 sm:h-96 w-32 sm:w-44 lg:w-52 overflow-hidden">
@@ -118,6 +129,15 @@ const ScrollingProductMenu = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Moved text below products */}
+        <div className="text-center mt-8">
+          <h2 className="text-2xl font-title">
+            <span className="text-red-500">Découvrez</span>{' '}
+            <span className="text-black font-bold">nos</span>{' '}
+            <span className="text-red-500">produits</span>
+          </h2>
         </div>
       </div>
       <style dangerouslySetInnerHTML={{
