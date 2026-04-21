@@ -4,25 +4,25 @@ import { Shield, Smartphone, Zap } from 'lucide-react';
 
 const products = [
   { id: 'x1ai', image: '/images/x1ai.webp', name: 'Serrure Intelligente X1AI' },
-  { id: 'i40', image: '/images/i40%20(2).webp', name: 'Serrure I40' },
+  { id: 'i40', image: '/images/i40 (2).webp', name: 'Serrure I40' },
   { id: 'i30', image: '/images/i30.webp', name: 'Serrure I30' },
-  { id: 'i29', image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.22.webp', name: 'Serrure I29' },
-  { id: 'k10', image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.21%20(6).webp', name: 'Clavier K10' },
-  { id: 'x5-cam', image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.21%20(5).webp', name: 'Caméra X5' },
-  { id: 'x5-ultra', image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.21%20(4).webp', name: 'Caméra X5 Ultra' },
+  { id: 'i29', image: '/images/WhatsApp Image 2025-09-11 at 15.47.22.webp', name: 'Serrure I29' },
+  { id: 'k10', image: '/images/WhatsApp Image 2025-09-11 at 15.47.21 (6).webp', name: 'Clavier K10' },
+  { id: 'x5-cam', image: '/images/WhatsApp Image 2025-09-11 at 15.47.21 (5).webp', name: 'Caméra X5' },
+  { id: 'x5-ultra', image: '/images/WhatsApp Image 2025-09-11 at 15.47.21 (4).webp', name: 'Caméra X5 Ultra' },
   { id: 'k5', image: '/images/k5.webp', name: 'Clavier K5' },
   { id: 'i20', image: '/images/i20.webp', name: 'Serrure I20' },
   { id: 'qm50', image: '/images/qm50.webp', name: 'Lecteur QM50' },
   { id: 'qm60', image: '/images/qm60.webp', name: 'Lecteur QM60' },
   { id: 'ca1-ca2', image: '/images/ca2.webp', name: 'Contrôleur CA2' },
   { id: 'inta-intb', image: '/images/intb.webp', name: 'Interphone INTB' },
-  { id: 'smart-switch-double', image: '/images/smart%20switch%20rideau.webp', name: 'Interrupteur Double Rideau' },
-  { id: 'smart-switch-simple', image: '/images/smart%20switch.webp', name: 'Interrupteur Simple' },
+  { id: 'smart-switch-double', image: '/images/smart switch rideau.webp', name: 'Interrupteur Double Rideau' },
+  { id: 'smart-switch-simple', image: '/images/smart switch.webp', name: 'Interrupteur Simple' },
   { id: 'cam', image: '/images/cam.webp', name: 'Caméra Surveillance' },
-  { id: 'sound-system', image: '/images/sound/Smart Sound Bar.webp', name: 'Barre de Son' },
-  { id: 'sound-system-2', image: '/images/sound/L1_Pro16.webp', name: 'Système Son L1 Pro' },
-  { id: 'sound-system-3', image: '/images/sound/Bose Music Amplifier.webp', name: 'Amplificateur Bose' },
-  { id: 'controle-acces-2', image: '/images/ca1.webp', name: 'Contrôleur CA1' }
+  { id: 'controle-acces-2', image: '/images/ca1.webp', name: 'Contrôleur CA1' },
+  { id: 'alexa', image: '/images/alexa.webp', name: 'Intégration Alexa' },
+  { id: 'google-home', image: '/images/google home.webp', name: 'Intégration Google Home' },
+  { id: 'tuya', image: '/images/tuya.webp', name: 'Plateforme Tuya' }
 ];
 
 const ScrollingProductMenu = () => {
@@ -85,11 +85,14 @@ const ScrollingProductMenu = () => {
                   className="w-full h-full object-contain p-6 transition-all duration-700 ease-in-out"
                   loading="eager"
                   fetchPriority="high"
+                  onError={(e) => {
+                    e.target.src = '/images/download.webp'; // Fallback image
+                  }}
                 />
                 {/* Product overlay */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <h3 className="text-white font-bold text-sm sm:text-base text-center">
-                    {featuredProducts[currentProductIndex]?.name}
+                    {featuredProducts[currentProductIndex]?.name || 'Produit EZ Lock'}
                   </h3>
                 </div>
               </div>
