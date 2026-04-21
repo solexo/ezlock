@@ -62,7 +62,7 @@ html, body {
 
   .btn-glow::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-blue-accent opacity-0 transition-opacity duration-300;
+    @apply absolute inset-0 bg-gradient-red-accent opacity-0 transition-opacity duration-300;
     pointer-events: none;
   }
 
