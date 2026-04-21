@@ -234,7 +234,7 @@ const SoundSystem = () => {
     const message = productName 
       ? `Bonjour, je suis intéressé par ${productName}. Pouvez-vous me faire un devis?`
       : 'Bonjour, je suis intéressé par vos systèmes audio. Pouvez-vous me contacter?';
-    window.open(`https://wa.me/212660245937?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/212601534301?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   const ProductCard = ({ product }) => {

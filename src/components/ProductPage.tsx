@@ -269,9 +269,9 @@ const ProductPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{product.name} - DOMO28 | Équipements Domotiques Maroc</title>
+        <title>{product.name} - Ez lock | Équipements Domotiques Maroc</title>
         <meta name="description" content={product.description} />
-        <link rel="canonical" href={`https://www.domo28.ma/product/${productId}`} />
+        <link rel="canonical" href={`https://www.ezlock.ma/product/${productId}`} />
       </Helmet>
       <div className="min-h-screen bg-gray-50 dark:bg-black pt-24 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

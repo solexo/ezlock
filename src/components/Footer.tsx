@@ -21,12 +21,12 @@ const Footer = () => {
               <div className="w-16 h-16 rounded-lg border border-blue-accent/50 overflow-hidden">
                 <img
                   src="/images/logob.webp"
-                  alt="DOMO28 Logo"
+                  alt="Ez lock Logo"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="ml-4">
-                <div className="font-hero text-xl text-text-primary">DOMO28</div>
+                <div className="font-hero text-xl text-text-primary">Ez lock</div>
                 <div className="text-sm text-text-secondary">Smart Home Maroc</div>
               </div>
             </div>
@@ -52,19 +52,25 @@ const Footer = () => {
               <div className="flex items-start space-x-3 group cursor-pointer">
                 <Phone className="w-4 h-4 text-blue-accent flex-shrink-0 mt-1" />
                 <div className="text-text-secondary group-hover:text-blue-accent transition-colors text-sm">
-                  +212 660 245 937
+                  06 01 53 43 01
                 </div>
               </div>
               <div className="flex items-start space-x-3 group cursor-pointer">
                 <Phone className="w-4 h-4 text-blue-accent flex-shrink-0 mt-1" />
                 <div className="text-text-secondary group-hover:text-blue-accent transition-colors text-sm">
-                  +212 669 154 235
+                  06 66 59 18 24
+                </div>
+              </div>
+              <div className="flex items-start space-x-3 group cursor-pointer">
+                <Phone className="w-4 h-4 text-blue-accent flex-shrink-0 mt-1" />
+                <div className="text-text-secondary group-hover:text-blue-accent transition-colors text-sm">
+                  Fax: 05 22 55 00 99
                 </div>
               </div>
               <div className="flex items-start space-x-3 group cursor-pointer">
                 <Mail className="w-4 h-4 text-blue-accent flex-shrink-0 mt-1" />
                 <div className="text-text-secondary group-hover:text-blue-accent transition-colors text-sm break-all">
-                  info@domo28.com
+                  info@ezlock.com
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -73,27 +79,34 @@ const Footer = () => {
                   Lun-Sam 8h-18h
                 </div>
               </div>
+              <div className="flex items-start space-x-3 mt-4">
+                <div className="text-text-secondary text-sm">
+                  <div className="font-semibold text-text-primary mb-2">Adresse :</div>
+                  26 Avenue Mers Sultan<br/>
+                  Apt N°3 étage 1<br/>
+                  Casablanca - Maroc
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Services */}
+          {/* Categories */}
           <div>
-            <h3 className="font-heading text-lg text-text-primary mb-6">Services</h3>
+            <h3 className="font-heading text-lg text-text-primary mb-6">Categories</h3>
             <ul className="space-y-3">
               {[
-                { label: 'Serrures Intelligentes', href: '/serrure-intelligente' },
-                { label: 'Domotique', href: '/domotique-casablanca' },
-                { label: 'Caméras', href: '/cameras-surveillance' },
-                { label: 'Contrôle d\'Accès', href: '/controle-acces' },
-                { label: 'Système Son', href: '/systeme-son' },
+                { label: 'CAMÉRA DE SURVEILLANCE' },
+                { label: 'CONTRÔLE D\'ACCÈS' },
+                { label: 'DOMOTIQUE' },
+                { label: 'LECTEUR UHF' },
+                { label: 'SERRURE INTELLIGENTE' },
               ].map((item, index) => (
                 <li key={index}>
-                  <a 
-                    href={item.href} 
-                    className="text-text-secondary hover:text-blue-accent transition-colors text-sm"
+                  <span 
+                    className="text-text-secondary hover:text-blue-accent transition-colors text-sm cursor-pointer"
                   >
                     {item.label}
-                  </a>
+                  </span>
                 </li>
               ))}
             </ul>
@@ -125,7 +138,7 @@ const Footer = () => {
                 </div>
                 <div className="text-left">
                   <div className="text-sm font-semibold text-text-primary">Facebook</div>
-                  <div className="text-xs text-text-secondary">DOMO28</div>
+                  <div className="text-xs text-text-secondary">Ez lock</div>
                 </div>
               </button>
             </div>
@@ -159,7 +172,7 @@ const Footer = () => {
         <div className="border-t border-slate-800/30 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="text-text-secondary text-sm text-center sm:text-left">
-              © 2025 DOMO28. Tous droits réservés.
+              © 2025 Ez lock. Tous droits réservés.
             </div>
             <div className="text-text-secondary text-xs mt-4 sm:mt-0">
               Solutions Smart Home Maroc

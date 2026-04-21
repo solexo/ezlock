@@ -191,7 +191,7 @@ const SerrureIntelligente = () => {
   }, []);
 
   const whatsappContact = () => {
-    window.open('https://wa.me/212660245937', '_blank');
+    window.open('https://wa.me/212601534301', '_blank');
   };
 
   return (
@@ -308,7 +308,7 @@ const SerrureIntelligente = () => {
           </h2>
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              DOMO28 est le leader en installation de serrures intelligentes au Maroc. Nos solutions de sécurité avancées combinent technologie de pointe et installation professionnelle pour protéger votre domicile ou votre entreprise.
+              Ez lock est le leader en installation de serrures intelligentes au Maroc. Nos solutions de sécurité avancées combinent technologie de pointe et installation professionnelle pour protéger votre domicile ou votre entreprise.
             </p>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Avantages des Serrures Intelligentes</h3>
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
@@ -319,7 +319,7 @@ const SerrureIntelligente = () => {
               <li>Alertes de sécurité instantanées</li>
             </ul>
             <p className="text-gray-600 dark:text-gray-300">
-              Contactez DOMO28 dès aujourd'hui pour un devis gratuit et une installation sous 48h. Notre équipe d'experts vous accompagne dans le choix de la meilleure solution de serrure intelligente adaptée à vos besoins.
+              Contactez Ez lock dès aujourd'hui pour un devis gratuit et une installation sous 48h. Notre équipe d'experts vous accompagne dans le choix de la meilleure solution de serrure intelligente adaptée à vos besoins.
             </p>
           </div>
         </div>

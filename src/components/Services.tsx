@@ -6,7 +6,7 @@ const Services = () => {
     {
       icon: Wrench,
       title: 'Installation Pro',
-      description: 'Installation par techniciens DOMO28 certifiés',
+      description: 'Installation par techniciens Ez lock certifiés',
     },
     {
       icon: Shield,

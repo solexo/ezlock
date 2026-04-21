@@ -104,7 +104,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       `Bonjour ! Je suis intéressé(e) par la ${product.name}. Pourriez-vous me donner plus d'informations et un devis ?`
     );
 
-    window.open(`https://wa.me/212660245937?text=${message}`, '_blank');
+    window.open(`https://wa.me/212601534301?text=${message}`, '_blank');
   };
 
   const handleWhatsAppPurchase = async (e: React.MouseEvent | React.TouchEvent) => {
@@ -117,7 +117,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       `Bonjour ! Je souhaite acheter la ${product.name}. Pouvez-vous me donner le prix et les modalités d'achat ?`
     );
 
-    window.open(`https://wa.me/212660245937?text=${message}`, '_blank');
+    window.open(`https://wa.me/212601534301?text=${message}`, '_blank');
   };
 
   return (

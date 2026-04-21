@@ -16,23 +16,23 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    // Force dark mode for premium aesthetic
-    document.documentElement.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
+    // Force light mode for clean aesthetic
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
   }, []);
 
   const whatsappContact = () => {
-    window.open('https://wa.me/212660245937', '_blank');
+    window.open('https://wa.me/212601534301', '_blank');
   };
 
   const navLinks = [
     { to: '/', label: 'Accueil' },
-    { to: '/serrure-intelligente', label: 'Serrures Intelligentes' },
-    { to: '/domotique-casablanca', label: 'Domotique' },
-    { to: '/cameras-surveillance', label: 'Caméras' },
-    { to: '/controle-acces', label: 'Contrôle d\'Accès' },
-    { to: '/systeme-son', label: 'Son' },
-    { to: '/blog', label: 'Blog' },
+    { to: '/serrure-intelligente', label: 'SERRURE INTELLIGENTE' },
+    { to: '/domotique-casablanca', label: 'DOMOTIQUE' },
+    { to: '/cameras-surveillance', label: 'CAMÉRA DE SURVEILLANCE' },
+    { to: '/controle-acces', label: 'CONTRÔLE D\'ACCÈS' },
+    { to: '/lecteur-uhf', label: 'LECTEUR UHF' },
+    { to: '/contact', label: 'CONTACTEZ NOUS' },
   ];
 
   return (
@@ -51,7 +51,7 @@ const Header = () => {
               <div className="absolute inset-0 bg-gradient-glow"></div>
               <img
                 src="/images/logob.webp"
-                alt="DOMO28 Logo"
+                alt="Ez lock Logo"
                 className="w-full h-full object-cover"
                 loading="eager"
                 fetchPriority="high"

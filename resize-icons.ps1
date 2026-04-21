@@ -1,7 +1,7 @@
-# DOMO28 Icon Resizer PowerShell Script
+# Ez lock Icon Resizer PowerShell Script
 # This script resizes the logo to proper icon sizes
 
-Write-Host "🔧 DOMO28 Icon Resizer" -ForegroundColor Cyan
+Write-Host "🔧 Ez lock Icon Resizer" -ForegroundColor Cyan
 Write-Host "================================" -ForegroundColor Cyan
 
 # Check if the logo exists

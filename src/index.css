@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Root dark mode setup */
+/* Root light mode setup */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html, body {
-  background-color: #020617;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* Professional Typography */

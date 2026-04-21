@@ -283,7 +283,7 @@ const ProductGallery = () => {
                 Contactez nos experts pour un conseil personnalisé gratuit et un devis sur mesure.
               </p>
               <button
-                onClick={() => window.open('https://wa.me/212660245937', '_blank')}
+                onClick={() => window.open('https://wa.me/212601534301', '_blank')}
                 className="inline-flex items-center space-x-2 bg-white text-blue-accent hover:bg-slate-50 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:shadow-glow-lg active:scale-95"
               >
                 <span>💬</span>

@@ -4,15 +4,15 @@ import { ArrowLeft, Calendar, User, Tag } from 'lucide-react';
 
 const Blog = () => {
   const whatsappContact = () => {
-    window.open('https://wa.me/212660245937', '_blank');
+    window.open('https://wa.me/212601534301', '_blank');
   };
   const articles = [
     {
       id: 1,
       title: 'Installation Serrure Intelligente : Guide Complet',
-      excerpt: 'Découvrez comment installer une serrure intelligente avec DOMO28. Guide étape par étape pour une sécurité optimale.',
+      excerpt: 'Découvrez comment installer une serrure intelligente avec Ez lock. Guide étape par étape pour une sécurité optimale.',
       date: '2025-10-20',
-      author: 'DOMO28 Team',
+      author: 'Ez lock Team',
       tags: ['serrure intelligente', 'installation'],
       image: '/images/i20.webp'
     },
@@ -21,7 +21,7 @@ const Blog = () => {
       title: 'Domotique Maroc : Tendances 2025',
       excerpt: 'Les dernières tendances en domotique au Maroc pour 2025. Découvrez les innovations en matière de maison connectée.',
       date: '2025-10-15',
-      author: 'DOMO28 Team',
+      author: 'Ez lock Team',
       tags: ['domotique', 'Maroc', 'tendances'],
       image: '/images/ca1.webp'
     },
@@ -30,7 +30,7 @@ const Blog = () => {
       title: 'Caméras Surveillance : Choisir le Bon Système',
       excerpt: 'Guide pour choisir le système de caméras surveillance idéal pour votre propriété.',
       date: '2025-10-10',
-      author: 'DOMO28 Team',
+      author: 'Ez lock Team',
       tags: ['caméras surveillance', 'sécurité'],
       image: '/images/cam.webp'
     }

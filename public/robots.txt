@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://domo28.ma/sitemap.xml
+Sitemap: https://ezlock.ma/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1

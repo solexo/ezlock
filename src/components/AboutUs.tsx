@@ -6,7 +6,7 @@ const AboutUs: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            À Propos de DOMO28
+            À Propos de Ez lock
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 text-center">
             Découvrez notre présentation complète sur les technologies domotiques modernes
@@ -17,11 +17,11 @@ const AboutUs: React.FC = () => {
           <div className="p-6">
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src={`https://docs.google.com/gview?url=https://domo28.ma/images/Blue%20and%20White%20Modern%20Smart%20Home%20Technology%20Presentation.pdf&embedded=true`}
+                src={`https://docs.google.com/gview?url=https://ezlock.ma/images/Blue%20and%20White%20Modern%20Smart%20Home%20Technology%20Presentation.pdf&embedded=true`}
                 width="100%"
                 height="600px"
                 className="border-0 rounded"
-                title="Présentation DOMO28 - Technologies Domotiques"
+                title="Présentation Ez lock - Technologies Domotiques"
                 allowFullScreen
               >
                 <div className="flex flex-col items-center justify-center h-64 bg-gray-100 dark:bg-gray-700 rounded">

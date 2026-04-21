@@ -16,12 +16,12 @@ const BlogPost = () => {
         <h2>Étape 1 : Préparation</h2>
         <p>Avant de commencer, assurez-vous d'avoir tous les outils nécessaires : tournevis, perceuse, et la serrure intelligente.</p>
         <h2>Étape 2 : Installation</h2>
-        <p>Suivez les instructions du fabricant pour installer la serrure. DOMO28 offre une installation professionnelle.</p>
+        <p>Suivez les instructions du fabricant pour installer la serrure. Ez lock offre une installation professionnelle.</p>
         <h2>Conclusion</h2>
-        <p>Avec une serrure intelligente, votre sécurité est renforcée. Contactez DOMO28 pour une installation experte.</p>
+        <p>Avec une serrure intelligente, votre sécurité est renforcée. Contactez Ez lock pour une installation experte.</p>
       `,
       date: '2025-10-20',
-      author: 'DOMO28 Team',
+      author: 'Ez lock Team',
       tags: ['serrure intelligente', 'installation'],
       image: '/images/i20.webp'
     },
@@ -34,10 +34,10 @@ const BlogPost = () => {
         <h2>Tendances Principales</h2>
         <p>Intégration IA, sécurité avancée, et économie d'énergie sont au cœur des innovations.</p>
         <h2>Conclusion</h2>
-        <p>Adoptez la domotique pour une maison moderne. DOMO28 est votre partenaire.</p>
+        <p>Adoptez la domotique pour une maison moderne. Ez lock est votre partenaire.</p>
       `,
       date: '2025-10-15',
-      author: 'DOMO28 Team',
+      author: 'Ez lock Team',
       tags: ['domotique', 'tendances'],
       image: '/images/ca1.webp'
     },
@@ -50,10 +50,10 @@ const BlogPost = () => {
         <h2>Critères de Choix</h2>
         <p>Considérez la résolution, la vision nocturne, et l'intégration mobile.</p>
         <h2>Conclusion</h2>
-        <p>DOMO28 propose des systèmes de qualité. Contactez-nous pour un devis.</p>
+        <p>Ez lock propose des systèmes de qualité. Contactez-nous pour un devis.</p>
       `,
       date: '2025-10-10',
-      author: 'DOMO28 Team',
+      author: 'Ez lock Team',
       tags: ['caméras surveillance', 'sécurité'],
       image: '/images/cam.webp'
     }
@@ -75,19 +75,19 @@ const BlogPost = () => {
         },
         "publisher": {
           "@type": "Organization",
-          "name": "DOMO28",
+          "name": "Ez lock",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://domo28.ma/images/logo_resized.webp"
+            "url": "https://ezlock.ma/images/logo_resized.webp"
           }
         },
         "datePublished": article.date,
         "dateModified": article.date,
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": `https://domo28.ma/blog/${article.id}`
+          "@id": `https://ezlock.ma/blog/${article.id}`
         },
-        "image": `https://domo28.ma${article.image}`
+        "image": `https://ezlock.ma${article.image}`
       };
 
       // Remove existing blog post schema if any
@@ -131,9 +131,9 @@ const BlogPost = () => {
   return (
     <>
       <Helmet>
-        <title>{article.title} - Blog DOMO28 | Domotique Maroc</title>
+        <title>{article.title} - Blog Ez lock | Domotique Maroc</title>
         <meta name="description" content={article.title} />
-        <link rel="canonical" href={`https://www.domo28.ma/blog/${id}`} />
+        <link rel="canonical" href={`https://www.ezlock.ma/blog/${id}`} />
       </Helmet>
       <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300 pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

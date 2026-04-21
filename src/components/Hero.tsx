@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   const whatsappContact = () => {
-    window.open('https://wa.me/212660245937', '_blank');
+    window.open('https://wa.me/212601534301', '_blank');
   };
 
   const features = [
@@ -76,7 +76,7 @@ const Hero = () => {
             {/* Promotional text right after animation */}
             <div className="mt-6 sm:mt-8">
               <p className="text-sm sm:text-base text-text-secondary max-w-3xl mx-auto leading-relaxed px-4 text-center">
-                🏠 <strong>Leader domotique Maroc</strong> - DOMO28 transforme votre maison en habitat intelligent.
+                🏠 <strong>Leader domotique Maroc</strong> - Ez lock transforme votre maison en habitat intelligent.
                 🔐 Installation serrures intelligentes, 📹 caméras surveillance, 🚪 contrôle d'accès, 🪟 rideaux automatiques,
                 💡 éclairage LED intelligent, 🚪 portes automatiques, 🌱 agriculture intelligente et 📱 contrôle centralisé.
                 ⚡ Installation professionnelle domotique Maroc - Devis gratuit 24h !

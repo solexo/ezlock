@@ -14,7 +14,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Bonjour ! 👋 Je suis votre assistant IA DOMO28 spécialisé en domotique avancée. Je peux vous présenter nos solutions complètes : serrures intelligentes, caméras IP, interrupteurs smart, relais automatisés, portes motorisées, poignets connectés, thermostats, et bien plus ! Je vous aide à créer votre maison du futur. Que souhaitez-vous découvrir ?",
+      text: "Bonjour ! 👋 Je suis votre assistant IA Ez lock spécialisé en domotique avancée. Je peux vous présenter nos solutions complètes : serrures intelligentes, caméras IP, interrupteurs smart, relais automatisés, portes motorisées, poignets connectés, thermostats, et bien plus ! Je vous aide à créer votre maison du futur. Que souhaitez-vous découvrir ?",
       isBot: true,
       timestamp: new Date()
     }
@@ -779,7 +779,7 @@ Que souhaitez-vous découvrir ? 🤔`;
     // Réponse par défaut
     return `Bonjour ! 👋 
 
-Je suis votre assistant DOMO28 spécialisé en domotique avancée. Je peux vous aider avec :
+Je suis votre assistant Ez lock spécialisé en domotique avancée. Je peux vous aider avec :
 
 🔐 **Serrures intelligentes** - i30, i40, k10, i29, X5, M1
 📹 **Caméras IP 4K** - Surveillance intelligente
@@ -826,7 +826,7 @@ Ex: "i30", "smart switch", "caméra", "thermostat", "alarme"
             <div className="flex items-center space-x-2 sm:space-x-3">
               <Bot className="w-5 h-5 sm:w-6 sm:h-6" />
               <div>
-                <h3 className="font-heading text-sm sm:text-base">Assistant DOMO28</h3>
+                <h3 className="font-heading text-sm sm:text-base">Assistant Ez lock</h3>
                 <p className="text-xs opacity-90">En ligne</p>
               </div>
             </div>
@@ -877,10 +877,10 @@ Ex: "i30", "smart switch", "caméra", "thermostat", "alarme"
 
                   if (isMobile) {
                     // Use whatsapp:// URL scheme for mobile apps
-                    window.location.href = 'whatsapp://send?phone=212660245937';
+                    window.location.href = 'whatsapp://send?phone=212601534301';
                   } else {
                     // Use web WhatsApp for desktop
-                    window.open('https://wa.me/212660245937', '_blank');
+                    window.open('https://wa.me/212601534301', '_blank');
                   }
                 }}
                 className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-xl font-semibold hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 text-sm sm:text-base touch-manipulation"

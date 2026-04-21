@@ -7,9 +7,9 @@ const Contact = () => {
     await trackProspect();
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     if (isMobile) {
-      window.location.href = 'whatsapp://send?phone=212660245937';
+      window.location.href = 'whatsapp://send?phone=212601534301';
     } else {
-      window.open('https://wa.me/212660245937', '_blank');
+      window.open('https://wa.me/212601534301', '_blank');
     }
   };
 
@@ -32,7 +32,7 @@ const Contact = () => {
             Contactez Nos <span className="bg-gradient-to-r from-blue-accent to-blue-300 bg-clip-text text-transparent">Experts</span>
           </h2>
           <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Notre équipe DOMO28 est à votre disposition pour répondre à vos questions et accompagner votre projet.
+            Notre équipe Ez lock est à votre disposition pour répondre à vos questions et accompagner votre projet.
           </p>
         </div>
 
@@ -58,8 +58,10 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-heading text-text-primary mb-1">Téléphone</h4>
-                    <p className="text-blue-accent font-semibold text-lg">+212 660 245 937</p>
-                    <p className="text-blue-accent font-semibold text-lg">+212 669 154 235</p>
+                    <p className="text-blue-accent font-semibold text-lg">06 01 53 43 01</p>
+                    <p className="text-blue-accent font-semibold text-lg">06 66 59 18 24</p>
+                    <h4 className="font-heading text-text-primary mb-1 mt-3">Fax</h4>
+                    <p className="text-blue-accent font-semibold text-lg">05 22 55 00 99</p>
                     <p className="text-text-secondary text-sm mt-1">Lun-Sam 8h-18h</p>
                   </div>
                 </div>

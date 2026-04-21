@@ -4,7 +4,7 @@ import { ArrowLeft, Home, Zap, Shield } from 'lucide-react';
 
 const DomotiqueCasablanca = () => {
   const whatsappContact = () => {
-    window.open('https://wa.me/212660245937', '_blank');
+    window.open('https://wa.me/212601534301', '_blank');
   };
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300 pt-24">
@@ -71,7 +71,7 @@ const DomotiqueCasablanca = () => {
           </h2>
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              DOMO28 est votre partenaire de confiance pour tous vos projets domotiques au Maroc. Avec plus de 500 installations réussies, nous sommes les experts en systèmes domotiques.
+              Ez lock est votre partenaire de confiance pour tous vos projets domotiques au Maroc. Avec plus de 500 installations réussies, nous sommes les experts en systèmes domotiques.
             </p>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Nos Services</h3>
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
@@ -84,7 +84,7 @@ const DomotiqueCasablanca = () => {
               <li>Agriculture intelligente</li>
               <li>Maison connectée</li>
             </ul>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Pourquoi Choisir DOMO28 à Casablanca ?</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Pourquoi Choisir Ez lock à Casablanca ?</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               Notre expertise au Maroc nous permet de comprendre vos besoins spécifiques et de proposer des solutions adaptées au climat et aux exigences locales.
             </p>
@@ -96,7 +96,7 @@ const DomotiqueCasablanca = () => {
               <li>Devis gratuit en 24h</li>
             </ul>
             <p className="text-gray-600 dark:text-gray-300">
-              Contactez-nous dès aujourd'hui pour transformer votre maison en un habitat intelligent. DOMO28 - Votre Maison De Demain au Maroc.
+              Contactez-nous dès aujourd'hui pour transformer votre maison en un habitat intelligent. Ez lock - Votre Maison De Demain au Maroc.
             </p>
           </div>
         </div>

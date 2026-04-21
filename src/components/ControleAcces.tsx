@@ -26,7 +26,7 @@ const ControleAcces = () => {
   }, []);
 
   const whatsappContact = () => {
-    window.open('https://wa.me/212660245937', '_blank');
+    window.open('https://wa.me/212601534301', '_blank');
   };
 
   // Translations object
@@ -47,7 +47,7 @@ const ControleAcces = () => {
       productsTitle: "Nos Produits de Contrôle d'Accès",
       installation: {
         title: "Installation Contrôle d'Accès Maroc",
-        intro: "DOMO28 installe des systèmes de contrôle d'accès de dernière génération pour sécuriser vos locaux. Nos solutions s'adaptent à tous types d'environnement.",
+        intro: "Ez lock installe des systèmes de contrôle d'accès de dernière génération pour sécuriser vos locaux. Nos solutions s'adaptent à tous types d'environnement.",
         typesTitle: "Types de Contrôle d'Accès",
         types: [
           "Contrôle d'Accès Biométrique",
@@ -79,7 +79,7 @@ const ControleAcces = () => {
       productsTitle: "Our Access Control Products",
       installation: {
         title: "Access Control Installation Morocco",
-        intro: "DOMO28 installs state-of-the-art access control systems to secure your premises. Our solutions adapt to all types of environments.",
+        intro: "Ez lock installs state-of-the-art access control systems to secure your premises. Our solutions adapt to all types of environments.",
         typesTitle: "Types of Access Control",
         types: [
           "Biometric Access Control",

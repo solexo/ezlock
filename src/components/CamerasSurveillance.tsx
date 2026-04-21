@@ -26,14 +26,14 @@ const CamerasSurveillance = () => {
   }, []);
 
   const whatsappContact = () => {
-    window.open('https://wa.me/212660245937', '_blank');
+    window.open('https://wa.me/212601534301', '_blank');
   };
   return (
     <>
       <Helmet>
-        <title>{selectedLang === 'Fr' ? 'Caméras Surveillance Maroc - Installation & Sécurité | DOMO28' : 'Surveillance Cameras Morocco - Installation & Security | DOMO28'}</title>
+        <title>{selectedLang === 'Fr' ? 'Caméras Surveillance Maroc - Installation & Sécurité | Ez lock' : 'Surveillance Cameras Morocco - Installation & Security | Ez lock'}</title>
         <meta name="description" content={selectedLang === 'Fr' ? "Installation professionnelle de systèmes de caméras surveillance au Maroc. Solutions analogiques et IP avec marques leaders comme Hikvision et Ezviz." : "Professional installation of surveillance camera systems in Morocco. Analog and IP solutions with leading brands like Hikvision and Ezviz."} />
-        <link rel="canonical" href="https://www.domo28.ma/cameras-surveillance" />
+        <link rel="canonical" href="https://www.ezlock.ma/cameras-surveillance" />
       </Helmet>
       <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300 pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -133,7 +133,7 @@ const CamerasSurveillance = () => {
           </h2>
            <div className="prose prose-lg dark:prose-invert max-w-none">
              <p className="text-gray-600 dark:text-gray-300 mb-6">
-               {selectedLang === 'Fr' ? "DOMO28 propose des solutions complètes de caméras surveillance pour sécuriser votre domicile, entreprise ou propriété au Maroc. Nos systèmes incluent installation, configuration et formation." : "DOMO28 offers comprehensive surveillance camera solutions to secure your home, business or property in Morocco. Our systems include installation, configuration and training."}
+               {selectedLang === 'Fr' ? "Ez lock propose des solutions complètes de caméras surveillance pour sécuriser votre domicile, entreprise ou propriété au Maroc. Nos systèmes incluent installation, configuration et formation." : "Ez lock offers comprehensive surveillance camera solutions to secure your home, business or property in Morocco. Our systems include installation, configuration and training."}
              </p>
              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{selectedLang === 'Fr' ? 'Nos Services de Caméras Surveillance' : 'Our Surveillance Camera Services'}</h3>
              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
