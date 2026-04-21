@@ -14,8 +14,8 @@ export default {
         'blue-hover': '#2563EB',
         'blue-dark': '#1D4ED8',
         // Glow colors
-        'glow-blue': 'rgba(59,130,246,0.4)',
-        'glow-blue-dim': 'rgba(59,130,246,0.15)',
+        'glow-red': 'rgba(239,68,68,0.4)',
+        'glow-red-dim': 'rgba(239,68,68,0.15)',
         // Text colors
         'text-primary': '#000000',
         'text-secondary': '#666666',
@@ -91,8 +91,8 @@ export default {
       },
       backgroundImage: {
         'gradient-dark': 'linear-gradient(to right, #020617, #0F172A)',
-        'gradient-glow': 'radial-gradient(circle, rgba(59,130,246,0.1) 0%, rgba(2,6,23,0) 70%)',
-        'gradient-blue-accent': 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)',
+        'gradient-glow': 'radial-gradient(circle, rgba(239,68,68,0.1) 0%, rgba(2,6,23,0) 70%)',
+        'gradient-red-accent': 'linear-gradient(135deg, #EF4444 0%, #DC2626 100%)',
       },
     },
   },

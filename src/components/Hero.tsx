@@ -39,13 +39,13 @@ const Hero = () => {
       id="accueil"
       className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-24 lg:pt-28"
     >
-      {/* Premium gradient background */}
-      <div className="absolute inset-0 bg-gradient-smart"></div>
+      {/* White background */}
+      <div className="absolute inset-0 bg-white"></div>
 
       {/* Animated glow orbs in background */}
-      <div className="absolute top-0 -left-40 w-80 h-80 bg-blue-accent/20 rounded-full blur-3xl opacity-20 animate-float"></div>
-      <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-blue-accent/10 rounded-full blur-3xl opacity-20 animate-float-delayed"></div>
-      <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-accent/5 rounded-full blur-3xl opacity-10 -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute top-0 -left-40 w-80 h-80 bg-red-500/20 rounded-full blur-3xl opacity-20 animate-float"></div>
+      <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-red-500/10 rounded-full blur-3xl opacity-20 animate-float-delayed"></div>
+      <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-red-500/5 rounded-full blur-3xl opacity-10 -translate-x-1/2 -translate-y-1/2"></div>
 
        {/* Content */}
        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
@@ -54,7 +54,7 @@ const Hero = () => {
           {/* Main heading */}
           <div className="space-y-4 sm:space-y-6 text-center animate-fade-in-up">
             <h1 className="font-hero text-2xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight">
-              <span className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 bg-clip-text text-transparent">
                 {selectedLang === 'Fr' ? 'Solutions domotiques professionnelles pour bâtiments intelligents' : 'Professional smart home solutions for intelligent buildings'}
               </span>
             </h1>
@@ -63,7 +63,7 @@ const Hero = () => {
               {selectedLang === 'Fr'
                 ? 'Améliorez la sécurité, le confort et l\'efficacité énergétique de vos espaces.'
                 : 'Improve the security, comfort and energy efficiency of your spaces.'}
-              <span className="text-blue-accent font-semibold">
+              <span className="text-red-500 font-semibold">
                 {selectedLang === 'Fr' ? ' Sécurité, confort, efficacité énergétique.' : ' Security, comfort, energy efficiency.'}
               </span>
             </p>
@@ -91,8 +91,8 @@ const Hero = () => {
                   className="card-elevated p-6 sm:p-8 text-center group"
                 >
                   <div className="flex justify-center mb-4">
-                    <div className="p-3 bg-blue-accent/10 rounded-xl group-hover:bg-blue-accent/20 transition-colors duration-300">
-                      <Icon className="w-8 h-8 text-blue-accent" />
+                    <div className="p-3 bg-red-500/10 rounded-xl group-hover:bg-red-500/20 transition-colors duration-300">
+                      <Icon className="w-8 h-8 text-red-500" />
                     </div>
                   </div>
                   <h3 className="font-heading text-lg sm:text-xl text-text-primary mb-2">
