@@ -38,7 +38,7 @@ const Portfolio = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-title text-gray-900 mb-4">
-            Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-blue-accent">Projets</span>
+            Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-red-500">Projets</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Découvrez nos réalisations en domotique et sécurité au Maroc. Projets réussis à Casablanca, Rabat, Marrakech et Tanger.
@@ -73,7 +73,7 @@ const Portfolio = () => {
                 </div>
                 <Link
                   to={`/portfolio/${project.id}`}
-                   className="inline-flex items-center text-blue-accent hover:text-blue-400 font-medium"
+                   className="inline-flex items-center text-red-500 hover:text-red-400 font-medium"
                 >
                   Voir le projet
                   <ExternalLink className="w-4 h-4 ml-1" />
@@ -86,7 +86,7 @@ const Portfolio = () => {
         <div className="text-center mt-12">
           <Link
             to="/portfolio"
-            className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             Voir Tous les Projets
           </Link>

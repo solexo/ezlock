@@ -14,22 +14,22 @@ const Contact = () => {
   };
 
   const benefits = [
-    { icon: Clock, label: 'Devis sous 24h', color: 'bg-blue-accent/10' },
-    { icon: Users, label: 'Équipe d\'experts', color: 'bg-blue-accent/10' },
-    { icon: MapPin, label: 'Déplacement gratuit', color: 'bg-blue-accent/10' },
-    { icon: Mail, label: 'Suivi personnalisé', color: 'bg-blue-accent/10' },
+    { icon: Clock, label: 'Devis sous 24h', color: 'bg-red-500/10' },
+    { icon: Users, label: 'Équipe d\'experts', color: 'bg-red-500/10' },
+    { icon: MapPin, label: 'Déplacement gratuit', color: 'bg-red-500/10' },
+    { icon: Mail, label: 'Suivi personnalisé', color: 'bg-red-500/10' },
   ];
 
   return (
     <section id="contact" className="relative py-20 sm:py-24 bg-gradient-smart overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-blue-accent/5 rounded-full blur-3xl opacity-10 -translate-y-1/2"></div>
+      <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-red-500/5 rounded-full blur-3xl opacity-10 -translate-y-1/2"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 sm:mb-20">
           <h2 className="font-hero text-4xl sm:text-5xl lg:text-6xl text-text-primary mb-4 sm:mb-6">
-            Contactez Nos <span className="bg-gradient-to-r from-blue-accent to-blue-300 bg-clip-text text-transparent">Experts</span>
+            Contactez Nos <span className="bg-gradient-to-r from-red-500 to-red-300 bg-clip-text text-transparent">Experts</span>
           </h2>
           <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
             Notre équipe Ez lock est à votre disposition pour répondre à vos questions et accompagner votre projet.
@@ -53,15 +53,15 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="card-elevated p-6 group">
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-blue-accent/10 rounded-lg group-hover:bg-blue-accent/20 transition-colors">
-                    <Phone className="w-6 h-6 text-blue-accent" />
+                  <div className="p-3 bg-red-500/10 rounded-lg group-hover:bg-red-500/20 transition-colors">
+                    <Phone className="w-6 h-6 text-red-500" />
                   </div>
                   <div>
                     <h4 className="font-heading text-text-primary mb-1">Téléphone</h4>
-                    <p className="text-blue-accent font-semibold text-lg">06 01 53 43 01</p>
-                    <p className="text-blue-accent font-semibold text-lg">06 66 59 18 24</p>
+                    <p className="text-red-500 font-semibold text-lg">06 01 53 43 01</p>
+                    <p className="text-red-500 font-semibold text-lg">06 66 59 18 24</p>
                     <h4 className="font-heading text-text-primary mb-1 mt-3">Fax</h4>
-                    <p className="text-blue-accent font-semibold text-lg">05 22 55 00 99</p>
+                    <p className="text-red-500 font-semibold text-lg">05 22 55 00 99</p>
                     <p className="text-text-secondary text-sm mt-1">Lun-Sam 8h-18h</p>
                   </div>
                 </div>
@@ -86,8 +86,8 @@ const Contact = () => {
               {benefits.map((benefit, index) => {
                 const Icon = benefit.icon;
                 return (
-                  <div key={index} className={`${benefit.color} border border-blue-accent/20 rounded-lg p-4 flex items-center space-x-3 hover:border-blue-accent/50 transition-colors`}>
-                    <Icon className="w-5 h-5 text-blue-accent flex-shrink-0" />
+                  <div key={index} className={`${benefit.color} border border-red-500/20 rounded-lg p-4 flex items-center space-x-3 hover:border-red-500/50 transition-colors`}>
+                    <Icon className="w-5 h-5 text-red-500 flex-shrink-0" />
                     <span className="text-sm font-medium text-text-primary">{benefit.label}</span>
                   </div>
                 );
@@ -96,9 +96,9 @@ const Contact = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="card-elevated bg-gradient-blue-accent relative overflow-hidden p-8 md:p-12 flex flex-col justify-center">
+          <div className="card-elevated bg-gradient-red-500 relative overflow-hidden p-8 md:p-12 flex flex-col justify-center">
             {/* Glow overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-accent/10 to-transparent opacity-50"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent opacity-50"></div>
 
             <div className="relative z-10 text-center space-y-8">
               <div className="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto">
@@ -115,7 +115,7 @@ const Contact = () => {
 
               <button
                 onClick={whatsappContact}
-                className="w-full bg-white text-blue-accent hover:bg-slate-50 font-bold text-lg py-4 px-6 rounded-lg transition-all duration-300 hover:shadow-glow-lg active:scale-95 flex items-center justify-center space-x-3"
+                className="w-full bg-white text-red-500 hover:bg-slate-50 font-bold text-lg py-4 px-6 rounded-lg transition-all duration-300 hover:shadow-glow-lg active:scale-95 flex items-center justify-center space-x-3"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span>Devis Gratuit</span>

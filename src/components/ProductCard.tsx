@@ -139,7 +139,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
       {/* Content */}
       <div className="p-6 flex-grow flex flex-col bg-gray-50">
-        <h3 className="text-xl font-heading text-text-primary mb-2 group-hover:text-blue-accent transition-colors duration-300">
+        <h3 className="text-xl font-heading text-text-primary mb-2 group-hover:text-red-500 transition-colors duration-300">
           {product.name}
         </h3>
         
@@ -154,9 +154,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             {product.features.map((feature, index) => (
               <div 
                 key={index} 
-                className="flex items-center space-x-1 bg-gray-100 border border-gray-300 px-3 py-1.5 rounded-lg text-xs text-gray-600 hover:border-blue-accent transition-colors"
+                className="flex items-center space-x-1 bg-gray-100 border border-gray-300 px-3 py-1.5 rounded-lg text-xs text-gray-600 hover:border-red-500 transition-colors"
               >
-                <div className="text-blue-accent">
+                <div className="text-red-500">
                   {getFeatureIcon(feature)}
                 </div>
                 <span>{feature}</span>
@@ -172,7 +172,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             onTouchStart={handleWhatsAppPurchase}
              className="w-full relative px-4 py-3 bg-blue-600 text-white font-semibold rounded-lg overflow-hidden group/btn transition-all duration-300 hover:shadow-glow-blue active:scale-95"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-accent/0 via-blue-accent/20 to-blue-accent/0 group-hover/btn:via-blue-accent/40 transition-all"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/20 to-red-500/0 group-hover/btn:via-red-500/40 transition-all"></div>
             <span className="relative flex items-center justify-center space-x-2">
               <span>🛒 Acheter</span>
             </span>
@@ -181,9 +181,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
            <button
              onClick={handleWhatsAppContact}
              onTouchStart={handleWhatsAppContact}
-             className="w-full relative px-4 py-3 bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white font-semibold rounded-lg overflow-hidden group/btn transition-all duration-300 hover:shadow-glow-blue active:scale-95"
+             className="w-full relative px-4 py-3 bg-gradient-to-r from-red-500 via-red-400 to-red-300 text-white font-semibold rounded-lg overflow-hidden group/btn transition-all duration-300 hover:shadow-glow-blue active:scale-95"
            >
-             <div className="absolute inset-0 bg-gradient-to-r from-blue-accent/0 via-blue-accent/20 to-blue-accent/0 group-hover/btn:via-blue-accent/40 transition-all"></div>
+             <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/20 to-red-500/0 group-hover/btn:via-red-500/40 transition-all"></div>
              <span className="relative flex items-center justify-center space-x-2">
                <span>💬 Devis</span>
              </span>
@@ -191,7 +191,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
           <Link
             to={product.url}
-            className="w-full px-4 py-3 bg-gray-100 border border-gray-300 text-black hover:border-blue-accent hover:text-blue-accent font-semibold rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+            className="w-full px-4 py-3 bg-gray-100 border border-gray-300 text-black hover:border-red-500 hover:text-red-500 font-semibold rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
           >
             <span>Détails</span>
             <ArrowRight className="w-4 h-4" />
@@ -207,7 +207,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               <h3 className="text-xl font-heading text-text-primary">{product.name}</h3>
               <button 
                 onClick={() => setShowImageGallery(false)}
-                className="text-text-secondary hover:text-blue-accent text-2xl transition-colors"
+                className="text-text-secondary hover:text-red-500 text-2xl transition-colors"
               >
                 ×
               </button>
@@ -229,7 +229,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                     onClick={() => setCurrentImageIndex(index)}
                     className={`w-3 h-3 rounded-full transition-all ${
                       index === currentImageIndex 
-                        ? 'bg-blue-accent w-8' 
+                        ? 'bg-red-500 w-8' 
                         : 'bg-slate-700 hover:bg-slate-600'
                     }`}
                   />

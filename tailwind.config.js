@@ -9,10 +9,10 @@ export default {
         'dark-bg': '#020617',
         'dark-secondary': '#0F172A',
         'dark-tertiary': '#1E293B',
-        // Electric blue accent
-        'blue-accent': '#3B82F6',
-        'blue-hover': '#2563EB',
-        'blue-dark': '#1D4ED8',
+        // Electric red accent
+        'blue-accent': '#EF4444',
+        'blue-hover': '#DC2626',
+        'blue-dark': '#B91C1C',
         // Glow colors
         'glow-red': 'rgba(239,68,68,0.4)',
         'glow-red-dim': 'rgba(239,68,68,0.15)',
@@ -25,9 +25,9 @@ export default {
         'glass': 'rgba(15, 23, 42, 0.5)',
       },
       boxShadow: {
-        'glow-blue': '0 0 20px rgba(59,130,246,0.3)',
-        'glow-blue-lg': '0 0 40px rgba(59,130,246,0.4)',
-        'glow-blue-xl': '0 0 60px rgba(59,130,246,0.5)',
+        'glow-red': '0 0 20px rgba(239,68,68,0.3)',
+        'glow-red-lg': '0 0 40px rgba(239,68,68,0.4)',
+        'glow-red-xl': '0 0 60px rgba(239,68,68,0.5)',
         'depth-sm': '0 4px 12px rgba(0, 0, 0, 0.3)',
         'depth-md': '0 8px 24px rgba(0, 0, 0, 0.4)',
         'depth-lg': '0 12px 36px rgba(0, 0, 0, 0.5)',

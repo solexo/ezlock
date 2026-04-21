@@ -51,9 +51,9 @@ html, body {
 
 /* Component utilities */
 @layer components {
-  /* Blue glow button */
+  /* Red glow button */
   .btn-glow {
-    @apply relative px-6 py-3 font-semibold text-white bg-blue-accent rounded-lg overflow-hidden transition-all duration-300;
+    @apply relative px-6 py-3 font-semibold text-white bg-red-500 rounded-lg overflow-hidden transition-all duration-300;
   }
 
   .btn-glow:hover {
@@ -76,7 +76,7 @@ html, body {
   }
 
   .card-glass:hover {
-    @apply border-blue-accent;
+    @apply border-red-500;
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
   }
 
@@ -86,14 +86,14 @@ html, body {
   }
 
   .card-elevated:hover {
-    @apply border-blue-accent;
+    @apply border-red-500;
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
     transform: translateY(-2px);
   }
 
   /* Glow text */
-  .text-glow-blue {
-    @apply text-blue-accent;
+  .text-glow-red {
+    @apply text-red-500;
   }
 
   /* Gradient background */
@@ -106,9 +106,9 @@ html, body {
     @apply bg-dark-secondary/30 backdrop-blur-md border border-slate-700/30;
   }
 
-  /* Blue accent border */
+  /* Red accent border */
   .border-accent {
-    @apply border-blue-accent border-l-4;
+    @apply border-red-500 border-l-4;
   }
 
   /* Smooth scroll */
@@ -151,20 +151,20 @@ html, body {
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-blue-accent rounded-full;
+    @apply bg-red-500 rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-blue-hover;
+    @apply bg-red-600;
   }
 
   /* Selection color */
   ::selection {
-    @apply bg-blue-accent text-white;
+    @apply bg-red-500 text-white;
   }
 
   /* Focus styles for accessibility */
   *:focus-visible {
-    @apply outline-none ring-2 ring-blue-accent ring-offset-2 ring-offset-dark-bg rounded;
+    @apply outline-none ring-2 ring-red-500 ring-offset-2 ring-offset-dark-bg rounded;
   }
 }

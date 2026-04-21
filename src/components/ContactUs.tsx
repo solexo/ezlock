@@ -15,7 +15,7 @@ const ContactUs = () => {
     <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Back Button */}
-        <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-400 mb-8">
+        <Link to="/" className="inline-flex items-center text-red-500 hover:text-red-400 mb-8">
           <ArrowLeft className="w-5 h-5 mr-2" />
           Retour à l'accueil
         </Link>
@@ -40,40 +40,40 @@ const ContactUs = () => {
 
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-blue-accent/10 rounded-lg">
-                  <Phone className="w-6 h-6 text-blue-accent" />
+                <div className="p-3 bg-red-500/10 rounded-lg">
+                  <Phone className="w-6 h-6 text-red-500" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Téléphone</h3>
-                  <p className="text-blue-accent font-semibold text-lg">06 01 53 43 01</p>
-                  <p className="text-blue-accent font-semibold text-lg">06 66 59 18 24</p>
+                  <p className="text-red-500 font-semibold text-lg">06 01 53 43 01</p>
+                  <p className="text-red-500 font-semibold text-lg">06 66 59 18 24</p>
                   <p className="text-gray-600 text-sm mt-1">Lun-Sam 8h-18h</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-blue-accent/10 rounded-lg">
-                  <Phone className="w-6 h-6 text-blue-accent" />
+                <div className="p-3 bg-red-500/10 rounded-lg">
+                  <Phone className="w-6 h-6 text-red-500" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Fax</h3>
-                  <p className="text-blue-accent font-semibold text-lg">05 22 55 00 99</p>
+                  <p className="text-red-500 font-semibold text-lg">05 22 55 00 99</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-blue-accent/10 rounded-lg">
-                  <Mail className="w-6 h-6 text-blue-accent" />
+                <div className="p-3 bg-red-500/10 rounded-lg">
+                  <Mail className="w-6 h-6 text-red-500" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                  <p className="text-blue-accent font-semibold">contact@ezlock.ma</p>
+                  <p className="text-red-500 font-semibold">contact@ezlock.ma</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-blue-accent/10 rounded-lg">
-                  <MapPin className="w-6 h-6 text-blue-accent" />
+                <div className="p-3 bg-red-500/10 rounded-lg">
+                  <MapPin className="w-6 h-6 text-red-500" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900  mb-1">Adresse</h3>
@@ -87,8 +87,8 @@ const ContactUs = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-blue-accent/10 rounded-lg">
-                  <Clock className="w-6 h-6 text-blue-accent" />
+                <div className="p-3 bg-red-500/10 rounded-lg">
+                  <Clock className="w-6 h-6 text-red-500" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900  mb-1">Horaires d'ouverture</h3>
@@ -152,7 +152,7 @@ const ContactUs = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-to-r from-blue-accent to-purple-600 rounded-2xl p-8 md:p-12 text-center text-white">
+        <div className="bg-gradient-to-r from-red-500 to-purple-600 rounded-2xl p-8 md:p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">
             Prêt à transformer votre maison ?
           </h2>
@@ -161,7 +161,7 @@ const ContactUs = () => {
           </p>
           <button
             onClick={whatsappContact}
-            className="bg-white text-blue-accent px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center space-x-3"
+            className="bg-white text-red-500 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center space-x-3"
           >
             <span>🚀</span>
             <span>Obtenir un Devis Gratuit</span>

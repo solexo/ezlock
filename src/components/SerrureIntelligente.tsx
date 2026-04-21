@@ -198,7 +198,7 @@ const SerrureIntelligente = () => {
     <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Back Button */}
-        <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-400 mb-8">
+        <Link to="/" className="inline-flex items-center text-red-500 hover:text-red-400 mb-8">
           <ArrowLeft className="w-5 h-5 mr-2" />
           Retour à l'accueil
         </Link>
@@ -207,7 +207,7 @@ const SerrureIntelligente = () => {
         <div className="text-center mb-16">
           {/* Title */}
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            {selectedLang === 'Fr' ? 'Serrure Intelligente' : 'Smart Lock'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300">{selectedLang === 'Fr' ? 'Maroc' : 'Morocco'}</span>
+            {selectedLang === 'Fr' ? 'Serrure Intelligente' : 'Smart Lock'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-red-300">{selectedLang === 'Fr' ? 'Maroc' : 'Morocco'}</span>
           </h1>
 
           {/* Animated Image Carousel */}
@@ -228,7 +228,7 @@ const SerrureIntelligente = () => {
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentIndex
-                      ? 'bg-blue-accent w-8'
+                      ? 'bg-red-500 w-8'
                       : 'bg-gray-400 hover:bg-gray-500'
                   }`}
                   aria-label={`Show lock ${index + 1}`}
@@ -251,13 +251,13 @@ const SerrureIntelligente = () => {
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button
               onClick={whatsappContact}
-              className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
                {selectedLang === 'Fr' ? 'Devis Gratuit' : 'Free Quote'}
             </button>
             <button
               onClick={() => window.location.href = '#services'}
-              className="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold border border-blue-accent hover:bg-blue-50 transition-all duration-300"
+              className="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold border border-red-500 hover:bg-blue-50 transition-all duration-300"
             >
               En Savoir Plus
             </button>
@@ -267,21 +267,21 @@ const SerrureIntelligente = () => {
         {/* Features */}
         <div id="services" className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-            <Shield className="w-12 h-12 text-blue-accent mx-auto mb-4" />
+            <Shield className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 mb-4">Sécurité Avancée</h3>
             <p className="text-gray-600">
               Technologie de reconnaissance faciale, empreinte digitale et NFC pour une sécurité maximale.
             </p>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-            <Smartphone className="w-12 h-12 text-blue-accent mx-auto mb-4" />
+            <Smartphone className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 mb-4">Contrôle Mobile</h3>
             <p className="text-gray-600">
               Gérez votre serrure depuis votre smartphone avec notre application dédiée.
             </p>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-            <Key className="w-12 h-12 text-blue-accent mx-auto mb-4" />
+            <Key className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 mb-4">Installation Pro</h3>
             <p className="text-gray-600">
               Installation par nos techniciens certifiés avec garantie 2 ans incluse.

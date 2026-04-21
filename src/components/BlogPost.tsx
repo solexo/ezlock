@@ -117,7 +117,7 @@ const BlogPost = () => {
     return (
       <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <Link to="/blog" className="inline-flex items-center text-blue-accent hover:text-blue-400 mb-8">
+          <Link to="/blog" className="inline-flex items-center text-red-500 hover:text-red-400 mb-8">
             <ArrowLeft className="w-5 h-5 mr-2" />
             Retour au Blog
           </Link>
@@ -137,7 +137,7 @@ const BlogPost = () => {
       </Helmet>
       <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <Link to="/blog" className="inline-flex items-center text-blue-accent hover:text-blue-400 mb-8">
+          <Link to="/blog" className="inline-flex items-center text-red-500 hover:text-red-400 mb-8">
             <ArrowLeft className="w-5 h-5 mr-2" />
             Retour au Blog
           </Link>

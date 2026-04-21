@@ -47,7 +47,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0 group">
-            <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-lg border border-blue-accent/50 overflow-hidden transition-all duration-300 group-hover:shadow-glow-blue group-hover:border-blue-accent">
+            <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-lg border border-red-500/50 overflow-hidden transition-all duration-300 group-hover:shadow-glow-blue group-hover:border-red-500">
               <div className="absolute inset-0 bg-gradient-glow"></div>
               <img
                 src="/images/logob.webp"
@@ -67,7 +67,7 @@ const Header = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-accent transition-all duration-300 rounded-lg hover:bg-gray-100"
+                className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-red-500 transition-all duration-300 rounded-lg hover:bg-gray-100"
               >
                 {link.label}
               </Link>
@@ -86,7 +86,7 @@ const Header = () => {
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden text-gray-600 hover:text-blue-accent transition-colors p-2 hover:bg-gray-100 rounded-lg"
+              className="lg:hidden text-gray-600 hover:text-red-500 transition-colors p-2 hover:bg-gray-100 rounded-lg"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
             >
@@ -106,7 +106,7 @@ const Header = () => {
                     setIsMenuOpen(false);
                     navigate(link.to);
                   }}
-                  className="block w-full text-left px-4 py-3 text-gray-600 hover:text-blue-accent hover:bg-gray-100 rounded-lg transition-all duration-300 font-medium cursor-pointer"
+                  className="block w-full text-left px-4 py-3 text-gray-600 hover:text-red-500 hover:bg-gray-100 rounded-lg transition-all duration-300 font-medium cursor-pointer"
                 >
                   {link.label}
                 </div>

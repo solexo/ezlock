@@ -39,14 +39,14 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-400 mb-8">
+        <Link to="/" className="inline-flex items-center text-red-500 hover:text-red-400 mb-8">
           <ArrowLeft className="w-5 h-5 mr-2" />
           Retour à l'accueil
         </Link>
 
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-             Blog <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300">Domotique</span>
+             Blog <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-red-300">Domotique</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Tutoriels, guides et conseils pour votre domotique au Maroc. Apprenez à installer et optimiser vos systèmes intelligents.
@@ -66,7 +66,7 @@ const Blog = () => {
                   <User className="w-4 h-4 ml-4 mr-1" />
                   {article.author}
                 </div>
-                <h2 className="text-xl font-bold text-gray-900 mb-3 hover:text-blue-accent transition-colors">
+                <h2 className="text-xl font-bold text-gray-900 mb-3 hover:text-red-500 transition-colors">
                   <Link to={`/blog/${article.id}`}>{article.title}</Link>
                 </h2>
                 <p className="text-gray-600 mb-4">
@@ -91,7 +91,7 @@ const Blog = () => {
           </p>
           <button
             onClick={whatsappContact}
-            className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             S'abonner à la Newsletter
           </button>

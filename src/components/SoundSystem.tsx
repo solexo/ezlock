@@ -264,7 +264,7 @@ const SoundSystem = () => {
           <div className="flex gap-3">
             <button
               onClick={() => whatsappContact(name)}
-               className="flex-1 bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+               className="flex-1 bg-gradient-to-r from-red-500 via-red-400 to-red-300 text-white py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
             >
               <FileText className="w-4 h-4" />
               {selectedLang === 'Fr' ? 'Devis' : 'Quote'}
@@ -286,7 +286,7 @@ const SoundSystem = () => {
     <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Back Button */}
-        <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-accent mb-8">
+        <Link to="/" className="inline-flex items-center text-red-500 hover:text-red-500 mb-8">
           <ArrowLeft className="w-5 h-5 mr-2" />
           {selectedLang === 'Fr' ? 'Retour à l\'accueil' : 'Back to Home'}
         </Link>
@@ -295,7 +295,7 @@ const SoundSystem = () => {
         <div className="text-center mb-16">
           {/* Title */}
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {selectedLang === 'Fr' ? 'Système Son' : 'Sound System'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300">{selectedLang === 'Fr' ? 'Domotique' : 'Automation'}</span>
+              {selectedLang === 'Fr' ? 'Système Son' : 'Sound System'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-red-300">{selectedLang === 'Fr' ? 'Domotique' : 'Automation'}</span>
             </h1>
 
           {/* Animated Image Carousel */}
@@ -316,7 +316,7 @@ const SoundSystem = () => {
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentIndex
-                      ? 'bg-blue-accent w-8'
+                      ? 'bg-red-500 w-8'
                       : 'bg-gray-400 hover:bg-gray-500'
                   }`}
                   aria-label={`Show product ${index + 1}`}
@@ -342,13 +342,13 @@ const SoundSystem = () => {
 
             <button
               onClick={() => whatsappContact()}
-              className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               {selectedLang === 'Fr' ? 'Devis Gratuit' : 'Free Quote'}
             </button>
             <button
               onClick={() => window.location.href = '#products'}
-              className="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold border border-blue-accent hover:bg-blue-50 transition-all duration-300"
+              className="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold border border-red-500 hover:bg-blue-50 transition-all duration-300"
             >
               {selectedLang === 'Fr' ? 'Nos Produits' : 'Our Products'}
             </button>
@@ -358,7 +358,7 @@ const SoundSystem = () => {
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-            <Volume2 className="w-12 h-12 text-blue-accent mx-auto mb-4" />
+            <Volume2 className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 mb-4">
               {selectedLang === 'Fr' ? 'Audio Haute Qualité' : 'High Quality Audio'}
             </h3>
@@ -369,7 +369,7 @@ const SoundSystem = () => {
             </p>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-            <Music className="w-12 h-12 text-blue-accent mx-auto mb-4" />
+            <Music className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 mb-4">
               {selectedLang === 'Fr' ? 'Contrôle Musical' : 'Music Control'}
             </h3>
@@ -380,7 +380,7 @@ const SoundSystem = () => {
             </p>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-            <Wifi className="w-12 h-12 text-blue-accent mx-auto mb-4" />
+            <Wifi className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 mb-4">
               {selectedLang === 'Fr' ? 'Connexion WiFi' : 'WiFi Connection'}
             </h3>
@@ -441,7 +441,7 @@ const SoundSystem = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 p-8 md:p-12 rounded-2xl text-white">
+        <div className="text-center bg-gradient-to-r from-red-500 via-red-400 to-red-300 p-8 md:p-12 rounded-2xl text-white">
           <h3 className="text-2xl font-bold mb-4">
             {selectedLang === 'Fr' 
               ? 'Prêt à Révolutionner Votre Expérience Audio ?'
@@ -454,7 +454,7 @@ const SoundSystem = () => {
           </p>
           <button
             onClick={() => whatsappContact()}
-            className="bg-white text-blue-accent px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="bg-white text-red-500 px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             {selectedLang === 'Fr' ? 'Obtenir un Devis Gratuit' : 'Get a Free Quote'}
           </button>

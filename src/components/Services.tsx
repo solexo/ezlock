@@ -38,14 +38,14 @@ const Services = () => {
   return (
     <section id="services" className="relative py-20 sm:py-24 bg-gradient-smart overflow-hidden">
       {/* Animated background elements */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-accent/5 rounded-full blur-3xl opacity-10"></div>
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-blue-accent/5 rounded-full blur-3xl opacity-10"></div>
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-red-500/5 rounded-full blur-3xl opacity-10"></div>
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-red-500/5 rounded-full blur-3xl opacity-10"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 sm:mb-20">
            <h2 className="font-hero text-4xl sm:text-5xl lg:text-6xl text-text-primary mb-4 sm:mb-6">
-             Nos <span className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 bg-clip-text text-transparent">Services</span>
+             Nos <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 bg-clip-text text-transparent">Services</span>
            </h2>
           <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
             Service domotique complet : installation, formation, garantie, et support technique 7j/7.
@@ -62,11 +62,11 @@ const Services = () => {
                 className="card-elevated p-8 group flex flex-col text-center"
               >
                 <div className="flex justify-center mb-4">
-                  <div className="p-4 bg-blue-accent/10 rounded-xl group-hover:bg-blue-accent/20 group-hover:shadow-glow-blue transition-all duration-300">
-                    <Icon className="w-8 h-8 text-blue-accent group-hover:scale-110 transition-transform" />
+                  <div className="p-4 bg-red-500/10 rounded-xl group-hover:bg-red-500/20 group-hover:shadow-glow-blue transition-all duration-300">
+                    <Icon className="w-8 h-8 text-red-500 group-hover:scale-110 transition-transform" />
                   </div>
                 </div>
-                <h3 className="font-heading text-lg sm:text-xl text-text-primary mb-2 group-hover:text-blue-accent transition-colors">
+                <h3 className="font-heading text-lg sm:text-xl text-text-primary mb-2 group-hover:text-red-500 transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-text-secondary text-sm sm:text-base">

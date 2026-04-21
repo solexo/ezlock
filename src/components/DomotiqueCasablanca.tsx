@@ -10,7 +10,7 @@ const DomotiqueCasablanca = () => {
     <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Back Button */}
-        <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-400 mb-8">
+        <Link to="/" className="inline-flex items-center text-red-500 hover:text-red-400 mb-8">
           <ArrowLeft className="w-5 h-5 mr-2" />
           Retour à l'accueil
         </Link>
@@ -18,7 +18,7 @@ const DomotiqueCasablanca = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-             Domotique <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300">Maroc</span>
+             Domotique <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-red-300">Maroc</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Leader en domotique au Maroc. Installation de systèmes domotiques complets : serrures intelligentes, caméras surveillance, contrôle d'accès, éclairage LED, agriculture intelligente. Devis gratuit 24h !
@@ -26,13 +26,13 @@ const DomotiqueCasablanca = () => {
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button
               onClick={whatsappContact}
-               className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+               className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               Devis Gratuit
             </button>
             <button
               onClick={() => window.location.href = '#services'}
-               className="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold border border-blue-accent hover:bg-blue-50 transition-all duration-300"
+               className="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold border border-red-500 hover:bg-blue-50 transition-all duration-300"
             >
               Nos Services
             </button>
@@ -42,21 +42,21 @@ const DomotiqueCasablanca = () => {
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-            <Home className="w-12 h-12 text-blue-accent mx-auto mb-4" />
+            <Home className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 mb-4">Maison Connectée</h3>
             <p className="text-gray-600">
               Transformez votre maison en habitat intelligent avec nos solutions domotiques avancées.
             </p>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-            <Zap className="w-12 h-12 text-blue-accent mx-auto mb-4" />
+            <Zap className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 mb-4">Économie d'Énergie</h3>
             <p className="text-gray-600">
               Optimisez votre consommation avec l'éclairage LED intelligent et l'automatisation.
             </p>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-            <Shield className="w-12 h-12 text-blue-accent mx-auto mb-4" />
+            <Shield className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 mb-4">Sécurité Totale</h3>
             <p className="text-gray-600">
               Caméras surveillance, serrures intelligentes et alarmes pour une protection complète.
