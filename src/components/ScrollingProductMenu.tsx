@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Smartphone, Zap } from 'lucide-react';
+import { Shield, Smartphone, Zap } from 'lucide-react';
 
 const products = [
   { id: 'x1ai', image: '/images/x1ai.webp', name: 'Serrure Intelligente X1AI' },
@@ -165,9 +165,8 @@ const ScrollingProductMenu = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProducts.map((product) => (
-              <Link
+              <div
                 key={product.id}
-                to={`/product/${product.id}`}
                 className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
               >
                 <div className="aspect-square overflow-hidden">
@@ -179,15 +178,27 @@ const ScrollingProductMenu = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-bold text-gray-900 mb-2 group-hover:text-red-500 transition-colors">
+                  <h3 className="font-bold text-gray-900 mb-4 group-hover:text-red-500 transition-colors">
                     {product.name}
                   </h3>
-                  <div className="flex items-center text-red-500 font-medium">
-                    <span>Voir les détails</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <div className="flex flex-col gap-3">
+                    <button
+                      onClick={whatsappContact}
+                      className="w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-2.5 px-4 rounded-lg font-semibold text-sm hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+                    >
+                      <span>🛒</span>
+                      <span>Acheter Maintenant</span>
+                    </button>
+                    <Link
+                      to={`/product/${product.id}`}
+                      className="w-full bg-gray-100 text-gray-700 py-2.5 px-4 rounded-lg font-medium text-sm hover:bg-gray-200 transition-all duration-300 flex items-center justify-center space-x-2"
+                    >
+                      <span>📋</span>
+                      <span>Voir les détails</span>
+                    </Link>
                   </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
 
