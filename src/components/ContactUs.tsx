@@ -67,7 +67,7 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                  <p className="text-red-500 font-semibold">contact@ezlock.ma</p>
+                  <p className="text-red-500 font-semibold">ezlock.maroc@gmail.com</p>
                 </div>
               </div>
 
@@ -141,7 +141,7 @@ const ContactUs = () => {
                   📞 Appel téléphonique direct
                 </button>
                 <button
-                  onClick={() => window.location.href = 'mailto:contact@ezlock.ma'}
+                  onClick={() => window.location.href = 'mailto:ezlock.maroc@gmail.com'}
                   className="w-full text-left p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   ✉️ Envoyer un email

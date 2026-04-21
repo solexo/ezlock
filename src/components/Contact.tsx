@@ -128,7 +128,7 @@ const Contact = () => {
               <div className="flex items-center justify-center space-x-3 text-sm text-white/80 flex-wrap gap-2">
                 <span>✓ Gratuit</span>
                 <span>✓ Installation Pro</span>
-                <span>✓ Garantie 2 ans</span>
+                <span>✓ Garantie 1 an</span>
               </div>
             </div>
           </div>

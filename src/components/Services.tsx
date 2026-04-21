@@ -10,7 +10,7 @@ const Services = () => {
     },
     {
       icon: Shield,
-      title: 'Garantie 2 ans',
+      title: 'Garantie 1 an',
       description: 'Couverture complète pièces & main-d\'œuvre',
     },
     {

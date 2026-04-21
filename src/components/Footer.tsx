@@ -40,7 +40,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2 text-text-secondary">
                 <Award className="w-4 h-4 text-red-500" />
-                <span>Garantie 2 ans</span>
+                <span>Garantie 1 an</span>
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3 group cursor-pointer">
                 <Mail className="w-4 h-4 text-red-500 flex-shrink-0 mt-1" />
                 <div className="text-text-secondary group-hover:text-red-500 transition-colors text-sm break-all">
-                  info@ezlock.com
+                  ezlock.maroc@gmail.com
                 </div>
               </div>
               <div className="flex items-start space-x-3">

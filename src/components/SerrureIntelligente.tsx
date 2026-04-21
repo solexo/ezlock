@@ -8,20 +8,22 @@ const SerrureIntelligente = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { selectedLang } = useLanguage();
 
-  // Smart lock products for carousel
   const carouselLocks = [
     { name: 'X1 AI', image: '/images/x1ai.webp' },
-    { name: 'K5', image: '/images/k5.webp' },
     { name: 'K10', image: '/images/k10.webp' },
     { name: 'I30', image: '/images/i30.webp' },
     { name: 'I40', image: '/images/i40 (2).webp' },
+    { name: 'I50', image: '/images/serrure intelligente/i50.webp' },
+    { name: 'M1 Pro', image: '/images/serrure intelligente/m1pro.webp' },
+    { name: 'S10', image: '/images/serrure intelligente/s10.webp' },
+    { name: 'S928', image: '/images/serrure intelligente/s928.webp' },
+    { name: 'X7 CAM', image: '/images/serrure intelligente/x7cam.jpg' },
   ];
 
-  // All smart lock products
   const smartLockProducts = [
     {
       id: 'x1ai',
-      name: 'X1 Ai 🔐 7 Méthodes d\'Ouverture Intelligentes',
+      name: 'X1 Ai 7 Méthodes d\'Ouverture Intelligentes',
       image: '/images/x1ai.webp',
       url: '/product/x1ai',
       features: [
@@ -124,20 +126,6 @@ const SerrureIntelligente = () => {
       description: 'Version ultra-compacte avec clavier numérique et reconnaissance biométrique'
     },
     {
-      id: 'k5',
-      name: 'Serrure Intelligente K5',
-      image: '/images/k5.webp',
-      url: '/product/k5',
-      features: [
-        'Application mobile',
-        'Empreinte digitale',
-        'Carte NFC',
-        'Clé traditionnelle',
-        'Mot de passe'
-      ],
-      description: 'Serrure intelligente K5 avec toutes les options de sécurité : NFC, code numérique et contrôle mobile'
-    },
-    {
       id: 'i20',
       name: 'Serrure Intelligente I20',
       image: '/images/i20.webp',
@@ -153,10 +141,10 @@ const SerrureIntelligente = () => {
       description: 'Serrure intelligente I20 avec caméra intégrée pour surveillance en temps réel et contrôle mobile'
     },
     {
-      id: 'qm50',
-      name: 'Serrure Intelligente QM50',
-      image: '/images/qm50.webp',
-      url: '/product/qm50',
+      id: 'i50',
+      name: 'Serrure Intelligente I50',
+      image: '/images/serrure intelligente/i50.webp',
+      url: '/product/i50',
       features: [
         'Application mobile',
         'Empreinte digitale',
@@ -164,13 +152,13 @@ const SerrureIntelligente = () => {
         'Clé traditionnelle',
         'Mot de passe'
       ],
-      description: 'Serrure intelligente QM50 avec design moderne et sécurité renforcée'
+      description: 'Serrure intelligente I50 avec design moderne et accès sécurisé pour maison ou bureau'
     },
     {
-      id: 'qm60',
-      name: 'Serrure Intelligente QM60',
-      image: '/images/qm60.webp',
-      url: '/product/qm60',
+      id: 'm1pro',
+      name: 'Serrure Intelligente M1 Pro',
+      image: '/images/serrure intelligente/m1pro.webp',
+      url: '/product/m1pro',
       features: [
         'Application mobile',
         'Empreinte digitale',
@@ -178,17 +166,59 @@ const SerrureIntelligente = () => {
         'Clé traditionnelle',
         'Mot de passe'
       ],
-      description: 'Serrure intelligente QM60 avec technologie avancée et interface intuitive'
+      description: 'Serrure intelligente M1 Pro avec contrôle mobile et méthodes d\'ouverture avancées'
+    },
+    {
+      id: 's10',
+      name: 'Serrure Intelligente S10',
+      image: '/images/serrure intelligente/s10.webp',
+      url: '/product/s10',
+      features: [
+        'Application mobile',
+        'Empreinte digitale',
+        'Carte NFC',
+        'Clé traditionnelle',
+        'Mot de passe'
+      ],
+      description: 'Serrure intelligente S10 au format compact avec sécurité biométrique et accès pratique'
+    },
+    {
+      id: 's928',
+      name: 'Serrure Intelligente S928',
+      image: '/images/serrure intelligente/s928.webp',
+      url: '/product/s928',
+      features: [
+        'Application mobile',
+        'Empreinte digitale',
+        'Carte NFC',
+        'Clé traditionnelle',
+        'Mot de passe'
+      ],
+      description: 'Serrure intelligente S928 avec design élégant et fonctions de sécurité essentielles'
+    },
+    {
+      id: 'x7-cam',
+      name: 'Serrure Intelligente X7 CAM',
+      image: '/images/serrure intelligente/x7cam.jpg',
+      url: '/product/x7-cam',
+      features: [
+        'Application mobile',
+        'Empreinte digitale',
+        'Carte NFC',
+        'Live cam view',
+        'Clé traditionnelle',
+        'Mot de passe'
+      ],
+      description: 'Serrure intelligente X7 CAM avec caméra intégrée pour surveillance et contrôle à distance'
     }
   ];
 
-  // Auto-loop carousel
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % carouselLocks.length);
-    }, 3000); // Change image every 3 seconds
+    }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [carouselLocks.length]);
 
   const whatsappContact = () => {
     window.open('https://wa.me/212601534301', '_blank');
@@ -197,20 +227,16 @@ const SerrureIntelligente = () => {
   return (
     <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Back Button */}
         <Link to="/" className="inline-flex items-center text-red-500 hover:text-red-400 mb-8">
           <ArrowLeft className="w-5 h-5 mr-2" />
           Retour à l'accueil
         </Link>
 
-        {/* Hero Section - Title, Image, Description, CTA */}
         <div className="text-center mb-16">
-          {/* Title */}
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {selectedLang === 'Fr' ? 'Serrure Intelligente' : 'Smart Lock'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-red-300">{selectedLang === 'Fr' ? 'Maroc' : 'Morocco'}</span>
           </h1>
 
-          {/* Animated Image Carousel */}
           <div className="flex flex-col items-center mb-12">
             <div className="w-full max-w-sm h-96 bg-white rounded-2xl overflow-hidden shadow-xl flex items-center justify-center relative">
               <img
@@ -220,40 +246,36 @@ const SerrureIntelligente = () => {
               />
             </div>
 
-            {/* Carousel Indicators */}
             <div className="flex gap-2 mt-6 justify-center">
               {carouselLocks.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentIndex
-                      ? 'bg-red-500 w-8'
-                      : 'bg-gray-400 hover:bg-gray-500'
+                    index === currentIndex ? 'bg-red-500 w-8' : 'bg-gray-400 hover:bg-gray-500'
                   }`}
                   aria-label={`Show lock ${index + 1}`}
                 />
               ))}
             </div>
 
-            {/* Product Name */}
             <h3 className="mt-6 text-2xl font-bold text-gray-900">
               {carouselLocks[currentIndex].name}
             </h3>
           </div>
 
-          {/* Description */}
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-            {selectedLang === 'Fr' ? 'Installation professionnelle de serrures intelligentes au Maroc. Sécurité avancée avec Face ID, empreinte digitale et NFC.' : 'Professional installation of smart locks in Morocco. Advanced security with Face ID, fingerprint and NFC.'}
+            {selectedLang === 'Fr'
+              ? 'Installation professionnelle de serrures intelligentes au Maroc. Sécurité avancée avec Face ID, empreinte digitale et NFC.'
+              : 'Professional installation of smart locks in Morocco. Advanced security with Face ID, fingerprint and NFC.'}
           </p>
 
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button
               onClick={whatsappContact}
               className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
-               {selectedLang === 'Fr' ? 'Devis Gratuit' : 'Free Quote'}
+              {selectedLang === 'Fr' ? 'Devis Gratuit' : 'Free Quote'}
             </button>
             <button
               onClick={() => window.location.href = '#services'}
@@ -264,7 +286,6 @@ const SerrureIntelligente = () => {
           </div>
         </div>
 
-        {/* Features */}
         <div id="services" className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
             <Shield className="w-12 h-12 text-red-500 mx-auto mb-4" />
@@ -284,12 +305,11 @@ const SerrureIntelligente = () => {
             <Key className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 mb-4">Installation Pro</h3>
             <p className="text-gray-600">
-              Installation par nos techniciens certifiés avec garantie 2 ans incluse.
+              Installation par nos techniciens certifiés avec garantie 1 an incluse.
             </p>
           </div>
         </div>
 
-        {/* Smart Locks Gallery */}
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
             {selectedLang === 'Fr' ? 'Nos Serrures Intelligentes' : 'Our Smart Locks'}
@@ -301,7 +321,6 @@ const SerrureIntelligente = () => {
           </div>
         </div>
 
-        {/* Content */}
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Installation Serrure Intelligente Maroc

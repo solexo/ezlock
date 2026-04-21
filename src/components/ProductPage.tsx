@@ -6,246 +6,374 @@ import ProductCard from './ProductCard';
 const ProductPage: React.FC = () => {
   const { productId } = useParams<{ productId: string }>();
 
-  // Import products from ProductGallery
   const products = [
     {
       id: 'x1ai',
-      name: 'X1 Ai 🔐 7 Méthodes d\'Ouverture Intelligentes',
+      name: 'X1 Ai 7 Methodes d\'Ouverture Intelligentes',
       image: '/images/x1ai.webp',
       url: '/product/x1ai',
       features: [
-        'Reconnaissance Faciale (AI) ultra-précise',
-        'Empreinte Digitale 360°',
+        'Reconnaissance Faciale (AI) ultra-precise',
+        'Empreinte Digitale 360 degres',
         'Code PIN personnalisable',
-        'Clé mécanique',
+        'Cle mecanique',
         'Carte NFC',
         'Application mobile (Wi-Fi & Bluetooth)',
         'Ouverture par paume intelligente (AI Palm ID)'
       ],
-      description: 'Grâce à son système AI avancé, la X1 reconnaît les visages avec une précision exceptionnelle, s\'adapte à la luminosité et apprend vos habitudes pour un confort d\'utilisation optimal. ✨ Design et Performance Écran tactile HD élégant et intuitif. Corps en alliage d\'aluminium résistant et raffiné. Installation simple et compatible avec la plupart des portes. Batterie longue durée avec alerte intelligente de faible charge.'
+      description: 'Grace a son systeme AI avance, la X1 reconnait les visages avec une precision exceptionnelle et apprend vos habitudes pour un confort optimal.'
     },
     {
       id: 'i40',
       name: 'Serrure Intelligente I40',
       image: '/images/i40%20(2).webp',
       url: '/product/i40',
-      features: [
-        'Application mobile',
-        'Empreinte digitale',
-        'Face ID',
-        'Carte NFC',
-        'Clé traditionnelle',
-        'Mot de passe'
-      ],
-      description: 'Serrure premium avec écran tactile et reconnaissance faciale avancée'
+      features: ['Application mobile', 'Empreinte digitale', 'Face ID', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
+      description: 'Serrure premium avec ecran tactile et reconnaissance faciale avancee'
     },
     {
       id: 'i30',
       name: 'Serrure Intelligente I30',
       image: '/images/i30.webp',
       url: '/product/i30',
-      features: [
-        'Application mobile',
-        'Empreinte digitale',
-        'Face ID',
-        'Carte NFC',
-        'Clé traditionnelle',
-        'Mot de passe'
-      ],
-      description: 'Serrure intelligente I30 avec toutes les fonctionnalités avancées comme l\'I40'
+      features: ['Application mobile', 'Empreinte digitale', 'Face ID', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
+      description: 'Serrure intelligente I30 avec toutes les fonctionnalites avancees comme l I40'
     },
     {
       id: 'i29',
       name: 'Serrure Intelligente I29',
       image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.22.webp',
       url: '/product/i29',
-      features: [
-        'Application mobile',
-        'Empreinte digitale',
-        'Face ID',
-        'Carte NFC',
-        'Clé traditionnelle',
-        'Mot de passe'
-      ],
-      description: 'Design élégant avec interface utilisateur intuitive et sécurité renforcée'
+      features: ['Application mobile', 'Empreinte digitale', 'Face ID', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
+      description: 'Design elegant avec interface intuitive et securite renforcee'
     },
     {
       id: 'k10',
       name: 'Serrure Intelligente K10',
       image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.21%20(6).webp',
       url: '/product/k10',
-      features: [
-        'Application mobile',
-        'Empreinte digitale',
-        'Face ID',
-        'Carte NFC',
-        'Clé traditionnelle',
-        'Mot de passe'
-      ],
-      description: 'Modèle robuste avec écran haute définition et mécanisme de sécurité avancé'
+      features: ['Application mobile', 'Empreinte digitale', 'Face ID', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
+      description: 'Modele robuste avec ecran haute definition et mecanisme de securite avance'
     },
     {
       id: 'x5-cam',
       name: 'Serrure Intelligente X5 CAM',
       image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.21%20(5).webp',
       url: '/product/x5-cam',
-      features: [
-        'Application mobile',
-        'Empreinte digitale',
-        'Carte NFC',
-        'Clé traditionnelle',
-        'Mot de passe'
-      ],
-      description: 'Serrure poignée avec design minimaliste et technologie NFC intégrée'
+      features: ['Application mobile', 'Empreinte digitale', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
+      description: 'Serrure poignee avec design minimaliste et technologie NFC integree'
     },
     {
       id: 'x5-ultra',
       name: 'Serrure Intelligente X5 ULTRA',
       image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.21%20(4).webp',
       url: '/product/x5-ultra',
-      features: [
-        'Application mobile',
-        'Empreinte digitale',
-        'Carte NFC',
-        'Clé traditionnelle',
-        'Mot de passe'
-      ],
-      description: 'Version ultra-compacte avec clavier numérique et reconnaissance biométrique'
-    },
-    {
-      id: 'k5',
-      name: 'Serrure Intelligente K5',
-      image: '/images/k5.webp',
-      url: '/product/k5',
-      features: [
-        'Application mobile',
-        'Empreinte digitale',
-        'Carte NFC',
-        'Clé traditionnelle',
-        'Mot de passe'
-      ],
-      description: 'Serrure intelligente K5 avec toutes les options de sécurité : NFC, code numérique et contrôle mobile'
+      features: ['Application mobile', 'Empreinte digitale', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
+      description: 'Version ultra-compacte avec clavier numerique et reconnaissance biometrique'
     },
     {
       id: 'i20',
       name: 'Serrure Intelligente I20',
       image: '/images/i20.webp',
       url: '/product/i20',
-      features: [
-        'Application mobile',
-        'Empreinte digitale',
-        'Carte NFC',
-        'Live cam view',
-        'Clé traditionnelle',
-        'Mot de passe'
-      ],
-      description: 'Serrure intelligente I20 avec caméra intégrée pour surveillance en temps réel et contrôle mobile'
+      features: ['Application mobile', 'Empreinte digitale', 'Carte NFC', 'Live cam view', 'Cle traditionnelle', 'Mot de passe'],
+      description: 'Serrure intelligente I20 avec camera integree pour surveillance en temps reel et controle mobile'
     },
     {
-      id: 'qm50',
-      name: 'Serrure Intelligente QM50',
-      image: '/images/qm50.webp',
-      url: '/product/qm50',
-      features: [
-        'Application mobile',
-        'Empreinte digitale',
-        'Carte NFC',
-        'Clé traditionnelle',
-        'Mot de passe'
-      ],
-      description: 'Serrure intelligente QM50 avec design moderne et sécurité renforcée'
+      id: 'i50',
+      name: 'Serrure Intelligente I50',
+      image: '/images/serrure intelligente/i50.webp',
+      url: '/product/i50',
+      features: ['Application mobile', 'Empreinte digitale', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
+      description: 'Serrure intelligente I50 avec design moderne et acces securise pour maison ou bureau'
     },
     {
-      id: 'qm60',
-      name: 'Serrure Intelligente QM60',
-      image: '/images/qm60.webp',
-      url: '/product/qm60',
-      features: [
-        'Application mobile',
-        'Empreinte digitale',
-        'Carte NFC',
-        'Clé traditionnelle',
-        'Mot de passe'
-      ],
-      description: 'Serrure intelligente QM60 avec technologie avancée et interface intuitive'
+      id: 'm1pro',
+      name: 'Serrure Intelligente M1 Pro',
+      image: '/images/serrure intelligente/m1pro.webp',
+      url: '/product/m1pro',
+      features: ['Application mobile', 'Empreinte digitale', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
+      description: 'Serrure intelligente M1 Pro avec controle mobile et methodes d ouverture avancees'
+    },
+    {
+      id: 's10',
+      name: 'Serrure Intelligente S10',
+      image: '/images/serrure intelligente/s10.webp',
+      url: '/product/s10',
+      features: ['Application mobile', 'Empreinte digitale', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
+      description: 'Serrure intelligente S10 au format compact avec securite biometrique et acces pratique'
+    },
+    {
+      id: 's928',
+      name: 'Serrure Intelligente S928',
+      image: '/images/serrure intelligente/s928.webp',
+      url: '/product/s928',
+      features: ['Application mobile', 'Empreinte digitale', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
+      description: 'Serrure intelligente S928 avec design elegant et fonctions de securite essentielles'
+    },
+    {
+      id: 'x7-cam',
+      name: 'Serrure Intelligente X7 CAM',
+      image: '/images/serrure intelligente/x7cam.jpg',
+      url: '/product/x7-cam',
+      features: ['Application mobile', 'Empreinte digitale', 'Carte NFC', 'Live cam view', 'Cle traditionnelle', 'Mot de passe'],
+      description: 'Serrure intelligente X7 CAM avec camera integree pour surveillance et controle a distance'
+    },
+    {
+      id: 'camera-surveillance-1',
+      name: 'Camera de surveillance 01',
+      image: '/images/camera de surveillance/a.webp',
+      url: '/product/camera-surveillance-1',
+      features: ['Application mobile', 'Vision nocturne', 'Detection de mouvement', 'Enregistrement HD', 'Notifications push'],
+      description: 'Camera de surveillance pour securiser votre maison, commerce ou bureau avec visualisation a distance.'
+    },
+    {
+      id: 'camera-surveillance-2',
+      name: 'Camera de surveillance 02',
+      image: '/images/camera de surveillance/a-1.webp',
+      url: '/product/camera-surveillance-2',
+      features: ['Application mobile', 'Vision nocturne', 'Detection de mouvement', 'Enregistrement HD', 'Stockage cloud'],
+      description: 'Solution de videosurveillance connectee avec image nette et controle facile depuis smartphone.'
+    },
+    {
+      id: 'camera-surveillance-3',
+      name: 'Camera de surveillance 03',
+      image: '/images/camera de surveillance/a-2.webp',
+      url: '/product/camera-surveillance-3',
+      features: ['Application mobile', 'Vision nocturne', 'Detection de mouvement', 'Enregistrement HD', 'Notifications push'],
+      description: 'Camera adaptee a la surveillance quotidienne avec acces rapide aux alertes et au flux video.'
+    },
+    {
+      id: 'camera-surveillance-4',
+      name: 'Camera de surveillance 04',
+      image: '/images/camera de surveillance/o.webp',
+      url: '/product/camera-surveillance-4',
+      features: ['Application mobile', 'Vision nocturne', 'Detection de mouvement', 'Enregistrement HD', 'Stockage cloud'],
+      description: 'Camera moderne pour une installation professionnelle avec supervision locale et a distance.'
     },
     {
       id: 'ca1-ca2',
-      name: 'Contrôle d\'Accès CA1/CA2',
+      name: 'Controle d Acces CA1/CA2',
       image: '/images/ca2.webp',
       url: '/product/ca1-ca2',
-      features: [
-        'Application mobile',
-        'Empreinte digitale',
-        'Code numérique',
-        'Carte NFC',
-        'Contrôle d\'accès'
-      ],
-      description: 'Systèmes de contrôle d\'accès CA1 et CA2 avec empreinte digitale, code et NFC pour sécuriser vos espaces'
+      features: ['Application mobile', 'Empreinte digitale', 'Code numerique', 'Carte NFC', 'Controle d acces'],
+      description: 'Systemes de controle d acces CA1 et CA2 avec empreinte digitale, code et NFC pour securiser vos espaces'
     },
     {
       id: 'inta-intb',
       name: 'Interrupteurs Tactiles INTA/INTB',
       image: '/images/intb.webp',
       url: '/product/inta-intb',
-      features: [
-        'Application mobile',
-        'Connexion WiFi',
-        'Contrôle éclairage',
-        'Contrôle rideaux',
-        'Contrôle TV',
-        'Contrôle climatisation'
-      ],
-      description: 'Interrupteurs tactiles INTA et INTB pour contrôler l\'éclairage, rideaux, TV et climatisation via WiFi et application'
+      features: ['Application mobile', 'Connexion WiFi', 'Controle eclairage', 'Controle rideaux', 'Controle TV', 'Controle climatisation'],
+      description: 'Interrupteurs tactiles INTA et INTB pour controler l eclairage, rideaux, TV et climatisation via WiFi et application'
     },
     {
       id: 'smart-switch-double',
       name: 'Smart Switch Intelligent Double',
       image: '/images/smart%20switch%20rideau.webp',
       url: '/product/smart-switch-double',
-      features: [
-        'Application mobile',
-        'Connexion WiFi',
-        'Contrôle éclairage',
-        'Contrôle rideaux',
-        'Contrôle climatisation',
-        'Contrôle prises',
-        '2 canaux indépendants',
-        'Programmation horaire'
-      ],
-      description: 'Smart switch double pour contrôler deux appareils indépendamment : éclairage, rideaux, climatisation, prises via WiFi et application'
+      features: ['Application mobile', 'Connexion WiFi', 'Controle eclairage', 'Controle rideaux', 'Controle climatisation', 'Controle prises', '2 canaux independants', 'Programmation horaire'],
+      description: 'Smart switch double pour controler deux appareils independamment : eclairage, rideaux, climatisation et prises via WiFi'
     },
     {
       id: 'smart-switch-simple',
       name: 'Smart Switch Intelligent Simple',
       image: '/images/smart%20switch.webp',
       url: '/product/smart-switch-simple',
-      features: [
-        'Application mobile',
-        'Connexion WiFi',
-        'Contrôle éclairage',
-        'Contrôle rideaux',
-        'Contrôle climatisation',
-        'Contrôle prises',
-        'Design compact',
-        'Programmation horaire'
-      ],
-      description: 'Smart switch simple pour contrôler éclairage, rideaux, climatisation, prises via WiFi et application mobile'
+      features: ['Application mobile', 'Connexion WiFi', 'Controle eclairage', 'Controle rideaux', 'Controle climatisation', 'Controle prises', 'Design compact', 'Programmation horaire'],
+      description: 'Smart switch simple pour controler eclairage, rideaux, climatisation et prises via WiFi et application mobile'
     },
     {
       id: 'cam',
-      name: 'Caméra de Surveillance',
+      name: 'Camera de Surveillance',
       image: '/images/cam.webp',
       url: '/product/cam',
-      features: [
-        'Application mobile',
-        'Vision nocturne',
-        'Détection de mouvement',
-        'Enregistrement HD',
-        'Stockage cloud',
-        'Notifications push'
-      ],
-      description: 'Caméra de surveillance intelligente avec vision nocturne, détection de mouvement et notifications en temps réel'
+      features: ['Application mobile', 'Vision nocturne', 'Detection de mouvement', 'Enregistrement HD', 'Stockage cloud', 'Notifications push'],
+      description: 'Camera de surveillance intelligente avec vision nocturne, detection de mouvement et notifications en temps reel'
+    },
+    {
+      id: 'domotique-4ch-r3-pro-2',
+      name: '4CH R3 Pro',
+      image: '/images/domotique/4CH-R3-Pro-2.webp',
+      url: '/product/domotique-4ch-r3-pro-2',
+      features: ['Application mobile', 'Connexion WiFi', 'Controle eclairage', 'Controle prises', 'Programmation horaire'],
+      description: 'Module domotique multi-canaux pour automatiser plusieurs circuits d eclairage et equipements.'
+    },
+    {
+      id: 'domotique-aubess-prise-3',
+      name: 'Aubess Prise Smart',
+      image: '/images/domotique/Aubess-Prise-3.webp',
+      url: '/product/domotique-aubess-prise-3',
+      features: ['Application mobile', 'Connexion WiFi', 'Controle prises', 'Programmation horaire'],
+      description: 'Prise connectee intelligente pour piloter vos appareils a distance et suivre vos automatisations.'
+    },
+    {
+      id: 'domotique-bridge-r2-2',
+      name: 'Bridge R2',
+      image: '/images/domotique/Bridge-R2-2.webp',
+      url: '/product/domotique-bridge-r2-2',
+      features: ['Application mobile', 'Connexion WiFi', 'Programmation horaire'],
+      description: 'Passerelle domotique pour relier et centraliser vos accessoires intelligents a la maison.'
+    },
+    {
+      id: 'domotique-dual-r3-1',
+      name: 'Dual R3',
+      image: '/images/domotique/Dual-R3-1.webp',
+      url: '/product/domotique-dual-r3-1',
+      features: ['Application mobile', 'Connexion WiFi', 'Controle rideaux', 'Controle eclairage'],
+      description: 'Relais double intelligent ideal pour l automatisation des volets, rideaux et circuits electriques.'
+    },
+    {
+      id: 'domotique-mini-r2-2',
+      name: 'Mini R2',
+      image: '/images/domotique/mini-r2-2.webp',
+      url: '/product/domotique-mini-r2-2',
+      features: ['Application mobile', 'Connexion WiFi', 'Controle eclairage', 'Design compact'],
+      description: 'Micro module compact pour transformer un interrupteur classique en interrupteur connecte.'
+    },
+    {
+      id: 'domotique-mini-r3-2',
+      name: 'Mini R3',
+      image: '/images/domotique/Mini-R3-2.webp',
+      url: '/product/domotique-mini-r3-2',
+      features: ['Application mobile', 'Connexion WiFi', 'Controle eclairage', 'Design compact'],
+      description: 'Solution mini format pour piloter l eclairage et les automatismes dans les petits espaces.'
+    },
+    {
+      id: 'domotique-mini-r4-1',
+      name: 'Mini R4',
+      image: '/images/domotique/Mini-R4-1.webp',
+      url: '/product/domotique-mini-r4-1',
+      features: ['Application mobile', 'Connexion WiFi', 'Controle eclairage', 'Design compact'],
+      description: 'Nouvelle generation de mini relais intelligent pour scenarios domotiques simples et efficaces.'
+    },
+    {
+      id: 'domotique-s26-r2-2',
+      name: 'S26 R2',
+      image: '/images/domotique/S26-R2-2.webp',
+      url: '/product/domotique-s26-r2-2',
+      features: ['Application mobile', 'Connexion WiFi', 'Controle prises', 'Programmation horaire'],
+      description: 'Prise intelligente WiFi pour automatiser vos appareils electriques a la maison ou au bureau.'
+    },
+    {
+      id: 'domotique-switch-r5-1',
+      name: 'Switch R5',
+      image: '/images/domotique/Switch-R5-1.webp',
+      url: '/product/domotique-switch-r5-1',
+      features: ['Application mobile', 'Connexion WiFi', 'Controle eclairage'],
+      description: 'Interrupteur scene pour piloter rapidement plusieurs actions domotiques depuis un seul point.'
+    },
+    {
+      id: 'domotique-t3eu3c',
+      name: 'T3EU3C',
+      image: '/images/domotique/T3EU3C.jpg',
+      url: '/product/domotique-t3eu3c',
+      features: ['Application mobile', 'Connexion WiFi', 'Controle eclairage', 'Programmation horaire'],
+      description: 'Interrupteur tactile connecte trois canaux pour une gestion elegante de votre eclairage.'
+    },
+    {
+      id: 'domotique-telecommande-2',
+      name: 'Telecommande Smart',
+      image: '/images/domotique/telecommande-2-250x250.jpg',
+      url: '/product/domotique-telecommande-2',
+      features: ['Application mobile', 'Connexion WiFi', 'Controle eclairage'],
+      description: 'Telecommande domotique pratique pour declencher vos scenes et commandes a distance.'
+    },
+    {
+      id: 'controle-acces-cp01',
+      name: 'Digicode Metallique CP01',
+      image: '/images/controle dacces/Digicode-metallique-CP01-1-250x250.jpg',
+      url: '/product/controle-acces-cp01',
+      features: ['Code numerique', 'Carte NFC', 'Controle d acces'],
+      description: 'Digicode metallique robuste pour le controle d acces securise de porte, portail ou bureau.'
+    },
+    {
+      id: 'controle-acces-rfid-lecteur-1',
+      name: 'Lecteur RFID',
+      image: '/images/controle dacces/Lecteur-Rfid-1.jpg',
+      url: '/product/controle-acces-rfid-lecteur-1',
+      features: ['Carte NFC', 'Controle d acces', 'Application mobile'],
+      description: 'Lecteur RFID pratique pour les systemes de controle d acces professionnels et residentiels.'
+    },
+    {
+      id: 'controle-acces-padlock-1',
+      name: 'Cadenas Connecte',
+      image: '/images/controle dacces/padlock-1-250x250.webp',
+      url: '/product/controle-acces-padlock-1',
+      features: ['Application mobile', 'Empreinte digitale', 'Controle d acces'],
+      description: 'Cadenas intelligent pour securiser rapidement casiers, portes et espaces techniques.'
+    },
+    {
+      id: 'controle-acces-clavier-1',
+      name: 'Clavier de Controle 01',
+      image: '/images/controle dacces/11161020751990325179.jpg',
+      url: '/product/controle-acces-clavier-1',
+      features: ['Code numerique', 'Carte NFC', 'Controle d acces'],
+      description: 'Clavier de controle d acces avec design compact pour installations interieures et exterieures.'
+    },
+    {
+      id: 'controle-acces-clavier-2',
+      name: 'Clavier de Controle 02',
+      image: '/images/controle dacces/1892504409-1613275237.jpg',
+      url: '/product/controle-acces-clavier-2',
+      features: ['Code numerique', 'Carte NFC', 'Controle d acces'],
+      description: 'Solution de controle d acces fiable pour bureaux, residences et coproprietes.'
+    },
+    {
+      id: 'controle-acces-clavier-3',
+      name: 'Clavier de Controle 03',
+      image: '/images/controle dacces/23703153969957916.jpg',
+      url: '/product/controle-acces-clavier-3',
+      features: ['Code numerique', 'Carte NFC', 'Controle d acces'],
+      description: 'Clavier securise pour gerer les acces avec code et badges sur site.'
+    },
+    {
+      id: 'controle-acces-clavier-4',
+      name: 'Clavier de Controle 04',
+      image: '/images/controle dacces/80713322-1538541174.jpg',
+      url: '/product/controle-acces-clavier-4',
+      features: ['Code numerique', 'Carte NFC', 'Controle d acces'],
+      description: 'Modele de controle d acces pense pour un usage intensif avec installation simple.'
+    },
+    {
+      id: 'controle-acces-badgeuse-1',
+      name: 'Badgeuse et Lecteur 01',
+      image: '/images/controle dacces/IMG_20210321_184217.jpg',
+      url: '/product/controle-acces-badgeuse-1',
+      features: ['Carte NFC', 'Controle d acces', 'Application mobile'],
+      description: 'Lecteur de controle d acces adapte aux immeubles, entreprises et zones sensibles.'
+    },
+    {
+      id: 'controle-acces-badgeuse-2',
+      name: 'Badgeuse et Lecteur 02',
+      image: '/images/controle dacces/InkedHe673616e79f345cc84ff35ee432b74e66-300x300.jpg',
+      url: '/product/controle-acces-badgeuse-2',
+      features: ['Carte NFC', 'Controle d acces', 'Application mobile'],
+      description: 'Unite de lecture compacte pour une integration rapide dans votre systeme de securite.'
+    },
+    {
+      id: 'lecteur-uhf-1',
+      name: 'Lecteur UHF 01',
+      image: '/images/lecteur uhf/H44d48b9fd1aa4fd4a1c0c7a261fe6156o-300x300.webp',
+      url: '/product/lecteur-uhf-1',
+      features: ['Application mobile', 'Controle d acces', 'Carte NFC'],
+      description: 'Lecteur UHF longue portee pour identification automatique dans les environnements professionnels.'
+    },
+    {
+      id: 'lecteur-uhf-2',
+      name: 'Lecteur UHF 02',
+      image: '/images/lecteur uhf/Hed70fdbf6c104b2d85715adf0c15c5faD-300x300.webp',
+      url: '/product/lecteur-uhf-2',
+      features: ['Application mobile', 'Controle d acces', 'Carte NFC'],
+      description: 'Solution UHF compacte pour la lecture rapide et fiable de badges et etiquettes a distance.'
+    },
+    {
+      id: 'lecteur-uhf-3',
+      name: 'Lecteur UHF 03',
+      image: '/images/lecteur uhf/InkedHe673616e79f345cc84ff35ee432b74e66-300x300.jpg',
+      url: '/product/lecteur-uhf-3',
+      features: ['Application mobile', 'Controle d acces', 'Carte NFC'],
+      description: 'Lecteur UHF professionnel adapte aux parkings, entrepots, sites industriels et controle d acces.'
     }
   ];
 
@@ -256,10 +384,10 @@ const ProductPage: React.FC = () => {
       <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Produit non trouvé
+            Produit non trouve
           </h1>
           <p className="text-lg text-gray-600">
-            Le produit demandé n'existe pas.
+            Le produit demande n'existe pas.
           </p>
         </div>
       </div>
@@ -269,7 +397,7 @@ const ProductPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{product.name} - Ez lock | Équipements Domotiques Maroc</title>
+        <title>{product.name} - Ez lock | Equipements Domotiques Maroc</title>
         <meta name="description" content={product.description} />
         <link rel="canonical" href={`https://www.ezlock.ma/product/${productId}`} />
       </Helmet>
@@ -280,7 +408,7 @@ const ProductPage: React.FC = () => {
               {product.name}
             </h1>
             <p className="text-lg text-gray-600 text-center">
-              Découvrez tous les détails de ce produit
+              Decouvrez tous les details de ce produit
             </p>
           </div>
 

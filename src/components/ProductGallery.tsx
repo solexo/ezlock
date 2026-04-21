@@ -9,7 +9,7 @@ const products = [
     url: '/product/x1ai',
     features: [
       'Reconnaissance Faciale (AI) ultra-précise',
-      'Empreinte Digitale 360°',
+      'Empreinte Digitale 360Â°',
       'Code PIN personnalisable',
       'Clé mécanique',
       'Carte NFC',
@@ -28,7 +28,7 @@ const products = [
       'Empreinte digitale',
       'Face ID',
       'Carte NFC',
-      'Clé traditionnelle',
+      'ClÃ© traditionnelle',
       'Mot de passe'
     ],
     description: 'Serrure premium avec écran tactile et reconnaissance faciale avancée'
@@ -107,20 +107,6 @@ const products = [
     description: 'Version ultra-compacte avec clavier numérique et reconnaissance biométrique'
   },
   {
-    id: 'k5',
-    name: 'Serrure Intelligente K5',
-    image: '/images/k5.webp',
-    url: '/product/k5',
-    features: [
-      'Application mobile',
-      'Empreinte digitale',
-      'Carte NFC',
-      'Clé traditionnelle',
-      'Mot de passe'
-    ],
-    description: 'Serrure intelligente K5 avec toutes les options de sécurité : NFC, code numérique et contrôle mobile'
-  },
-  {
     id: 'i20',
     name: 'Serrure Intelligente I20',
     image: '/images/i20.webp',
@@ -128,40 +114,12 @@ const products = [
     features: [
       'Application mobile',
       'Empreinte digitale',
+      'Face ID',
       'Carte NFC',
-      'Live cam view',
       'Clé traditionnelle',
       'Mot de passe'
     ],
     description: 'Serrure intelligente I20 avec caméra intégrée pour surveillance en temps réel et contrôle mobile'
-  },
-  {
-    id: 'qm50',
-    name: 'Serrure Intelligente QM50',
-    image: '/images/qm50.webp',
-    url: '/product/qm50',
-    features: [
-      'Application mobile',
-      'Empreinte digitale',
-      'Carte NFC',
-      'Clé traditionnelle',
-      'Mot de passe'
-    ],
-    description: 'Serrure intelligente QM50 avec design moderne et sécurité renforcée'
-  },
-  {
-    id: 'qm60',
-    name: 'Serrure Intelligente QM60',
-    image: '/images/qm60.webp',
-    url: '/product/qm60',
-    features: [
-      'Application mobile',
-      'Empreinte digitale',
-      'Carte NFC',
-      'Clé traditionnelle',
-      'Mot de passe'
-    ],
-    description: 'Serrure intelligente QM60 avec technologie avancée et interface intuitive'
   },
   {
     id: 'ca1-ca2',
@@ -246,47 +204,42 @@ const products = [
 const ProductGallery = () => {
   return (
     <section id="produits" className="relative py-20 sm:py-24 bg-white overflow-hidden">
-      {/* Background glow elements */}
       <div className="absolute top-1/4 -left-40 w-80 h-80 bg-red-500/10 rounded-full blur-3xl opacity-20"></div>
       <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-red-500/5 rounded-full blur-3xl opacity-20"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16 sm:mb-20">
           <h2 className="font-hero text-4xl sm:text-5xl lg:text-6xl text-text-primary mb-4 sm:mb-6">
             Nos <span className="bg-gradient-to-r from-red-500 to-red-300 bg-clip-text text-transparent animate-pulse">Équipements</span>
           </h2>
           <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Découvrez notre gamme complète d'équipements domotiques dernière génération. 
+            Découvrez notre gamme complète d'équipements domotiques dernière génération.
             Serrures intelligentes, éclairage connecté, systèmes de sécurité avec installation gratuite.
           </p>
         </div>
 
-        {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch mb-16 sm:mb-20">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
 
-        {/* CTA Section */}
         <div className="text-center">
           <div className="card-elevated bg-gradient-red-500 relative overflow-hidden p-8 md:p-12 rounded-2xl max-w-4xl mx-auto">
-            {/* Glow overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent opacity-50"></div>
 
             <div className="relative z-10">
-              <h3 className="font-hero text-3xl sm:text-4xl text-white mb-4">
+              <h3 className="font-hero text-3xl sm:text-4xl text-black mb-4">
                 Besoin d'Aide pour Choisir ?
               </h3>
-              <p className="text-blue-100 text-lg mb-8 leading-relaxed">
+              <p className="text-black text-lg mb-8 leading-relaxed">
                 Contactez nos experts pour un conseil personnalisé gratuit et un devis sur mesure.
               </p>
               <button
                 onClick={() => window.open('https://wa.me/212601534301', '_blank')}
                 className="inline-flex items-center space-x-2 bg-white text-red-500 hover:bg-slate-50 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:shadow-glow-lg active:scale-95"
               >
-                <span>💬</span>
+                <span>ðŸ’¬</span>
                 <span>Conseil Gratuit</span>
               </button>
             </div>
