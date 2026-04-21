@@ -209,7 +209,7 @@ const DomotiqueCasablanca = () => {
 
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Services Domotique Maroc
+            Services Solution intelligente
           </h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-600 mb-6">

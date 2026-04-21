@@ -18,7 +18,7 @@ const Blog = () => {
     },
     {
       id: 2,
-      title: 'Domotique Maroc : Tendances 2025',
+      title: 'Solution intelligente : Tendances 2025',
       excerpt: 'Les dernières tendances en domotique au Maroc pour 2025. Découvrez les innovations en matière de maison connectée.',
       date: '2025-10-15',
       author: 'Ez lock Team',

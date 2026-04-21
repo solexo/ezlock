@@ -27,7 +27,7 @@ const BlogPost = () => {
     },
     {
       id: 2,
-      title: 'Domotique Maroc : Tendances 2025',
+      title: 'Solution intelligente : Tendances 2025',
       content: `
         <h2>Introduction</h2>
         <p>La domotique au Maroc évolue rapidement. Découvrez les tendances pour 2025.</p>
@@ -131,7 +131,7 @@ const BlogPost = () => {
   return (
     <>
       <Helmet>
-        <title>{article.title} - Blog Ez lock | Domotique Maroc</title>
+        <title>{article.title} - Blog Ez lock | Solution intelligente</title>
         <meta name="description" content={article.title} />
         <link rel="canonical" href={`https://www.ezlock.ma/blog/${id}`} />
       </Helmet>

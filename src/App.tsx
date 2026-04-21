@@ -51,15 +51,15 @@ const AppContent = () => {
 
     // Update document title based on route
     const titles: { [key: string]: string } = {
-      '/': 'Domotique Maroc - Maison Intelligente Casablanca | Ez lock',
+      '/': 'Ez Lock Solution intelligente',
       '/serrure-intelligente': 'Serrure Intelligente Maroc - Installation & Prix | Ez lock',
       '/domotique-casablanca': 'Domotique Casablanca - Maison Connectée & Smart Home | Ez lock',
       '/cameras-surveillance': 'Caméras Surveillance Maroc - Installation & Sécurité | Ez lock',
       '/controle-acces': 'Contrôle d\'Accès Maroc - Systèmes Biométriques | Ez lock',
       '/lecteur-uhf': 'Lecteur UHF Maroc - Solutions RFID & Identification | Ez lock',
-      '/contact': 'Contact Ez lock - Domotique Maroc | Devis & Informations',
-      '/systeme-son': 'Système Son Domotique Maroc - Audio Intelligent | Ez lock',
-      '/blog': 'Blog Domotique Maroc - Actualités & Conseils | Ez lock',
+      '/contact': 'Contact Ez lock - Solution intelligente | Devis & Informations',
+      '/systeme-son': 'Système Son Solution intelligente - Audio Intelligent | Ez lock',
+      '/blog': 'Blog Solution intelligente - Actualités & Conseils | Ez lock',
       '/about': 'À Propos - Ez lock | Technologies Domotiques Modernes',
       '/product/:productId': 'Produit - Ez lock | Équipements Domotiques'
     };
