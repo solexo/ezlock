@@ -28,6 +28,9 @@ const products = [
 const ScrollingProductMenu = () => {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
 
+  // Get featured products (first 6)
+  const featuredProducts = products.slice(0, 6);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -62,9 +65,6 @@ const ScrollingProductMenu = () => {
       description: 'Mise en service professionnelle en 24h avec formation complète incluse.',
     },
   ];
-
-  // Get featured products (first 6)
-  const featuredProducts = products.slice(0, 6);
 
   return (
     <div className="min-h-screen bg-gray-50 transition-colors duration-300">
