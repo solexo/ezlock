@@ -1,7 +1,7 @@
 Add-Type -AssemblyName System.Drawing
 
-$sourcePath = "public\images\logob.webp"
-$outputPath = "public\images\logo_resized.webp"
+$sourcePath = "public\images\logobb.webp"
+$outputPath = "public\images\logobb.webp"
 
 # Load original image
 $originalImage = [System.Drawing.Image]::FromFile((Resolve-Path $sourcePath))

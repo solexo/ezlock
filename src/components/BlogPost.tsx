@@ -78,7 +78,7 @@ const BlogPost = () => {
           "name": "Ez lock",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://ezlock.ma/images/logo_resized.webp"
+            "url": "https://ezlock.ma/images/logobb.webp"
           }
         },
         "datePublished": article.date,
