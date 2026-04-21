@@ -74,7 +74,7 @@ const Blog = () => {
                 </p>
                 <div className="flex flex-wrap gap-2">
                    {article.tags.map((tag) => (
-                     <span key={tag} className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">
+                     <span key={tag} className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-800">
                        <Tag className="w-3 h-3 mr-1" />
                        {tag}
                      </span>

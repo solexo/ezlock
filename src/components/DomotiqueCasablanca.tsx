@@ -69,7 +69,7 @@ const DomotiqueCasablanca = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Services Domotique Maroc
           </h2>
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg max-w-none">
             <p className="text-gray-600 mb-6">
               Ez lock est votre partenaire de confiance pour tous vos projets domotiques au Maroc. Avec plus de 500 installations réussies, nous sommes les experts en systèmes domotiques.
             </p>

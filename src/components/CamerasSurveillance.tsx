@@ -131,7 +131,7 @@ const CamerasSurveillance = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             {selectedLang === 'Fr' ? 'Installation Caméras Surveillance Maroc' : 'Surveillance Camera Installation Morocco'}
           </h2>
-           <div className="prose prose-lg dark:prose-invert max-w-none">
+           <div className="prose prose-lg max-w-none">
              <p className="text-gray-600 mb-6">
                {selectedLang === 'Fr' ? "Ez lock propose des solutions complètes de caméras surveillance pour sécuriser votre domicile, entreprise ou propriété au Maroc. Nos systèmes incluent installation, configuration et formation." : "Ez lock offers comprehensive surveillance camera solutions to secure your home, business or property in Morocco. Our systems include installation, configuration and training."}
              </p>

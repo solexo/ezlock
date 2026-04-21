@@ -66,7 +66,7 @@ const Portfolio = () => {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                    {project.services.map((service) => (
-                     <span key={service} className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                     <span key={service} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
                        {service}
                      </span>
                    ))}

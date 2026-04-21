@@ -306,7 +306,7 @@ const SerrureIntelligente = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Installation Serrure Intelligente Maroc
           </h2>
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg max-w-none">
             <p className="text-gray-600 mb-6">
               Ez lock est le leader en installation de serrures intelligentes au Maroc. Nos solutions de sécurité avancées combinent technologie de pointe et installation professionnelle pour protéger votre domicile ou votre entreprise.
             </p>

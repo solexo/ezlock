@@ -237,7 +237,7 @@ const ControleAcces = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             {t.installation.title}
           </h2>
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg max-w-none">
             <p className="text-gray-600 mb-6">
               {t.installation.intro}
             </p>
