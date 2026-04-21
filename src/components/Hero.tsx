@@ -55,14 +55,14 @@ const Hero = () => {
           <div className="space-y-4 sm:space-y-6 text-center animate-fade-in-up">
             <h1 className="font-hero text-2xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight">
               <span className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 bg-clip-text text-transparent">
-                {selectedLang === 'Fr' ? 'Votre Maison de Demain' : 'Your Home of Tomorrow'}
+                {selectedLang === 'Fr' ? 'Solutions domotiques professionnelles pour bâtiments intelligents' : 'Professional smart home solutions for intelligent buildings'}
               </span>
             </h1>
 
             <p className="text-base sm:text-lg lg:text-xl text-text-secondary max-w-2xl sm:max-w-3xl mx-auto leading-relaxed px-4">
               {selectedLang === 'Fr'
-                ? 'Transformez votre habitat avec les solutions domotiques les plus avancées.'
-                : 'Transform your home with the most advanced home automation solutions.'}
+                ? 'Améliorez la sécurité, le confort et l\'efficacité énergétique de vos espaces.'
+                : 'Improve the security, comfort and energy efficiency of your spaces.'}
               <span className="text-blue-accent font-semibold">
                 {selectedLang === 'Fr' ? ' Sécurité, confort, efficacité énergétique.' : ' Security, comfort, energy efficiency.'}
               </span>
@@ -76,10 +76,7 @@ const Hero = () => {
             {/* Promotional text right after animation */}
             <div className="mt-6 sm:mt-8">
               <p className="text-sm sm:text-base text-text-secondary max-w-3xl mx-auto leading-relaxed px-4 text-center">
-                🏠 <strong>Leader domotique Maroc</strong> - Ez lock transforme votre maison en habitat intelligent.
-                🔐 Installation serrures intelligentes, 📹 caméras surveillance, 🚪 contrôle d'accès, 🪟 rideaux automatiques,
-                💡 éclairage LED intelligent, 🚪 portes automatiques, 🌱 agriculture intelligente et 📱 contrôle centralisé.
-                ⚡ Installation professionnelle domotique Maroc - Devis gratuit 24h !
+                EZ Lock, leader de la domotique au Maroc, propose des solutions pour maisons et entreprises : serrures intelligentes, caméras de surveillance, contrôle d'accès, éclairage intelligent, automatisation des portes et gestion centralisée avec installation professionnelle et devis gratuit en 24h.
               </p>
             </div>
           </div>
