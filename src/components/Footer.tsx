@@ -125,7 +125,7 @@ const Footer = () => {
                 </div>
                 <div className="text-left">
                   <div className="text-sm font-semibold text-text-primary">Instagram</div>
-                  <div className="text-xs text-text-secondary">@domo_28</div>
+                  <div className="text-xs text-text-secondary">Ez lock</div>
                 </div>
               </button>
               
