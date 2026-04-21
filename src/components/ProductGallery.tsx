@@ -245,7 +245,7 @@ const products = [
 
 const ProductGallery = () => {
   return (
-    <section id="produits" className="relative py-20 sm:py-24 bg-gradient-smart overflow-hidden">
+    <section id="produits" className="relative py-20 sm:py-24 bg-white overflow-hidden">
       {/* Background glow elements */}
       <div className="absolute top-1/4 -left-40 w-80 h-80 bg-red-500/10 rounded-full blur-3xl opacity-20"></div>
       <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-red-500/5 rounded-full blur-3xl opacity-20"></div>
