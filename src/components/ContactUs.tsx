@@ -68,7 +68,6 @@ const ContactUs = () => {
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Email</h3>
                   <p className="text-blue-accent font-semibold">contact@ezlock.ma</p>
-                  <p className="text-blue-accent font-semibold">badr.assanoussi@ezlock.com</p>
                 </div>
               </div>
 
