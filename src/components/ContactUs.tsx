@@ -44,9 +44,9 @@ const ContactUs = () => {
                   <Phone className="w-6 h-6 text-red-500" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Téléphone</h3>
-                  <p className="text-red-500 font-semibold text-lg">06 01 53 43 01</p>
-                  <p className="text-red-500 font-semibold text-lg">06 66 59 18 24</p>
+                  <h3 className="font-semibold text-black mb-1">Téléphone</h3>
+                  <p className="text-black font-semibold text-lg">06 01 53 43 01</p>
+                  <p className="text-black font-semibold text-lg">06 66 59 18 24</p>
                   <p className="text-gray-600 text-sm mt-1">Lun-Sam 8h-18h</p>
                 </div>
               </div>
@@ -56,8 +56,8 @@ const ContactUs = () => {
                   <Phone className="w-6 h-6 text-red-500" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Fax</h3>
-                  <p className="text-red-500 font-semibold text-lg">05 22 55 00 99</p>
+                  <h3 className="font-semibold text-black mb-1">Fax</h3>
+                  <p className="text-black font-semibold text-lg">05 22 55 00 99</p>
                 </div>
               </div>
 

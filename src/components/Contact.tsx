@@ -58,10 +58,10 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-heading text-text-primary mb-1">Téléphone</h4>
-                    <p className="text-red-500 font-semibold text-lg">06 01 53 43 01</p>
-                    <p className="text-red-500 font-semibold text-lg">06 66 59 18 24</p>
-                    <h4 className="font-heading text-text-primary mb-1 mt-3">Fax</h4>
-                    <p className="text-red-500 font-semibold text-lg">05 22 55 00 99</p>
+                    <p className="text-black font-semibold text-lg">06 01 53 43 01</p>
+                    <p className="text-black font-semibold text-lg">06 66 59 18 24</p>
+                    <h4 className="font-heading text-black mb-1 mt-3">Fax</h4>
+                    <p className="text-black font-semibold text-lg">05 22 55 00 99</p>
                     <p className="text-text-secondary text-sm mt-1">Lun-Sam 8h-18h</p>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ const Contact = () => {
                 Sécurisez Votre Maison Maintenant
               </h3>
               
-              <p className="text-blue-100 text-lg leading-relaxed">
+              <p className="text-black text-lg leading-relaxed">
                 Contactez-nous pour un devis gratuit. Nos experts vous conseillent et accompagnent votre projet domotique.
               </p>
 
