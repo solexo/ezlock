@@ -37,7 +37,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300 pt-24">
+    <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-400 mb-8">
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -45,31 +45,31 @@ const Blog = () => {
         </Link>
 
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
              Blog <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300">Domotique</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Tutoriels, guides et conseils pour votre domotique au Maroc. Apprenez à installer et optimiser vos systèmes intelligents.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((article) => (
-            <article key={article.id} className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-video bg-gray-200 dark:bg-gray-700">
+            <article key={article.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-video bg-gray-200">
                 <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
               </div>
               <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                <div className="flex items-center text-sm text-gray-500 mb-3">
                   <Calendar className="w-4 h-4 mr-1" />
                   {article.date}
                   <User className="w-4 h-4 ml-4 mr-1" />
                   {article.author}
                 </div>
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 hover:text-blue-accent transition-colors">
+                <h2 className="text-xl font-bold text-gray-900 mb-3 hover:text-blue-accent transition-colors">
                   <Link to={`/blog/${article.id}`}>{article.title}</Link>
                 </h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="text-gray-600 mb-4">
                   {article.excerpt}
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -86,7 +86,7 @@ const Blog = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-600 dark:text-gray-300 mb-6">
+          <p className="text-gray-600 mb-6">
             Restez informé des dernières actualités domotique au Maroc. Abonnez-vous à notre newsletter !
           </p>
           <button

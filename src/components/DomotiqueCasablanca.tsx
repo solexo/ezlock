@@ -7,7 +7,7 @@ const DomotiqueCasablanca = () => {
     window.open('https://wa.me/212601534301', '_blank');
   };
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300 pt-24">
+    <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Back Button */}
         <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-400 mb-8">
@@ -17,10 +17,10 @@ const DomotiqueCasablanca = () => {
 
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
              Domotique <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300">Maroc</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Leader en domotique au Maroc. Installation de systèmes domotiques complets : serrures intelligentes, caméras surveillance, contrôle d'accès, éclairage LED, agriculture intelligente. Devis gratuit 24h !
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -32,7 +32,7 @@ const DomotiqueCasablanca = () => {
             </button>
             <button
               onClick={() => window.location.href = '#services'}
-               className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-blue-accent hover:bg-blue-50 dark:hover:bg-gray-700 transition-all duration-300"
+               className="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold border border-blue-accent hover:bg-blue-50 transition-all duration-300"
             >
               Nos Services
             </button>
@@ -41,40 +41,40 @@ const DomotiqueCasablanca = () => {
 
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
             <Home className="w-12 h-12 text-blue-accent mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Maison Connectée</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Maison Connectée</h3>
+            <p className="text-gray-600">
               Transformez votre maison en habitat intelligent avec nos solutions domotiques avancées.
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
             <Zap className="w-12 h-12 text-blue-accent mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Économie d'Énergie</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Économie d'Énergie</h3>
+            <p className="text-gray-600">
               Optimisez votre consommation avec l'éclairage LED intelligent et l'automatisation.
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
             <Shield className="w-12 h-12 text-blue-accent mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Sécurité Totale</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Sécurité Totale</h3>
+            <p className="text-gray-600">
               Caméras surveillance, serrures intelligentes et alarmes pour une protection complète.
             </p>
           </div>
         </div>
 
         {/* Content */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Services Domotique Maroc
           </h2>
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
+            <p className="text-gray-600 mb-6">
               Ez lock est votre partenaire de confiance pour tous vos projets domotiques au Maroc. Avec plus de 500 installations réussies, nous sommes les experts en systèmes domotiques.
             </p>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Nos Services</h3>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Nos Services</h3>
+            <ul className="list-disc list-inside text-gray-600 mb-6">
               <li>Installation serrures intelligentes</li>
               <li>Caméras surveillance</li>
               <li>Contrôle d'accès</li>
@@ -84,18 +84,18 @@ const DomotiqueCasablanca = () => {
               <li>Agriculture intelligente</li>
               <li>Maison connectée</li>
             </ul>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Pourquoi Choisir Ez lock à Casablanca ?</h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Pourquoi Choisir Ez lock à Casablanca ?</h3>
+            <p className="text-gray-600 mb-6">
               Notre expertise au Maroc nous permet de comprendre vos besoins spécifiques et de proposer des solutions adaptées au climat et aux exigences locales.
             </p>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+            <ul className="list-disc list-inside text-gray-600 mb-6">
               <li>Installation sous 48h</li>
               <li>Garantie 2 ans complète</li>
               <li>Formation utilisateur incluse</li>
               <li>Support technique 7j/7</li>
               <li>Devis gratuit en 24h</li>
             </ul>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-600">
               Contactez-nous dès aujourd'hui pour transformer votre maison en un habitat intelligent. Ez lock - Votre Maison De Demain au Maroc.
             </p>
           </div>

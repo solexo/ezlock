@@ -12,7 +12,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300 pt-24">
+    <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Back Button */}
         <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-400 mb-8">
@@ -22,10 +22,10 @@ const ContactUs = () => {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Contactez Nous
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Notre équipe est à votre disposition pour répondre à toutes vos questions et vous accompagner dans vos projets domotiques.
           </p>
         </div>
@@ -33,8 +33,8 @@ const ContactUs = () => {
         {/* Contact Information */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
           {/* Contact Details */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          <div className="bg-white rounded-2xl shadow-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Informations de Contact
             </h2>
 
@@ -44,10 +44,10 @@ const ContactUs = () => {
                   <Phone className="w-6 h-6 text-blue-accent" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Téléphone</h3>
+                  <h3 className="font-semibold text-gray-900 mb-1">Téléphone</h3>
                   <p className="text-blue-accent font-semibold text-lg">06 01 53 43 01</p>
                   <p className="text-blue-accent font-semibold text-lg">06 66 59 18 24</p>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">Lun-Sam 8h-18h</p>
+                  <p className="text-gray-600 text-sm mt-1">Lun-Sam 8h-18h</p>
                 </div>
               </div>
 
@@ -56,7 +56,7 @@ const ContactUs = () => {
                   <Phone className="w-6 h-6 text-blue-accent" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Fax</h3>
+                  <h3 className="font-semibold text-gray-900 mb-1">Fax</h3>
                   <p className="text-blue-accent font-semibold text-lg">05 22 55 00 99</p>
                 </div>
               </div>
@@ -66,7 +66,7 @@ const ContactUs = () => {
                   <Mail className="w-6 h-6 text-blue-accent" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Email</h3>
+                  <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                   <p className="text-blue-accent font-semibold">contact@ezlock.ma</p>
                 </div>
               </div>
@@ -76,11 +76,11 @@ const ContactUs = () => {
                   <MapPin className="w-6 h-6 text-blue-accent" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Adresse</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <h3 className="font-semibold text-gray-900  mb-1">Adresse</h3>
+                  <p className="text-gray-600 ">
                     Casablanca, Maroc
                   </p>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  <p className="text-gray-600  text-sm">
                     Zone de couverture : Casablanca, Rabat, Marrakech, Tanger
                   </p>
                 </div>
@@ -91,11 +91,11 @@ const ContactUs = () => {
                   <Clock className="w-6 h-6 text-blue-accent" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Horaires d'ouverture</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <h3 className="font-semibold text-gray-900  mb-1">Horaires d'ouverture</h3>
+                  <p className="text-gray-600 ">
                     Lundi - Samedi : 8h00 - 18h00
                   </p>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <p className="text-gray-600 ">
                     Dimanche : Fermé
                   </p>
                 </div>
@@ -104,13 +104,13 @@ const ContactUs = () => {
           </div>
 
           {/* Contact Form/Map Placeholder */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          <div className="bg-white rounded-2xl shadow-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Contactez-nous directement
             </h2>
 
             <div className="text-center">
-              <p className="text-gray-600 dark:text-gray-300 mb-8">
+              <p className="text-gray-600  mb-8">
                 Pour un devis personnalisé ou des informations sur nos produits,
                 contactez-nous via WhatsApp pour une réponse rapide.
               </p>
@@ -123,26 +123,26 @@ const ContactUs = () => {
                 <span>Contactez-nous sur WhatsApp</span>
               </button>
 
-              <p className="text-gray-500 dark:text-gray-400 text-sm">
+              <p className="text-gray-500 text-sm">
                 Réponse garantie sous 24h !
               </p>
             </div>
 
             {/* Additional Contact Options */}
-            <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+            <div className="mt-8 pt-8 border-t border-gray-200">
+              <h3 className="font-semibold text-gray-900  mb-4">
                 Autres moyens de contact
               </h3>
               <div className="space-y-3">
                 <button
                   onClick={() => window.location.href = 'tel:+212601534301'}
-                  className="w-full text-left p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                  className="w-full text-left p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   📞 Appel téléphonique direct
                 </button>
                 <button
                   onClick={() => window.location.href = 'mailto:contact@ezlock.ma'}
-                  className="w-full text-left p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                  className="w-full text-left p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   ✉️ Envoyer un email
                 </button>

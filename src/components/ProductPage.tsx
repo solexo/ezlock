@@ -253,12 +253,12 @@ const ProductPage: React.FC = () => {
 
   if (!product) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-black pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Produit non trouvé
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="text-lg text-gray-600">
             Le produit demandé n'existe pas.
           </p>
         </div>
@@ -273,13 +273,13 @@ const ProductPage: React.FC = () => {
         <meta name="description" content={product.description} />
         <link rel="canonical" href={`https://www.ezlock.ma/product/${productId}`} />
       </Helmet>
-      <div className="min-h-screen bg-gray-50 dark:bg-black pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
               {product.name}
             </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300 text-center">
+            <p className="text-lg text-gray-600 text-center">
               Découvrez tous les détails de ce produit
             </p>
           </div>

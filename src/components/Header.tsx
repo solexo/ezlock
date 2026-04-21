@@ -39,7 +39,7 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-dark-bg/80 backdrop-blur-xl shadow-depth-md border-b border-slate-800/30' 
+          ? 'bg-white/80 backdrop-blur-xl shadow-lg border-b border-gray-200' 
           : 'bg-transparent'
       }`}
     >
@@ -67,7 +67,7 @@ const Header = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className="px-4 py-2 text-sm font-medium text-text-secondary hover:text-blue-accent transition-all duration-300 rounded-lg hover:bg-dark-secondary/40"
+                className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-accent transition-all duration-300 rounded-lg hover:bg-gray-100"
               >
                 {link.label}
               </Link>
@@ -86,7 +86,7 @@ const Header = () => {
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden text-text-secondary hover:text-blue-accent transition-colors p-2 hover:bg-dark-secondary/40 rounded-lg"
+              className="lg:hidden text-gray-600 hover:text-blue-accent transition-colors p-2 hover:bg-gray-100 rounded-lg"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
             >
@@ -97,7 +97,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-20 left-0 right-0 bg-dark-secondary/95 backdrop-blur-xl border-b border-slate-800/30 shadow-depth-lg">
+          <div className="lg:hidden absolute top-20 left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg">
             <nav className="px-4 py-4 space-y-2">
               {navLinks.map((link) => (
                 <div
@@ -106,7 +106,7 @@ const Header = () => {
                     setIsMenuOpen(false);
                     navigate(link.to);
                   }}
-                  className="block w-full text-left px-4 py-3 text-text-secondary hover:text-blue-accent hover:bg-dark-tertiary/40 rounded-lg transition-all duration-300 font-medium cursor-pointer"
+                  className="block w-full text-left px-4 py-3 text-gray-600 hover:text-blue-accent hover:bg-gray-100 rounded-lg transition-all duration-300 font-medium cursor-pointer"
                 >
                   {link.label}
                 </div>

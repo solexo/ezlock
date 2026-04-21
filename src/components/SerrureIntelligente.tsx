@@ -195,7 +195,7 @@ const SerrureIntelligente = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300 pt-24">
+    <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Back Button */}
         <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-400 mb-8">
@@ -206,13 +206,13 @@ const SerrureIntelligente = () => {
         {/* Hero Section - Title, Image, Description, CTA */}
         <div className="text-center mb-16">
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {selectedLang === 'Fr' ? 'Serrure Intelligente' : 'Smart Lock'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300">{selectedLang === 'Fr' ? 'Maroc' : 'Morocco'}</span>
           </h1>
 
           {/* Animated Image Carousel */}
           <div className="flex flex-col items-center mb-12">
-            <div className="w-full max-w-sm h-96 bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center relative">
+            <div className="w-full max-w-sm h-96 bg-white rounded-2xl overflow-hidden shadow-xl flex items-center justify-center relative">
               <img
                 src={carouselLocks[currentIndex].image}
                 alt={carouselLocks[currentIndex].name}
@@ -229,7 +229,7 @@ const SerrureIntelligente = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentIndex
                       ? 'bg-blue-accent w-8'
-                      : 'bg-gray-400 dark:bg-gray-600 hover:bg-gray-500'
+                      : 'bg-gray-400 hover:bg-gray-500'
                   }`}
                   aria-label={`Show lock ${index + 1}`}
                 />
@@ -237,13 +237,13 @@ const SerrureIntelligente = () => {
             </div>
 
             {/* Product Name */}
-            <h3 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white">
+            <h3 className="mt-6 text-2xl font-bold text-gray-900">
               {carouselLocks[currentIndex].name}
             </h3>
           </div>
 
           {/* Description */}
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
             {selectedLang === 'Fr' ? 'Installation professionnelle de serrures intelligentes au Maroc. Sécurité avancée avec Face ID, empreinte digitale et NFC.' : 'Professional installation of smart locks in Morocco. Advanced security with Face ID, fingerprint and NFC.'}
           </p>
 
@@ -257,7 +257,7 @@ const SerrureIntelligente = () => {
             </button>
             <button
               onClick={() => window.location.href = '#services'}
-              className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-blue-accent hover:bg-blue-50 dark:hover:bg-gray-700 transition-all duration-300"
+              className="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold border border-blue-accent hover:bg-blue-50 transition-all duration-300"
             >
               En Savoir Plus
             </button>
@@ -266,24 +266,24 @@ const SerrureIntelligente = () => {
 
         {/* Features */}
         <div id="services" className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
             <Shield className="w-12 h-12 text-blue-accent mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Sécurité Avancée</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Sécurité Avancée</h3>
+            <p className="text-gray-600">
               Technologie de reconnaissance faciale, empreinte digitale et NFC pour une sécurité maximale.
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
             <Smartphone className="w-12 h-12 text-blue-accent mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Contrôle Mobile</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Contrôle Mobile</h3>
+            <p className="text-gray-600">
               Gérez votre serrure depuis votre smartphone avec notre application dédiée.
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
             <Key className="w-12 h-12 text-blue-accent mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Installation Pro</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Installation Pro</h3>
+            <p className="text-gray-600">
               Installation par nos techniciens certifiés avec garantie 2 ans incluse.
             </p>
           </div>
@@ -291,7 +291,7 @@ const SerrureIntelligente = () => {
 
         {/* Smart Locks Gallery */}
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
             {selectedLang === 'Fr' ? 'Nos Serrures Intelligentes' : 'Our Smart Locks'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -302,23 +302,23 @@ const SerrureIntelligente = () => {
         </div>
 
         {/* Content */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Installation Serrure Intelligente Maroc
           </h2>
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
+            <p className="text-gray-600 mb-6">
               Ez lock est le leader en installation de serrures intelligentes au Maroc. Nos solutions de sécurité avancées combinent technologie de pointe et installation professionnelle pour protéger votre domicile ou votre entreprise.
             </p>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Avantages des Serrures Intelligentes</h3>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Avantages des Serrures Intelligentes</h3>
+            <ul className="list-disc list-inside text-gray-600 mb-6">
               <li>Accès sans clé avec reconnaissance biométrique</li>
               <li>Contrôle à distance via application mobile</li>
               <li>Historique des accès en temps réel</li>
               <li>Intégration avec systèmes domotiques existants</li>
               <li>Alertes de sécurité instantanées</li>
             </ul>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-600">
               Contactez Ez lock dès aujourd'hui pour un devis gratuit et une installation sous 48h. Notre équipe d'experts vous accompagne dans le choix de la meilleure solution de serrure intelligente adaptée à vos besoins.
             </p>
           </div>

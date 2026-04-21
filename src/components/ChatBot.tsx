@@ -820,7 +820,7 @@ Ex: "i30", "smart switch", "caméra", "thermostat", "alarme"
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-[calc(100vw-2rem)] sm:w-96 h-[calc(100vh-2rem)] sm:h-[600px] max-h-[700px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 z-50 flex flex-col">
+        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-[calc(100vw-2rem)] sm:w-96 h-[calc(100vh-2rem)] sm:h-[600px] max-h-[700px] bg-white rounded-2xl shadow-2xl border border-gray-200 z-50 flex flex-col">
           {/* Header */}
           <div className="bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white p-3 sm:p-4 rounded-t-2xl flex items-center justify-between">
             <div className="flex items-center space-x-2 sm:space-x-3">
@@ -848,7 +848,7 @@ Ex: "i30", "smart switch", "caméra", "thermostat", "alarme"
                 <div
                   className={`max-w-[85%] sm:max-w-[80%] p-2 sm:p-3 rounded-2xl ${
                     message.isBot
-                      ? 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white'
+                      ? 'bg-gray-100 text-gray-900'
                        : 'bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300 text-white'
                   }`}
                 >
@@ -869,7 +869,7 @@ Ex: "i30", "smart switch", "caméra", "thermostat", "alarme"
 
           {/* Bouton WhatsApp */}
           {showWhatsAppButton && (
-            <div className="p-3 sm:p-4 border-t border-gray-200 dark:border-gray-700">
+            <div className="p-3 sm:p-4 border-t border-gray-200">
               <button
                 onClick={() => {
                   // Check if mobile device
@@ -892,7 +892,7 @@ Ex: "i30", "smart switch", "caméra", "thermostat", "alarme"
           )}
 
           {/* Input */}
-          <div className="p-3 sm:p-4 border-t border-gray-200 dark:border-gray-700">
+          <div className="p-3 sm:p-4 border-t border-gray-200">
             <div className="flex space-x-2">
               <input
                 type="text"
@@ -900,7 +900,7 @@ Ex: "i30", "smart switch", "caméra", "thermostat", "alarme"
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Tapez votre message..."
-                 className="flex-1 px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-accent dark:bg-gray-700 dark:text-white"
+                 className="flex-1 px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-accent"
               />
               <button
                 onClick={handleSendMessage}

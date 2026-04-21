@@ -243,8 +243,8 @@ const SoundSystem = () => {
     const price = selectedLang === 'Fr' ? product.priceFr : product.priceEn;
     
     return (
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-        <div className="relative h-64 overflow-hidden bg-gray-200 dark:bg-gray-700">
+      <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+        <div className="relative h-64 overflow-hidden bg-gray-200">
           <img
             src={product.image}
             alt={name}
@@ -255,10 +255,10 @@ const SoundSystem = () => {
           />
         </div>
         <div className="p-6">
-          <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2">
+          <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
             {name}
           </h3>
-          <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 line-clamp-2">
+          <p className="text-gray-600 text-sm mb-6 line-clamp-2">
             {description}
           </p>
           <div className="flex gap-3">
@@ -283,7 +283,7 @@ const SoundSystem = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300 pt-24">
+    <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Back Button */}
         <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-accent mb-8">
@@ -294,13 +294,13 @@ const SoundSystem = () => {
         {/* Hero Section - Title, Image, Description, CTA */}
         <div className="text-center mb-16">
           {/* Title */}
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               {selectedLang === 'Fr' ? 'Système Son' : 'Sound System'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-accent via-blue-400 to-blue-300">{selectedLang === 'Fr' ? 'Domotique' : 'Automation'}</span>
             </h1>
 
           {/* Animated Image Carousel */}
           <div className="flex flex-col items-center mb-12">
-            <div className="w-full max-w-sm h-96 bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center relative">
+            <div className="w-full max-w-sm h-96 bg-white rounded-2xl overflow-hidden shadow-xl flex items-center justify-center relative">
               <img
                 src={featuredProducts[currentIndex].image}
                 alt={featuredProducts[currentIndex].name}
@@ -317,7 +317,7 @@ const SoundSystem = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentIndex
                       ? 'bg-blue-accent w-8'
-                      : 'bg-gray-400 dark:bg-gray-600 hover:bg-gray-500'
+                      : 'bg-gray-400 hover:bg-gray-500'
                   }`}
                   aria-label={`Show product ${index + 1}`}
                 />
@@ -325,13 +325,13 @@ const SoundSystem = () => {
             </div>
 
             {/* Product Name */}
-            <h3 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white">
+            <h3 className="mt-6 text-2xl font-bold text-gray-900">
               {featuredProducts[currentIndex].name}
             </h3>
           </div>
 
           {/* Description */}
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
             {selectedLang === 'Fr'
               ? 'Installation professionnelle de systèmes audio domotiques au Maroc. Contrôle intelligent de votre musique et ambiance sonore.'
               : 'Professional installation of smart audio systems in Morocco. Intelligent control of your music and sound ambiance.'}
@@ -348,7 +348,7 @@ const SoundSystem = () => {
             </button>
             <button
               onClick={() => window.location.href = '#products'}
-              className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-blue-accent hover:bg-blue-50 dark:hover:bg-gray-700 transition-all duration-300"
+              className="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold border border-blue-accent hover:bg-blue-50 transition-all duration-300"
             >
               {selectedLang === 'Fr' ? 'Nos Produits' : 'Our Products'}
             </button>
@@ -357,34 +357,34 @@ const SoundSystem = () => {
 
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
             <Volume2 className="w-12 h-12 text-blue-accent mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">
               {selectedLang === 'Fr' ? 'Audio Haute Qualité' : 'High Quality Audio'}
             </h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-600">
               {selectedLang === 'Fr'
                 ? 'Systèmes audio professionnels avec son surround et amplification de qualité supérieure.'
                 : 'Professional audio systems with surround sound and superior amplification.'}
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
             <Music className="w-12 h-12 text-blue-accent mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">
               {selectedLang === 'Fr' ? 'Contrôle Musical' : 'Music Control'}
             </h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-600">
               {selectedLang === 'Fr'
                 ? 'Gestion centralisée de votre musique avec streaming et playlists personnalisées.'
                 : 'Centralized music management with streaming and personalized playlists.'}
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
             <Wifi className="w-12 h-12 text-blue-accent mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">
               {selectedLang === 'Fr' ? 'Connexion WiFi' : 'WiFi Connection'}
             </h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-600">
               {selectedLang === 'Fr'
                 ? 'Contrôle à distance via application mobile et intégration avec votre système domotique.'
                 : 'Remote control via mobile app and integration with your home automation system.'}
@@ -394,10 +394,10 @@ const SoundSystem = () => {
 
         {/* Products Section */}
         <div id="products" className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
             {selectedLang === 'Fr' ? 'Nos Produits Audio' : 'Our Audio Products'}
           </h2>
-          <p className="text-center text-gray-600 dark:text-gray-300 mb-12 text-lg">
+          <p className="text-center text-gray-600 mb-12 text-lg">
             {selectedLang === 'Fr'
               ? 'Découvrez notre large gamme de systèmes audio professionnels'
               : 'Discover our wide range of professional audio systems'}
@@ -410,16 +410,16 @@ const SoundSystem = () => {
         </div>
 
         {/* Services Section */}
-        <div id="services" className="bg-white dark:bg-gray-800 p-8 md:p-12 rounded-2xl shadow-lg mb-16">
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">
+        <div id="services" className="bg-white p-8 md:p-12 rounded-2xl shadow-lg mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
             {selectedLang === 'Fr' ? 'Nos Services Audio' : 'Our Audio Services'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 {selectedLang === 'Fr' ? 'Installation Complète' : 'Complete Installation'}
               </h3>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+              <ul className="space-y-2 text-gray-600">
                 <li>• {selectedLang === 'Fr' ? 'Étude acoustique de votre espace' : 'Acoustic study of your space'}</li>
                 <li>• {selectedLang === 'Fr' ? 'Installation d\'enceintes et amplificateurs' : 'Installation of speakers and amplifiers'}</li>
                 <li>• {selectedLang === 'Fr' ? 'Configuration du système domotique' : 'Configuration of home automation system'}</li>
@@ -427,10 +427,10 @@ const SoundSystem = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 {selectedLang === 'Fr' ? 'Maintenance & Support' : 'Maintenance & Support'}
               </h3>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+              <ul className="space-y-2 text-gray-600">
                 <li>• {selectedLang === 'Fr' ? 'Garantie complète sur nos installations' : 'Complete warranty on our installations'}</li>
                 <li>• {selectedLang === 'Fr' ? 'Support technique 24/7' : '24/7 technical support'}</li>
                 <li>• {selectedLang === 'Fr' ? 'Mises à jour logicielles' : 'Software updates'}</li>

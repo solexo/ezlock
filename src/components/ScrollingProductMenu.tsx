@@ -32,9 +32,9 @@ const ScrollingProductMenu = () => {
   const column3 = products.slice(Math.ceil(2 * products.length / 3));
 
   return (
-    <section className="py-8 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+    <section className="py-8 bg-gray-100 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-2xl font-title text-gray-900 dark:text-white mb-6">
+        <h2 className="text-center text-2xl font-title text-gray-900 mb-6">
           Découvrez nos produits
         </h2>
         <div className="flex justify-center items-start space-x-1 sm:space-x-2 lg:space-x-4">

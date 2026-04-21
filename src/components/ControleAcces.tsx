@@ -129,7 +129,7 @@ const ControleAcces = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300 pt-24">
+    <div className="min-h-screen bg-gray-50 transition-colors duration-300 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link to="/" className="inline-flex items-center text-blue-accent hover:text-blue-400 mb-8">
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -139,13 +139,13 @@ const ControleAcces = () => {
         {/* Hero Section - Title, Image, Description, CTA */}
         <div className="text-center mb-16">
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {t.title}
           </h1>
 
           {/* Animated Image Carousel */}
           <div className="flex flex-col items-center mb-12">
-            <div className="w-full max-w-sm h-96 bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center relative">
+            <div className="w-full max-w-sm h-96 bg-white rounded-2xl overflow-hidden shadow-xl flex items-center justify-center relative">
               <img
                 src={accessProducts[currentIndex].image}
                 alt={accessProducts[currentIndex].name}
@@ -162,7 +162,7 @@ const ControleAcces = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentIndex
                       ? 'bg-blue-accent w-8'
-                      : 'bg-gray-400 dark:bg-gray-600 hover:bg-gray-500'
+                      : 'bg-gray-400 hover:bg-gray-500'
                   }`}
                   aria-label={`Show product ${index + 1}`}
                 />
@@ -170,13 +170,13 @@ const ControleAcces = () => {
             </div>
 
             {/* Product Name */}
-            <h3 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white">
+            <h3 className="mt-6 text-2xl font-bold text-gray-900">
               {accessProducts[currentIndex].name}
             </h3>
           </div>
 
           {/* Description */}
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
             {t.description}
           </p>
 
@@ -191,7 +191,7 @@ const ControleAcces = () => {
             </button>
             <button
               onClick={() => window.location.href = '#services'}
-              className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border border-blue-accent hover:bg-blue-50 dark:hover:bg-gray-700 transition-all duration-300"
+              className="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold border border-blue-accent hover:bg-blue-50 transition-all duration-300"
             >
               {t.ctaLearnMore}
             </button>
@@ -199,31 +199,31 @@ const ControleAcces = () => {
         </div>
 
         <div id="services" className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
             <Lock className="w-12 h-12 text-blue-accent mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t.features.biometricSecurity}</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">{t.features.biometricSecurity}</h3>
+            <p className="text-gray-600">
               {t.features.biometricDesc}
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
             <Users className="w-12 h-12 text-blue-accent mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t.features.userManagement}</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">{t.features.userManagement}</h3>
+            <p className="text-gray-600">
               {t.features.userDesc}
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
             <Building className="w-12 h-12 text-blue-accent mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t.features.businessSolutions}</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">{t.features.businessSolutions}</h3>
+            <p className="text-gray-600">
               {t.features.businessDesc}
             </p>
           </div>
         </div>
 
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             {t.productsTitle}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -233,21 +233,21 @@ const ControleAcces = () => {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             {t.installation.title}
           </h2>
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
+            <p className="text-gray-600 mb-6">
               {t.installation.intro}
             </p>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{t.installation.typesTitle}</h3>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">{t.installation.typesTitle}</h3>
+            <ul className="list-disc list-inside text-gray-600 mb-6">
               {t.installation.types.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-600">
               {t.installation.closing}
             </p>
           </div>

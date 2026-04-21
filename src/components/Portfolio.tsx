@@ -34,34 +34,34 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <section id="portfolio" className="py-20 bg-white transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-title text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-title text-gray-900 mb-4">
             Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-blue-accent">Projets</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Découvrez nos réalisations en domotique et sécurité au Maroc. Projets réussis à Casablanca, Rabat, Marrakech et Tanger.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-video bg-gray-200 dark:bg-gray-700">
+            <div key={project.id} className="bg-gray-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-video bg-gray-200">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
               </div>
               <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                <div className="flex items-center text-sm text-gray-500 mb-3">
                   <MapPin className="w-4 h-4 mr-1" />
                   {project.location}
                   <Calendar className="w-4 h-4 ml-4 mr-1" />
                   {project.date}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="text-gray-600 mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">

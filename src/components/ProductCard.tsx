@@ -123,7 +123,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <div className="group card-elevated flex flex-col h-full cursor-pointer transition-all duration-500 overflow-hidden" onClick={() => window.location.href = product.url}>
       {/* Product Image Container */}
-      <div className="relative h-80 overflow-hidden flex-shrink-0 bg-dark-tertiary/50">
+      <div className="relative h-80 overflow-hidden flex-shrink-0 bg-gray-100">
         <div className="absolute inset-0 bg-gradient-glow opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
         <img
           src={productImages[currentImageIndex]}
@@ -138,7 +138,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </div>
 
       {/* Content */}
-      <div className="p-6 flex-grow flex flex-col bg-dark-secondary/50">
+      <div className="p-6 flex-grow flex flex-col bg-gray-50">
         <h3 className="text-xl font-heading text-text-primary mb-2 group-hover:text-blue-accent transition-colors duration-300">
           {product.name}
         </h3>
@@ -154,7 +154,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             {product.features.map((feature, index) => (
               <div 
                 key={index} 
-                className="flex items-center space-x-1 bg-dark-tertiary/40 border border-slate-700/50 px-3 py-1.5 rounded-lg text-xs text-text-secondary hover:border-blue-accent/50 transition-colors"
+                className="flex items-center space-x-1 bg-gray-100 border border-gray-300 px-3 py-1.5 rounded-lg text-xs text-gray-600 hover:border-blue-accent transition-colors"
               >
                 <div className="text-blue-accent">
                   {getFeatureIcon(feature)}
@@ -191,7 +191,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
           <Link
             to={product.url}
-            className="w-full px-4 py-3 bg-dark-tertiary/40 border border-slate-700/50 text-text-primary hover:border-blue-accent/50 hover:text-blue-accent font-semibold rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+            className="w-full px-4 py-3 bg-gray-100 border border-gray-300 text-black hover:border-blue-accent hover:text-blue-accent font-semibold rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
           >
             <span>Détails</span>
             <ArrowRight className="w-4 h-4" />
