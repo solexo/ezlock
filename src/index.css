@@ -19,7 +19,7 @@ html, body {
   }
 
   body {
-    @apply bg-dark-bg text-text-primary;
+    @apply bg-white text-black;
   }
 
   .font-display {

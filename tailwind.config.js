@@ -17,9 +17,9 @@ export default {
         'glow-blue': 'rgba(59,130,246,0.4)',
         'glow-blue-dim': 'rgba(59,130,246,0.15)',
         // Text colors
-        'text-primary': '#FFFFFF',
-        'text-secondary': '#94A3B8',
-        'text-tertiary': '#64748B',
+        'text-primary': '#000000',
+        'text-secondary': '#666666',
+        'text-tertiary': '#888888',
       },
       backgroundColor: {
         'glass': 'rgba(15, 23, 42, 0.5)',

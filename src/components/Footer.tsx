@@ -4,11 +4,11 @@ import { Phone, Mail, Clock, Shield, Award, Instagram, Facebook } from 'lucide-r
 const Footer = () => {
 
   const openInstagram = () => {
-    window.open('https://www.instagram.com/domo_28/', '_blank');
+    window.open('https://www.instagram.com/ezlock.ma/', '_blank');
   };
 
   const openFacebook = () => {
-    window.open('https://web.facebook.com/profile.php?id=61582655861695', '_blank');
+    window.open('https://www.facebook.com', '_blank');
   };
 
   return (
@@ -145,28 +145,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Integrations */}
-        <div className="mb-12 pb-12 border-t border-slate-800/30">
-          <h3 className="text-center font-heading text-lg text-text-primary mb-8 mt-12">Compatible avec</h3>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-3 max-w-4xl mx-auto">
-            {[
-              'tuya', 'googleassistant', 'google home', 'alexa', 'smartlife',
-              'tplink', 'ewlink', 'airbnb', 'booking', 'sonoff'
-            ].map((platform, index) => (
-              <div
-                key={index}
-                className="card-elevated p-3 flex items-center justify-center h-16 sm:h-20 group cursor-pointer"
-              >
-                <img
-                  src={`/images/${platform}.webp`}
-                  alt={platform}
-                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Bottom bar */}
         <div className="border-t border-slate-800/30 pt-8">
