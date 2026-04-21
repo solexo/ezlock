@@ -47,7 +47,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0 group">
-            <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-lg border border-blue-accent/50 overflow-hidden transition-all duration-300 group-hover:shadow-glow-blue group-hover:border-blue-accent">
+            <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-lg border border-blue-accent/50 overflow-hidden transition-all duration-300 group-hover:shadow-glow-blue group-hover:border-blue-accent">
               <div className="absolute inset-0 bg-gradient-glow"></div>
               <img
                 src="/images/logob.webp"
