@@ -374,6 +374,175 @@ const ProductPage: React.FC = () => {
       url: '/product/lecteur-uhf-3',
       features: ['Application mobile', 'Controle d acces', 'Carte NFC'],
       description: 'Lecteur UHF professionnel adapte aux parkings, entrepots, sites industriels et controle d acces.'
+    },
+    // Add audio products
+    {
+      id: 'smart-soundbar',
+      name: 'Smart Soundbar',
+      image: '/images/sound/Smart%20Sound%20Bar.webp',
+      url: '/product/smart-soundbar',
+      features: ['Système audio haute qualité', 'Installation résidentielle', 'Contrôle domotique'],
+      description: 'Soundbar intelligente avec son immersif et connectivité WiFi'
+    },
+    {
+      id: 'smart-ultra-soundbar',
+      name: 'Smart Ultra Soundbar',
+      image: '/images/sound/Smart%20Ultra%20Soundbar.webp',
+      url: '/product/smart-ultra-soundbar',
+      features: ['Système audio haute qualité', 'Installation résidentielle', 'Contrôle domotique'],
+      description: 'Soundbar premium avec Dolby Atmos 3D'
+    },
+    {
+      id: 'acoustimass-series-3-haut-parleur',
+      name: 'Acoustimass Series 3 Haut-parleur',
+      image: '/images/sound/cube.webp',
+      url: '/product/acoustimass-series-3-haut-parleur',
+      features: ['Système audio haute qualité', 'Installation résidentielle', 'Contrôle domotique'],
+      description: 'Enceintes satellites cubes Acoustimass Series 3 pour système surround'
+    },
+    {
+      id: 'acoustimass-3',
+      name: 'Acoustimass 3',
+      image: '/images/sound/Caisson%20de%20Bass%20Acoustimass3.webp',
+      url: '/product/acoustimass-3',
+      features: ['Système audio haute qualité', 'Installation résidentielle', 'Contrôle domotique'],
+      description: 'Caisson de basses Acoustimass 3 pour son surround'
+    },
+    {
+      id: 'smart-ultra-caisson-700',
+      name: 'Smart Ultra Caisson 700',
+      image: '/images/sound/Smart%20Ultra%20Caisson%20700.webp',
+      url: '/product/smart-ultra-caisson-700',
+      features: ['Système audio haute qualité', 'Installation résidentielle', 'Contrôle domotique'],
+      description: 'Caisson de basses premium avec technologie sans fil'
+    },
+    {
+      id: 'caisson-de-bass-flush',
+      name: 'Caisson de Bass Flush',
+      image: '/images/sound/Caisson%20de%20bass%20flush.webp',
+      url: '/product/caisson-de-bass-flush',
+      features: ['Système audio haute qualité', 'Installation résidentielle', 'Contrôle domotique'],
+      description: 'Caisson de basses encastrable avec design flush'
+    },
+    {
+      id: 'dm2c-encastrable',
+      name: 'DM2C Encastrable',
+      image: '/images/sound/DM2C.webp',
+      url: '/product/dm2c-encastrable',
+      features: ['Installation professionnelle', 'Son surround', 'Amplification puissante'],
+      description: 'Enceinte encastrée pour installations professionnelles'
+    },
+    {
+      id: 'dm3-flush',
+      name: 'DM3 Flush',
+      image: '/images/sound/DM3_Flush.webp',
+      url: '/product/dm3-flush',
+      features: ['Installation professionnelle', 'Son surround', 'Amplification puissante'],
+      description: 'Enceinte flush avec design discret'
+    },
+    {
+      id: 'dm5-flush',
+      name: 'DM5 Flush',
+      image: '/images/sound/DM5_Flush.webp',
+      url: '/product/dm5-flush',
+      features: ['Installation professionnelle', 'Son surround', 'Amplification puissante'],
+      description: 'Enceinte flush premium avec son supérieur'
+    },
+    {
+      id: 'dm8c-flush',
+      name: 'DM8C Flush',
+      image: '/images/sound/DM8C_Flush.webp',
+      url: '/product/dm8c-flush',
+      features: ['Installation professionnelle', 'Son surround', 'Amplification puissante'],
+      description: 'Enceinte flush haut de gamme avec acoustique exceptionnelle'
+    },
+    {
+      id: 'fs2c',
+      name: 'FS2C',
+      image: '/images/sound/FS2C.webp',
+      url: '/product/fs2c',
+      features: ['Installation professionnelle', 'Son surround', 'Amplification puissante'],
+      description: 'Enceinte professionnelle FS2C pour installations'
+    },
+    {
+      id: 'fs2se',
+      name: 'FS2SE',
+      image: '/images/sound/FS2SE.webp',
+      url: '/product/fs2se',
+      features: ['Installation professionnelle', 'Son surround', 'Amplification puissante'],
+      description: 'Enceinte professionnelle FS2SE pour installations'
+    },
+    {
+      id: '251-enceinte-exterieure',
+      name: '251 Enceinte Extérieure',
+      image: '/images/sound/251.webp',
+      url: '/product/251-enceinte-exterieure',
+      features: ['Installation professionnelle', 'Son surround', 'Amplification puissante'],
+      description: 'Enceinte extérieure Articulated Array® avec zone d\'écoute vaste et homogène'
+    },
+    {
+      id: 'satellite-flush',
+      name: 'Satellite Flush',
+      image: '/images/sound/Satellite_flush.webp',
+      url: '/product/satellite-flush',
+      features: ['Installation professionnelle', 'Son surround', 'Amplification puissante'],
+      description: 'Enceinte satellite flush pour installations discrètes'
+    },
+    {
+      id: 'satellites',
+      name: 'Satellites',
+      image: '/images/sound/Satellite_flush.webp',
+      url: '/product/satellites',
+      features: ['Installation professionnelle', 'Son surround', 'Amplification puissante'],
+      description: 'Enceintes satellites pour son surround'
+    },
+    {
+      id: 'iza2120',
+      name: 'IZA2120',
+      image: '/images/sound/IZA2120.webp',
+      url: '/product/iza2120',
+      features: ['Installation professionnelle', 'Son surround', 'Amplification puissante'],
+      description: 'Amplificateur professionnel IZA2120'
+    },
+    {
+      id: 'bose-music-amplifier',
+      name: 'Bose Music Amplifier',
+      image: '/images/sound/Bose%20Music%20Amplifier.webp',
+      url: '/product/bose-music-amplifier',
+      features: ['Installation professionnelle', 'Son surround', 'Amplification puissante'],
+      description: 'Amplificateur multicanal pour applications professionnelles'
+    },
+    {
+      id: 'l1-pro-16',
+      name: 'L1 PRO 16',
+      image: '/images/sound/L1_Pro16.webp',
+      url: '/product/l1-pro-16',
+      features: ['Système portable', 'Batterie longue durée', 'Connexion sans fil'],
+      description: 'Système de sonorisation portable professionnel 16 canaux'
+    },
+    {
+      id: 'l1-pro-8',
+      name: 'L1 PRO 8',
+      image: '/images/sound/L1pro8.webp',
+      url: '/product/l1-pro-8',
+      features: ['Système portable', 'Batterie longue durée', 'Connexion sans fil'],
+      description: 'Système de sonorisation portable professionnel 8 canaux'
+    },
+    {
+      id: '360p-ec',
+      name: '360P EC',
+      image: '/images/sound/360P_EC.webp',
+      url: '/product/360p-ec',
+      features: ['Système portable', 'Batterie longue durée', 'Connexion sans fil'],
+      description: 'Enceinte portable résistante à l\'eau avec son 360°'
+    },
+    {
+      id: 'za250-lz-zone-amplifier',
+      name: 'ZA250-LZ Zone Amplifier',
+      image: '/images/sound/ZA250.webp',
+      url: '/product/za250-lz-zone-amplifier',
+      features: ['Installation professionnelle', 'Son surround', 'Amplification puissante'],
+      description: 'Amplificateur de zone pour extension de systèmes sonores'
     }
   ];
 

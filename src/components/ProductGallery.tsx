@@ -2,6 +2,170 @@ import React from 'react';
 import ProductCard from './ProductCard';
 
 const products = [
+  // Camera surveillance products
+  {
+    id: 'camera-surveillance-1',
+    name: 'Caméra de surveillance 01',
+    image: '/images/camera de surveillance/a.webp',
+    url: '/product/camera-surveillance-1',
+    features: [
+      'Application mobile',
+      'Vision nocturne',
+      'Détection de mouvement',
+      'Enregistrement HD',
+      'Notifications push'
+    ],
+    description: 'Caméra de surveillance pour sécuriser votre maison, commerce ou bureau avec visualisation à distance.'
+  },
+  {
+    id: 'camera-surveillance-2',
+    name: 'Caméra de surveillance 02',
+    image: '/images/camera de surveillance/a-1.webp',
+    url: '/product/camera-surveillance-2',
+    features: [
+      'Application mobile',
+      'Vision nocturne',
+      'Détection de mouvement',
+      'Enregistrement HD',
+      'Stockage cloud'
+    ],
+    description: 'Solution de vidéosurveillance connectée avec image nette et contrôle facile depuis smartphone.'
+  },
+  {
+    id: 'camera-surveillance-3',
+    name: 'Caméra de surveillance 03',
+    image: '/images/camera de surveillance/a-2.webp',
+    url: '/product/camera-surveillance-3',
+    features: [
+      'Application mobile',
+      'Vision nocturne',
+      'Détection de mouvement',
+      'Enregistrement HD',
+      'Notifications push'
+    ],
+    description: 'Caméra adaptée à la surveillance quotidienne avec accès rapide aux alertes et au flux vidéo.'
+  },
+  {
+    id: 'camera-surveillance-4',
+    name: 'Caméra de surveillance 04',
+    image: '/images/camera de surveillance/o.webp',
+    url: '/product/camera-surveillance-4',
+    features: [
+      'Application mobile',
+      'Vision nocturne',
+      'Détection de mouvement',
+      'Enregistrement HD',
+      'Stockage cloud'
+    ],
+    description: 'Caméra moderne pour une installation professionnelle avec supervision locale et à distance.'
+  },
+  // Controle acces products
+  {
+    id: 'controle-acces-cp01',
+    name: 'Digicode Métallique CP01',
+    image: '/images/controle dacces/Digicode-metallique-CP01-1-250x250.jpg',
+    url: '/product/controle-acces-cp01',
+    features: ['Code numérique', 'Carte NFC', 'Contrôle d\'accès'],
+    description: 'Digicode métallique robuste pour le contrôle d\'accès sécurisé de porte, portail ou bureau.'
+  },
+  {
+    id: 'controle-acces-rfid-lecteur-1',
+    name: 'Lecteur RFID',
+    image: '/images/controle dacces/Lecteur-Rfid-1.jpg',
+    url: '/product/controle-acces-rfid-lecteur-1',
+    features: ['Carte NFC', 'Contrôle d\'accès', 'Application mobile'],
+    description: 'Lecteur RFID pratique pour les systèmes de contrôle d\'accès professionnels et résidentiels.'
+  },
+  {
+    id: 'controle-acces-padlock-1',
+    name: 'Cadenas Connecté',
+    image: '/images/controle dacces/padlock-1-250x250.webp',
+    url: '/product/controle-acces-padlock-1',
+    features: ['Application mobile', 'Empreinte digitale', 'Contrôle d\'accès'],
+    description: 'Cadenas intelligent pour sécuriser rapidement casiers, portes et espaces techniques.'
+  },
+  {
+    id: 'controle-acces-prise-intelligente',
+    name: 'Prise Intelligente Aubess',
+    image: '/images/controle dacces/Aubess-Prise-3.webp',
+    url: '/product/controle-acces-prise-intelligente',
+    features: ['Contrôle mobile', 'Programmation horaire', 'Contrôle d\'accès'],
+    description: 'Prise intelligente pour le contrôle d\'accès aux appareils électriques avec application mobile.'
+  },
+  {
+    id: 'controle-acces-clavier-1',
+    name: 'Clavier de Contrôle 01',
+    image: '/images/controle dacces/11161020751990325179.jpg',
+    url: '/product/controle-acces-clavier-1',
+    features: ['Code numérique', 'Carte NFC', 'Contrôle d\'accès'],
+    description: 'Clavier de contrôle d\'accès avec design compact pour installations intérieures et extérieures.'
+  },
+  {
+    id: 'controle-acces-clavier-2',
+    name: 'Clavier de Contrôle 02',
+    image: '/images/controle dacces/1892504409-1613275237.jpg',
+    url: '/product/controle-acces-clavier-2',
+    features: ['Code numérique', 'Carte NFC', 'Contrôle d\'accès'],
+    description: 'Solution de contrôle d\'accès fiable pour bureaux, résidences et copropriétés.'
+  },
+  {
+    id: 'controle-acces-clavier-3',
+    name: 'Clavier de Contrôle 03',
+    image: '/images/controle dacces/23703153969957916.jpg',
+    url: '/product/controle-acces-clavier-3',
+    features: ['Code numérique', 'Carte NFC', 'Contrôle d\'accès'],
+    description: 'Clavier sécurisé pour gérer les accès avec code et badges sur site.'
+  },
+  {
+    id: 'controle-acces-clavier-4',
+    name: 'Clavier de Contrôle 04',
+    image: '/images/controle dacces/80713322-1538541174.jpg',
+    url: '/product/controle-acces-clavier-4',
+    features: ['Code numérique', 'Carte NFC', 'Contrôle d\'accès'],
+    description: 'Modèle de contrôle d\'accès pensé pour un usage intensif avec installation simple.'
+  },
+  {
+    id: 'controle-acces-badgeuse-1',
+    name: 'Badgeuse et Lecteur 01',
+    image: '/images/controle dacces/IMG_20210321_184217.jpg',
+    url: '/product/controle-acces-badgeuse-1',
+    features: ['Carte NFC', 'Contrôle d\'accès', 'Application mobile'],
+    description: 'Lecteur de contrôle d\'accès adapté aux immeubles, entreprises et zones sensibles.'
+  },
+  {
+    id: 'controle-acces-badgeuse-2',
+    name: 'Badgeuse et Lecteur 02',
+    image: '/images/controle dacces/InkedHe673616e79f345cc84ff35ee432b74e66-300x300.jpg',
+    url: '/product/controle-acces-badgeuse-2',
+    features: ['Carte NFC', 'Contrôle d\'accès', 'Application mobile'],
+    description: 'Unité de lecture compacte pour une intégration rapide dans votre système de sécurité.'
+  },
+  // UHF reader products
+  {
+    id: 'lecteur-uhf-1',
+    name: 'Lecteur UHF 01',
+    image: '/images/lecteur uhf/H44d48b9fd1aa4fd4a1c0c7a261fe6156o-300x300.webp',
+    url: '/product/lecteur-uhf-1',
+    features: ['Application mobile', 'Contrôle d\'accès', 'Carte NFC'],
+    description: 'Lecteur UHF longue portée pour identification automatique dans les environnements professionnels.'
+  },
+  {
+    id: 'lecteur-uhf-2',
+    name: 'Lecteur UHF 02',
+    image: '/images/lecteur uhf/Hed70fdbf6c104b2d85715adf0c15c5faD-300x300.webp',
+    url: '/product/lecteur-uhf-2',
+    features: ['Application mobile', 'Contrôle d\'accès', 'Carte NFC'],
+    description: 'Solution UHF compacte pour la lecture rapide et fiable de badges et étiquettes à distance.'
+  },
+  {
+    id: 'lecteur-uhf-3',
+    name: 'Lecteur UHF 03',
+    image: '/images/lecteur uhf/InkedHe673616e79f345cc84ff35ee432b74e66-300x300.jpg',
+    url: '/product/lecteur-uhf-3',
+    features: ['Application mobile', 'Contrôle d\'accès', 'Carte NFC'],
+    description: 'Lecteur UHF professionnel adapté aux parkings, entrepôts, sites industriels et contrôle d\'accès.'
+  },
+  // Smart locks
   {
     id: 'x1ai',
     name: 'X1 Ai 🔐 7 Méthodes d\'Ouverture Intelligentes',

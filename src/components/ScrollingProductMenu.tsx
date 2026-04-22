@@ -17,12 +17,15 @@ const allProducts = [
   { id: 'inta-intb', image: '/images/intb.webp', name: 'Interrupteurs Tactiles INTA/INTB', category: 'domotique' },
   { id: 'smart-switch-double', image: '/images/smart switch rideau.webp', name: 'Interrupteur Double Rideau', category: 'domotique' },
   { id: 'smart-switch-simple', image: '/images/smart switch.webp', name: 'Interrupteur Simple', category: 'domotique' },
-  // Caméras
-  { id: 'cam', image: '/images/cam.webp', name: 'Caméra de Surveillance', category: 'camera' },
-  { id: 'x5-ultra', image: '/images/WhatsApp Image 2025-09-11 at 15.47.21 (4).webp', name: 'Serrure X5 ULTRA', category: 'camera' },
-  // Lecteur UHF
-  { id: 'lecteur-uhf-1', image: '/images/smart switch.webp', name: 'Lecteur UHF Standard', category: 'uhf' },
-  { id: 'lecteur-uhf-2', image: '/images/i20.webp', name: 'Lecteur UHF Pro', category: 'uhf' },
+   // Caméras
+   { id: 'camera-surveillance-1', image: '/images/camera de surveillance/a.webp', name: 'Caméra de surveillance 01', category: 'camera' },
+   { id: 'camera-surveillance-2', image: '/images/camera de surveillance/a-1.webp', name: 'Caméra de surveillance 02', category: 'camera' },
+   { id: 'camera-surveillance-3', image: '/images/camera de surveillance/a-2.webp', name: 'Caméra de surveillance 03', category: 'camera' },
+   { id: 'camera-surveillance-4', image: '/images/camera de surveillance/o.webp', name: 'Caméra de surveillance 04', category: 'camera' },
+   // Lecteur UHF
+   { id: 'lecteur-uhf-1', image: '/images/lecteur uhf/H44d48b9fd1aa4fd4a1c0c7a261fe6156o-300x300.webp', name: 'Lecteur UHF 01', category: 'uhf' },
+   { id: 'lecteur-uhf-2', image: '/images/lecteur uhf/Hed70fdbf6c104b2d85715adf0c15c5faD-300x300.webp', name: 'Lecteur UHF 02', category: 'uhf' },
+   { id: 'lecteur-uhf-3', image: '/images/lecteur uhf/InkedHe673616e79f345cc84ff35ee432b74e66-300x300.jpg', name: 'Lecteur UHF 03', category: 'uhf' },
 ];
 
 const getProductsByCategory = (category) => {
