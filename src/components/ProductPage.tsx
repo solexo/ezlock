@@ -50,26 +50,18 @@ const ProductPage: React.FC = () => {
     {
       id: 'k10',
       name: 'Serrure Intelligente K10',
-      image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.21%20(6).webp',
+      image: '/images/k10.webp',
       url: '/product/k10',
       features: ['Application mobile', 'Empreinte digitale', 'Face ID', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
       description: 'Modele robuste avec ecran haute definition et mecanisme de securite avance'
     },
     {
-      id: 'x5-cam',
-      name: 'Serrure Intelligente X5 CAM',
-      image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.21%20(5).webp',
-      url: '/product/x5-cam',
+      id: 'x5',
+      name: 'X5',
+      image: '/images/x5.webp',
+      url: '/product/x5',
       features: ['Application mobile', 'Empreinte digitale', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
       description: 'Serrure poignee avec design minimaliste et technologie NFC integree'
-    },
-    {
-      id: 'x5-ultra',
-      name: 'Serrure Intelligente X5 ULTRA',
-      image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.21%20(4).webp',
-      url: '/product/x5-ultra',
-      features: ['Application mobile', 'Empreinte digitale', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
-      description: 'Version ultra-compacte avec clavier numerique et reconnaissance biometrique'
     },
     {
       id: 'i20',
@@ -90,7 +82,7 @@ const ProductPage: React.FC = () => {
     {
       id: 'm1pro',
       name: 'Serrure Intelligente M1 Pro',
-      image: '/images/serrure intelligente/m1pro.webp',
+      image: '/images/m1pro.webp',
       url: '/product/m1pro',
       features: ['Application mobile', 'Empreinte digitale', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
       description: 'Serrure intelligente M1 Pro avec controle mobile et methodes d ouverture avancees'

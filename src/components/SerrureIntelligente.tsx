@@ -14,7 +14,7 @@ const SerrureIntelligente = () => {
     { name: 'I30', image: '/images/i30.webp' },
     { name: 'I40', image: '/images/i40 (2).webp' },
     { name: 'I50', image: '/images/serrure intelligente/i50.webp' },
-    { name: 'M1 Pro', image: '/images/serrure intelligente/m1pro.webp' },
+    { name: 'M1 Pro', image: '/images/m1pro.webp' },
     { name: 'S10', image: '/images/serrure intelligente/s10.webp' },
     { name: 'S928', image: '/images/serrure intelligente/s928.webp' },
     { name: 'X7 CAM', image: '/images/serrure intelligente/x7cam.jpg' },
@@ -98,10 +98,10 @@ const SerrureIntelligente = () => {
       description: 'Modèle robuste avec écran haute définition et mécanisme de sécurité avancé'
     },
     {
-      id: 'x5-cam',
-      name: 'Serrure Intelligente X5 CAM',
-      image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.21%20(5).webp',
-      url: '/product/x5-cam',
+      id: 'x5',
+      name: 'X5',
+      image: '/images/x5.webp',
+      url: '/product/x5',
       features: [
         'Application mobile',
         'Empreinte digitale',
@@ -110,20 +110,6 @@ const SerrureIntelligente = () => {
         'Mot de passe'
       ],
       description: 'Serrure poignée avec design minimaliste et technologie NFC intégrée'
-    },
-    {
-      id: 'x5-ultra',
-      name: 'Serrure Intelligente X5 ULTRA',
-      image: '/images/WhatsApp%20Image%202025-09-11%20at%2015.47.21%20(4).webp',
-      url: '/product/x5-ultra',
-      features: [
-        'Application mobile',
-        'Empreinte digitale',
-        'Carte NFC',
-        'Clé traditionnelle',
-        'Mot de passe'
-      ],
-      description: 'Version ultra-compacte avec clavier numérique et reconnaissance biométrique'
     },
     {
       id: 'i20',
@@ -157,7 +143,7 @@ const SerrureIntelligente = () => {
     {
       id: 'm1pro',
       name: 'Serrure Intelligente M1 Pro',
-      image: '/images/serrure intelligente/m1pro.webp',
+      image: '/images/m1pro.webp',
       url: '/product/m1pro',
       features: [
         'Application mobile',
