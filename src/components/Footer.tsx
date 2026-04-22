@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, Clock, Shield, Award, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
@@ -95,18 +96,19 @@ const Footer = () => {
             <h3 className="font-heading text-lg text-text-primary mb-6">Categories</h3>
             <ul className="space-y-3">
               {[
-                { label: 'CAMÉRA DE SURVEILLANCE' },
-                { label: 'CONTRÔLE D\'ACCÈS' },
-                { label: 'DOMOTIQUE' },
-                { label: 'LECTEUR UHF' },
-                { label: 'SERRURE INTELLIGENTE' },
+                { label: 'CAMÉRA DE SURVEILLANCE', path: '/cameras-surveillance' },
+                { label: 'CONTRÔLE D\'ACCÈS', path: '/controle-acces' },
+                { label: 'DOMOTIQUE', path: '/domotique-casablanca' },
+                { label: 'LECTEUR UHF', path: '/lecteur-uhf' },
+                { label: 'SERRURE INTELLIGENTE', path: '/serrure-intelligente' },
               ].map((item, index) => (
                 <li key={index}>
-                  <span 
-                    className="text-text-secondary hover:text-red-500 transition-colors text-sm cursor-pointer"
+                  <Link
+                    to={item.path}
+                    className="text-text-secondary hover:text-red-500 transition-colors text-sm"
                   >
                     {item.label}
-                  </span>
+                  </Link>
                 </li>
               ))}
             </ul>
