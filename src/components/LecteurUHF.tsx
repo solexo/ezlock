@@ -135,7 +135,7 @@ const LecteurUHF = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch mb-10">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

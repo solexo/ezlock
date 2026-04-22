@@ -172,7 +172,7 @@ const CamerasSurveillance = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-12 items-stretch">
+            <div className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-12 items-stretch">
               {cameras.map((camera) => (
                 <ProductCard key={camera.id} product={camera} />
               ))}

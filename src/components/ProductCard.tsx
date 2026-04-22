@@ -123,12 +123,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <div className="group card-elevated flex flex-col h-full cursor-pointer transition-all duration-500 overflow-hidden" onClick={() => window.location.href = product.url}>
       {/* Product Image Container */}
-      <div className="relative h-80 overflow-hidden flex-shrink-0 bg-gray-100">
+      <div className="relative h-48 sm:h-64 md:h-80 overflow-hidden flex-shrink-0 bg-gray-100">
         <div className="absolute inset-0 bg-gradient-glow opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
         <img
           src={productImages[currentImageIndex]}
           alt={product.name}
-          className="w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-500 ease-out relative z-10"
+          className="w-full h-full object-contain p-4 sm:p-6 md:p-8 group-hover:scale-110 transition-transform duration-500 ease-out relative z-10"
           onClick={handleImageClick}
           loading="lazy"
           fetchPriority={product.id === 'i29' ? "high" : "auto"}
@@ -138,12 +138,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </div>
 
       {/* Content */}
-      <div className="p-6 flex-grow flex flex-col bg-gray-50">
-        <h3 className="text-xl font-heading text-text-primary mb-2 group-hover:text-red-500 transition-colors duration-300">
+      <div className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col bg-gray-50">
+        <h3 className="text-lg sm:text-xl font-heading text-text-primary mb-2 group-hover:text-red-500 transition-colors duration-300">
           {product.name}
         </h3>
-        
-        <p className="text-text-secondary text-sm mb-4 flex-grow line-clamp-3">
+
+        <p className="text-text-secondary text-sm mb-4 flex-grow line-clamp-2 sm:line-clamp-3">
           {product.description}
         </p>
 

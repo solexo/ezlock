@@ -382,7 +382,7 @@ const ProductGallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch mb-16 sm:mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-stretch mb-16 sm:mb-20">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
