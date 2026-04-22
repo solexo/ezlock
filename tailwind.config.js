@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false,
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -20,6 +20,10 @@ export default {
         'text-primary': '#000000',
         'text-secondary': '#666666',
         'text-tertiary': '#888888',
+        // Dark theme variants
+        'text-primary-dark': '#FFFFFF',
+        'text-secondary-dark': '#CCCCCC',
+        'text-tertiary-dark': '#AAAAAA',
       },
       backgroundColor: {
         'glass': 'rgba(15, 23, 42, 0.5)',

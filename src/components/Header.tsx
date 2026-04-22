@@ -15,11 +15,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    // Force light mode for clean aesthetic
-    document.documentElement.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
-  }, []);
+
 
   const whatsappContact = () => {
     window.open('https://wa.me/212601534301', '_blank');
@@ -36,10 +32,10 @@ const Header = () => {
   ];
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-white/80 backdrop-blur-xl shadow-lg border-b border-gray-200' 
+        isScrolled
+          ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl shadow-lg border-b border-gray-200 dark:border-gray-700'
           : 'bg-transparent'
       }`}
     >

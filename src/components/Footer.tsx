@@ -13,7 +13,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-white border-t border-gray-200">
+    <footer className="relative bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-12">
           {/* Brand */}
@@ -27,19 +27,19 @@ const Footer = () => {
                 />
               </div>
               <div className="ml-4">
-                <div className="font-hero text-xl text-text-primary">Ez lock</div>
-                <div className="text-sm text-text-secondary">Smart Home Maroc</div>
+                <div className="font-hero text-xl text-text-primary dark:text-text-primary-dark dark:text-text-primary dark:text-text-primary-dark-dark">Ez lock</div>
+                <div className="text-sm text-text-secondary dark:text-text-secondary-dark dark:text-text-secondary dark:text-text-secondary-dark-dark">Smart Home Maroc</div>
               </div>
             </div>
-            <p className="text-text-secondary mb-6 max-w-md leading-relaxed">
-              Spécialiste domotique Maroc. Solutions intelligentes pour maisons connectées sécurisées.
+            <p className="text-text-secondary dark:text-text-secondary-dark dark:text-text-secondary dark:text-text-secondary-dark-dark mb-6 max-w-md leading-relaxed">
+              Expert en domotique complète au Maroc. Serrures intelligentes, caméras surveillance, contrôle d'accès, rideaux automatiques, éclairage intelligent, portes automatiques, agriculture intelligente. Installation professionnelle de solutions de maison connectée.
             </p>
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-6 text-sm">
-              <div className="flex items-center space-x-2 text-text-secondary">
+              <div className="flex items-center space-x-2 text-text-secondary dark:text-text-secondary-dark">
                 <Shield className="w-4 h-4 text-red-500" />
                 <span>Installation Pro</span>
               </div>
-              <div className="flex items-center space-x-2 text-text-secondary">
+              <div className="flex items-center space-x-2 text-text-secondary dark:text-text-secondary-dark">
                 <Award className="w-4 h-4 text-red-500" />
                 <span>Garantie 1 an</span>
               </div>
@@ -48,41 +48,41 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-heading text-lg text-text-primary mb-6">Contact</h3>
+            <h3 className="font-heading text-lg text-text-primary dark:text-text-primary-dark mb-6">Contact</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3 group cursor-pointer">
                 <Phone className="w-4 h-4 text-red-500 flex-shrink-0 mt-1" />
-                <div className="text-text-secondary group-hover:text-red-500 transition-colors text-sm">
+                <div className="text-text-secondary dark:text-text-secondary-dark group-hover:text-red-500 transition-colors text-sm">
                   06 01 53 43 01
                 </div>
               </div>
               <div className="flex items-start space-x-3 group cursor-pointer">
                 <Phone className="w-4 h-4 text-red-500 flex-shrink-0 mt-1" />
-                <div className="text-text-secondary group-hover:text-red-500 transition-colors text-sm">
+                <div className="text-text-secondary dark:text-text-secondary-dark group-hover:text-red-500 transition-colors text-sm">
                   06 66 59 18 24
                 </div>
               </div>
               <div className="flex items-start space-x-3 group cursor-pointer">
                 <Phone className="w-4 h-4 text-red-500 flex-shrink-0 mt-1" />
-                <div className="text-text-secondary group-hover:text-red-500 transition-colors text-sm">
+                <div className="text-text-secondary dark:text-text-secondary-dark group-hover:text-red-500 transition-colors text-sm">
                   Fax: 05 22 55 00 99
                 </div>
               </div>
               <div className="flex items-start space-x-3 group cursor-pointer">
                 <Mail className="w-4 h-4 text-red-500 flex-shrink-0 mt-1" />
-                <div className="text-text-secondary group-hover:text-red-500 transition-colors text-sm break-all">
+                <div className="text-text-secondary dark:text-text-secondary-dark group-hover:text-red-500 transition-colors text-sm break-all">
                   ezlock.maroc@gmail.com
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock className="w-4 h-4 text-red-500 flex-shrink-0 mt-1" />
-                <div className="text-text-secondary text-sm">
+                <div className="text-text-secondary dark:text-text-secondary-dark text-sm">
                   Lun-Sam 8h-18h
                 </div>
               </div>
               <div className="flex items-start space-x-3 mt-4">
-                <div className="text-text-secondary text-sm">
-                  <div className="font-semibold text-text-primary mb-2">Adresse :</div>
+                <div className="text-text-secondary dark:text-text-secondary-dark text-sm">
+                  <div className="font-semibold text-text-primary dark:text-text-primary-dark mb-2">Adresse :</div>
                   26 Avenue Mers Sultan<br/>
                   Apt N°3 étage 1<br/>
                   Casablanca - Maroc
@@ -93,7 +93,7 @@ const Footer = () => {
 
           {/* Categories */}
           <div>
-            <h3 className="font-heading text-lg text-text-primary mb-6">Categories</h3>
+            <h3 className="font-heading text-lg text-text-primary dark:text-text-primary-dark mb-6">Categories</h3>
             <ul className="space-y-3">
               {[
                 { label: 'CAMÉRA DE SURVEILLANCE', path: '/cameras-surveillance' },
@@ -105,7 +105,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to={item.path}
-                    className="text-text-secondary hover:text-red-500 transition-colors text-sm"
+                    className="text-text-secondary dark:text-text-secondary-dark hover:text-red-500 transition-colors text-sm"
                   >
                     {item.label}
                   </Link>
@@ -116,7 +116,7 @@ const Footer = () => {
 
           {/* Social */}
           <div>
-            <h3 className="font-heading text-lg text-text-primary mb-6">Suivez-nous</h3>
+            <h3 className="font-heading text-lg text-text-primary dark:text-text-primary-dark mb-6">Suivez-nous</h3>
             <div className="space-y-4">
               <button
                 onClick={openInstagram}
@@ -126,8 +126,8 @@ const Footer = () => {
                   <Instagram className="w-4 h-4 text-white" />
                 </div>
                 <div className="text-left">
-                  <div className="text-sm font-semibold text-text-primary">Instagram</div>
-                  <div className="text-xs text-text-secondary">Ez lock</div>
+                  <div className="text-sm font-semibold text-text-primary dark:text-text-primary-dark">Instagram</div>
+                  <div className="text-xs text-text-secondary dark:text-text-secondary-dark">Ez lock</div>
                 </div>
               </button>
               
@@ -139,8 +139,8 @@ const Footer = () => {
                   <Facebook className="w-4 h-4 text-white" />
                 </div>
                 <div className="text-left">
-                  <div className="text-sm font-semibold text-text-primary">Facebook</div>
-                  <div className="text-xs text-text-secondary">Ez lock</div>
+                  <div className="text-sm font-semibold text-text-primary dark:text-text-primary-dark">Facebook</div>
+                  <div className="text-xs text-text-secondary dark:text-text-secondary-dark">Ez lock</div>
                 </div>
               </button>
             </div>
@@ -151,10 +151,10 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="border-t border-slate-800/30 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center">
-            <div className="text-text-secondary text-sm text-center sm:text-left">
+            <div className="text-text-secondary dark:text-text-secondary-dark text-sm text-center sm:text-left">
               © 2025 Ez lock. Tous droits réservés.
             </div>
-            <div className="text-text-secondary text-xs mt-4 sm:mt-0">
+            <div className="text-text-secondary dark:text-text-secondary-dark text-xs mt-4 sm:mt-0">
               Solutions Smart Home Maroc
             </div>
           </div>

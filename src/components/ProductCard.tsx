@@ -123,7 +123,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <div className="group card-elevated flex flex-col h-full cursor-pointer transition-all duration-500 overflow-hidden" onClick={() => window.location.href = product.url}>
       {/* Product Image Container */}
-      <div className="relative h-48 sm:h-64 md:h-80 overflow-hidden flex-shrink-0 bg-gray-100">
+      <div className="relative h-48 sm:h-64 md:h-80 overflow-hidden flex-shrink-0 bg-gray-100 dark:bg-gray-800">
         <div className="absolute inset-0 bg-gradient-glow opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
         <img
           src={productImages[currentImageIndex]}
@@ -138,23 +138,23 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </div>
 
       {/* Content */}
-      <div className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col bg-gray-50">
-        <h3 className="text-lg sm:text-xl font-heading text-text-primary mb-2 group-hover:text-red-500 transition-colors duration-300">
+      <div className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col bg-gray-50 dark:bg-gray-800">
+        <h3 className="text-lg sm:text-xl font-heading text-text-primary dark:text-text-primary-dark mb-2 group-hover:text-red-500 transition-colors duration-300">
           {product.name}
         </h3>
 
-        <p className="text-text-secondary text-sm mb-4 flex-grow line-clamp-2 sm:line-clamp-3">
+        <p className="text-text-secondary dark:text-text-secondary-dark text-sm mb-4 flex-grow line-clamp-2 sm:line-clamp-3">
           {product.description}
         </p>
 
         {/* Features */}
         <div className="space-y-3 mb-6">
-          <h4 className="font-semibold text-text-secondary text-xs uppercase tracking-wider">Caractéristiques</h4>
+          <h4 className="font-semibold text-text-secondary dark:text-text-secondary-dark text-xs uppercase tracking-wider">Caractéristiques</h4>
           <div className="flex flex-wrap gap-2">
             {product.features.map((feature, index) => (
-              <div 
-                key={index} 
-                className="flex items-center space-x-1 bg-gray-100 border border-gray-300 px-3 py-1.5 rounded-lg text-xs text-gray-600 hover:border-red-500 transition-colors"
+              <div
+                key={index}
+                className="flex items-center space-x-1 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 px-3 py-1.5 rounded-lg text-xs text-gray-600 dark:text-gray-300 hover:border-red-500 transition-colors"
               >
                 <div className="text-red-500">
                   {getFeatureIcon(feature)}
@@ -191,7 +191,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
           <Link
             to={product.url}
-            className="w-full px-4 py-3 bg-gray-100 border border-gray-300 text-black hover:border-red-500 hover:text-red-500 font-semibold rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+            className="w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-black dark:text-white hover:border-red-500 hover:text-red-500 font-semibold rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
           >
             <span>Détails</span>
             <ArrowRight className="w-4 h-4" />
@@ -202,12 +202,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       {/* Image Gallery Modal */}
       {showImageGallery && (
         <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowImageGallery(false)}>
-          <div className="card-elevated max-w-4xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
-            <div className="flex items-center justify-between p-6 border-b border-slate-800/30">
-              <h3 className="text-xl font-heading text-text-primary">{product.name}</h3>
-              <button 
+          <div className="card-elevated max-w-4xl max-h-[90vh] overflow-hidden bg-white dark:bg-gray-800" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between p-6 border-b border-slate-800/30 dark:border-gray-700">
+              <h3 className="text-xl font-heading text-text-primary dark:text-text-primary-dark">{product.name}</h3>
+              <button
                 onClick={() => setShowImageGallery(false)}
-                className="text-text-secondary hover:text-red-500 text-2xl transition-colors"
+                className="text-text-secondary dark:text-text-secondary-dark hover:text-red-500 text-2xl transition-colors"
               >
                 ×
               </button>

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from './contexts/LanguageContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProductGallery from './components/ProductGallery';
@@ -11,6 +12,7 @@ import Contact from './components/Contact';
 
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
+import ThemeToggle from './components/ThemeToggle';
 import SerrureIntelligente from './components/SerrureIntelligente';
 import DomotiqueCasablanca from './components/DomotiqueCasablanca';
 import CamerasSurveillance from './components/CamerasSurveillance';
@@ -25,13 +27,6 @@ import ProductPage from './components/ProductPage';
 
 const AppContent = () => {
   const location = useLocation();
-
-  useEffect(() => {
-    // Force light mode for clean aesthetic
-    document.documentElement.classList.remove('dark');
-    document.documentElement.style.colorScheme = 'light';
-    localStorage.setItem('theme', 'light');
-  }, []);
 
   useEffect(() => {
     // Dynamic canonical tag for SPA routing
@@ -75,7 +70,8 @@ const AppContent = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <ThemeToggle />
       <Header />
       <Routes>
         <Route path="/" element={
@@ -109,7 +105,9 @@ function App() {
     <HelmetProvider>
       <Router>
         <LanguageProvider>
-          <AppContent />
+          <ThemeProvider>
+            <AppContent />
+          </ThemeProvider>
         </LanguageProvider>
       </Router>
     </HelmetProvider>
