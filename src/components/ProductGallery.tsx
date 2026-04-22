@@ -367,16 +367,16 @@ const products = [
 
 const ProductGallery = () => {
   return (
-    <section id="produits" className="relative py-20 sm:py-24 bg-white overflow-hidden">
+    <section id="produits" className="relative py-20 sm:py-24 bg-white dark:bg-gray-900 overflow-hidden">
       <div className="absolute top-1/4 -left-40 w-80 h-80 bg-red-500/10 rounded-full blur-3xl opacity-20"></div>
       <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-red-500/5 rounded-full blur-3xl opacity-20"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 sm:mb-20">
-          <h2 className="font-hero text-4xl sm:text-5xl lg:text-6xl text-text-primary mb-4 sm:mb-6">
+          <h2 className="font-hero text-4xl sm:text-5xl lg:text-6xl text-text-primary dark:text-text-primary-dark mb-4 sm:mb-6">
             Nos <span className="bg-gradient-to-r from-red-500 to-red-300 bg-clip-text text-transparent animate-pulse">Équipements</span>
           </h2>
-          <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-text-secondary dark:text-text-secondary-dark max-w-3xl mx-auto leading-relaxed">
             Découvrez notre gamme complète d'équipements domotiques dernière génération.
             Serrures intelligentes, éclairage connecté, systèmes de sécurité avec installation gratuite.
           </p>

@@ -40,7 +40,7 @@ const Hero = () => {
       className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-24 lg:pt-28"
     >
       {/* White background */}
-      <div className="absolute inset-0 bg-white"></div>
+      <div className="absolute inset-0 bg-white dark:bg-gray-900"></div>
 
       {/* Animated glow orbs in background */}
       <div className="absolute top-0 -left-40 w-80 h-80 bg-red-500/20 rounded-full blur-3xl opacity-20 animate-float"></div>
@@ -59,7 +59,7 @@ const Hero = () => {
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl text-text-secondary max-w-2xl sm:max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-base sm:text-lg lg:text-xl text-text-secondary dark:text-text-secondary-dark max-w-2xl sm:max-w-3xl mx-auto leading-relaxed px-4">
               {selectedLang === 'Fr'
                 ? 'Améliorez la sécurité, le confort et l\'efficacité énergétique de vos espaces.'
                 : 'Improve the security, comfort and energy efficiency of your spaces.'}
@@ -75,7 +75,7 @@ const Hero = () => {
 
             {/* Promotional text right after animation */}
             <div className="mt-6 sm:mt-8">
-              <p className="text-sm sm:text-base text-text-secondary max-w-3xl mx-auto leading-relaxed px-4 text-center">
+              <p className="text-sm sm:text-base text-text-secondary dark:text-text-secondary-dark max-w-3xl mx-auto leading-relaxed px-4 text-center">
                 EZ Lock, leader de la domotique au Maroc, propose des solutions pour maisons et entreprises : serrures intelligentes, caméras de surveillance, contrôle d'accès, éclairage intelligent, automatisation des portes et gestion centralisée avec installation professionnelle et devis gratuit en 24h.
               </p>
             </div>
@@ -95,10 +95,10 @@ const Hero = () => {
                       <Icon className="w-8 h-8 text-red-500" />
                     </div>
                   </div>
-                  <h3 className="font-heading text-lg sm:text-xl text-text-primary mb-2">
+                  <h3 className="font-heading text-lg sm:text-xl text-text-primary dark:text-text-primary-dark mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-text-secondary text-sm sm:text-base">
+                  <p className="text-text-secondary dark:text-text-secondary-dark text-sm sm:text-base">
                     {feature.description}
                   </p>
                 </div>
@@ -108,7 +108,7 @@ const Hero = () => {
 
           {/* Integration platforms */}
           <div className="hidden sm:block pt-8 sm:pt-12">
-            <h3 className="font-heading text-center text-xl sm:text-2xl text-text-primary mb-8">
+            <h3 className="font-heading text-center text-xl sm:text-2xl text-text-primary dark:text-text-primary-dark mb-8">
               Compatible avec les meilleures plateformes
             </h3>
             <div className="grid grid-cols-3 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
