@@ -9,6 +9,7 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   build: {
+    target: 'es2020',
     rollupOptions: {
       output: {
         manualChunks: undefined,
