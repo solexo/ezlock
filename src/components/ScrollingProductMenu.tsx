@@ -2,28 +2,110 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Smartphone, Zap } from 'lucide-react';
 
-const products = [
-  { id: 'x1ai', image: '/images/x1ai.webp', name: 'Serrure Intelligente X1AI' },
-  { id: 'i40', image: '/images/i40 (2).webp', name: 'Serrure I40' },
-  { id: 'i30', image: '/images/i30.webp', name: 'Serrure I30' },
-  { id: 'i29', image: '/images/WhatsApp Image 2025-09-11 at 15.47.22.webp', name: 'Serrure I29' },
-  { id: 'k10', image: '/images/WhatsApp Image 2025-09-11 at 15.47.21 (6).webp', name: 'Clavier K10' },
-  { id: 'x5-cam', image: '/images/WhatsApp Image 2025-09-11 at 15.47.21 (5).webp', name: 'Camera X5' },
-  { id: 'x5-ultra', image: '/images/WhatsApp Image 2025-09-11 at 15.47.21 (4).webp', name: 'Camera X5 Ultra' },
-  { id: 'i20', image: '/images/i20.webp', name: 'Serrure I20' },
-  { id: 'ca1-ca2', image: '/images/ca2.webp', name: 'Controleur CA2' },
-  { id: 'inta-intb', image: '/images/intb.webp', name: 'Interphone INTB' },
-  { id: 'smart-switch-double', image: '/images/smart switch rideau.webp', name: 'Interrupteur Double Rideau' },
-  { id: 'smart-switch-simple', image: '/images/smart switch.webp', name: 'Interrupteur Simple' },
-  { id: 'cam', image: '/images/cam.webp', name: 'Camera Surveillance' },
-  { id: 'controle-acces-2', image: '/images/ca1.webp', name: 'Controleur CA1' },
-  { id: 'alexa', image: '/images/alexa.webp', name: 'Integration Alexa' },
-  { id: 'google-home', image: '/images/google home.webp', name: 'Integration Google Home' },
-  { id: 'tuya', image: '/images/tuya.webp', name: 'Plateforme Tuya' }
+const allProducts = [
+  // Serrures Intelligentes (Smart Locks)
+  { id: 'x1ai', image: '/images/x1ai.webp', name: 'Serrure Intelligente X1AI', category: 'serrure' },
+  { id: 'i40', image: '/images/i40 (2).webp', name: 'Serrure I40', category: 'serrure' },
+  { id: 'i30', image: '/images/i30.webp', name: 'Serrure I30', category: 'serrure' },
+  { id: 'i29', image: '/images/WhatsApp Image 2025-09-11 at 15.47.22.webp', name: 'Serrure I29', category: 'serrure' },
+  { id: 'k10', image: '/images/WhatsApp Image 2025-09-11 at 15.47.21 (6).webp', name: 'Clavier K10', category: 'serrure' },
+  { id: 'x5-cam', image: '/images/WhatsApp Image 2025-09-11 at 15.47.21 (5).webp', name: 'Camera X5', category: 'serrure' },
+  // Contrôle d'Accès (Access Control)
+  { id: 'ca1-ca2', image: '/images/ca2.webp', name: 'Controleur CA2', category: 'controle-acces' },
+  { id: 'controle-acces-2', image: '/images/ca1.webp', name: 'Controleur CA1', category: 'controle-acces' },
+  // Domotique (Home Automation)
+  { id: 'inta-intb', image: '/images/intb.webp', name: 'Interrupteurs Tactiles INTA/INTB', category: 'domotique' },
+  { id: 'smart-switch-double', image: '/images/smart switch rideau.webp', name: 'Interrupteur Double Rideau', category: 'domotique' },
+  { id: 'smart-switch-simple', image: '/images/smart switch.webp', name: 'Interrupteur Simple', category: 'domotique' },
+  // Caméras
+  { id: 'cam', image: '/images/cam.webp', name: 'Caméra de Surveillance', category: 'camera' },
+  { id: 'x5-ultra', image: '/images/WhatsApp Image 2025-09-11 at 15.47.21 (4).webp', name: 'Serrure X5 ULTRA', category: 'camera' },
+  // Lecteur UHF
+  { id: 'lecteur-uhf-1', image: '/images/smart switch.webp', name: 'Lecteur UHF Standard', category: 'uhf' },
+  { id: 'lecteur-uhf-2', image: '/images/i20.webp', name: 'Lecteur UHF Pro', category: 'uhf' },
 ];
+
+const getProductsByCategory = (category) => {
+  if (Array.isArray(category)) {
+    return allProducts.filter(p => category.includes(p.category));
+  }
+  return allProducts.filter(p => p.category === category);
+};
+
+const SimpleCarousel = ({ category, categoryTitle }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const products = getProductsByCategory(category);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [products.length]);
+
+  if (!products.length) return null;
+
+  return (
+    <div className="relative flex flex-col items-center justify-center h-full p-6 bg-gradient-to-br from-gray-50 to-red-50 rounded-2xl">
+      <div className="text-center">
+        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 text-red-500">
+          {categoryTitle}
+        </h3>
+
+        <div className="flex justify-center mb-4">
+          <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-xl border-2 border-red-500/30 overflow-hidden shadow-lg bg-white">
+            <img
+              src={products[currentIndex]?.image}
+              alt={products[currentIndex]?.name}
+              className="w-full h-full object-contain p-4 transition-all duration-700"
+              loading="eager"
+              onError={(e) => {
+                e.target.src = '/images/download.webp';
+              }}
+            />
+          </div>
+        </div>
+
+        <div className="flex justify-center space-x-2 mb-4">
+          {products.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-1.5 h-1.5 rounded-full transition-all ${
+                index === currentIndex ? 'bg-red-500 w-4' : 'bg-gray-300'
+              }`}
+            />
+          ))}
+        </div>
+
+        <p className="text-xs sm:text-sm text-gray-700 font-semibold text-center line-clamp-2">
+          {products[currentIndex]?.name}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 const ScrollingProductMenu = () => {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
+
+  const products = [
+    { id: 'x1ai', image: '/images/x1ai.webp', name: 'Serrure Intelligente X1AI' },
+    { id: 'i40', image: '/images/i40 (2).webp', name: 'Serrure I40' },
+    { id: 'i30', image: '/images/i30.webp', name: 'Serrure I30' },
+    { id: 'i29', image: '/images/WhatsApp Image 2025-09-11 at 15.47.22.webp', name: 'Serrure I29' },
+    { id: 'k10', image: '/images/WhatsApp Image 2025-09-11 at 15.47.21 (6).webp', name: 'Clavier K10' },
+    { id: 'x5-cam', image: '/images/WhatsApp Image 2025-09-11 at 15.47.21 (5).webp', name: 'Camera X5' },
+    { id: 'x5-ultra', image: '/images/WhatsApp Image 2025-09-11 at 15.47.21 (4).webp', name: 'Camera X5 Ultra' },
+    { id: 'i20', image: '/images/i20.webp', name: 'Serrure I20' },
+    { id: 'ca1-ca2', image: '/images/ca2.webp', name: 'Controleur CA2' },
+    { id: 'inta-intb', image: '/images/intb.webp', name: 'Interphone INTB' },
+    { id: 'smart-switch-double', image: '/images/smart switch rideau.webp', name: 'Interrupteur Double Rideau' },
+    { id: 'smart-switch-simple', image: '/images/smart switch.webp', name: 'Interrupteur Simple' },
+    { id: 'cam', image: '/images/cam.webp', name: 'Camera Surveillance' },
+    { id: 'controle-acces-2', image: '/images/ca1.webp', name: 'Controleur CA1' },
+  ];
 
   const featuredProducts = products.slice(0, 6);
 
@@ -63,77 +145,83 @@ const ScrollingProductMenu = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 transition-colors duration-300">
-      <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-red-50">
+      {/* Main Hero Section with Center Animation and Side Carousels */}
+      <div className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-red-50">
         <div className="absolute top-0 -left-40 w-80 h-80 bg-red-500/5 rounded-full blur-3xl opacity-20 animate-float"></div>
         <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-red-500/5 rounded-full blur-3xl opacity-20 animate-float-delayed"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex justify-center mb-8">
-            <div className="relative">
-              <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-2xl border-2 border-red-500/30 overflow-hidden shadow-2xl bg-white transition-all duration-500">
-                <img
-                  src={featuredProducts[currentProductIndex]?.image}
-                  alt={featuredProducts[currentProductIndex]?.name}
-                  className="w-full h-full object-contain p-6 transition-all duration-700 ease-in-out"
-                  loading="eager"
-                  fetchPriority="high"
-                  onError={(e) => {
-                    e.target.src = '/images/download.webp';
-                  }}
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                  <h3 className="text-white font-bold text-sm sm:text-base text-center">
-                    {featuredProducts[currentProductIndex]?.name || 'Produit EZ Lock'}
-                  </h3>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8 items-center">
+            {/* LEFT CAROUSEL - Domotique */}
+            <div className="hidden md:block h-96">
+              <SimpleCarousel category="domotique" categoryTitle="" />
+            </div>
+
+            {/* CENTER - Main Animation */}
+            <div className="flex flex-col items-center justify-center py-12 md:py-0">
+              <div className="flex justify-center mb-8">
+                <div className="relative">
+                  <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-2xl border-4 border-red-500/40 overflow-hidden shadow-2xl bg-white transition-all duration-500 hover:shadow-2xl hover:border-red-500">
+                    <img
+                      src={featuredProducts[currentProductIndex]?.image}
+                      alt={featuredProducts[currentProductIndex]?.name}
+                      className="w-full h-full object-contain p-8 transition-all duration-700 ease-in-out"
+                      loading="eager"
+                      fetchPriority="high"
+                      onError={(e) => {
+                        e.target.src = '/images/download.webp';
+                      }}
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                      <h3 className="text-white font-bold text-base sm:text-lg text-center">
+                        {featuredProducts[currentProductIndex]?.name || 'Produit EZ Lock'}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-center mt-6 space-x-2">
+                    {featuredProducts.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentProductIndex(index)}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          index === currentProductIndex ? 'bg-red-500 w-6' : 'bg-gray-300 hover:bg-red-300'
+                        }`}
+                        aria-label={`View ${featuredProducts[index]?.name}`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              <div className="flex justify-center mt-4 space-x-2">
-                {featuredProducts.map((_, index) => (
+              <div className="space-y-4 text-center">
+                <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-4">
                   <button
-                    key={index}
-                    onClick={() => setCurrentProductIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentProductIndex ? 'bg-red-500 w-6' : 'bg-gray-300 hover:bg-red-300'
-                    }`}
-                    aria-label={`View ${featuredProducts[index]?.name}`}
-                  />
-                ))}
+                    onClick={whatsappContact}
+                    className="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-xl font-bold text-sm hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                  >
+                    Demander un Devis
+                  </button>
+
+                  <Link
+                    to="/contact"
+                    className="bg-white text-red-500 px-6 py-3 rounded-xl font-bold text-sm border-2 border-red-500 hover:bg-red-50 transition-all duration-300"
+                  >
+                    Nous Contacter
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="space-y-6 animate-fade-in-up">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold">
-              <span className="bg-gradient-to-r from-red-500 via-black to-red-500 bg-clip-text text-transparent">
-                Nos Produits
-              </span>
-            </h1>
-
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Decouvrez notre gamme complete de solutions domotiques : serrures intelligentes,
-              cameras de surveillance, controle d'acces et bien plus encore.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-              <button
-                onClick={whatsappContact}
-                className="bg-gradient-to-r from-red-500 to-red-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center space-x-3"
-              >
-                <span>Demander un Devis</span>
-              </button>
-
-              <Link
-                to="/contact"
-                className="bg-white text-red-500 px-8 py-4 rounded-xl font-bold text-lg border-2 border-red-500 hover:bg-red-50 transition-all duration-300 inline-flex items-center space-x-3"
-              >
-                <span>Nous Contacter</span>
-              </Link>
+            {/* RIGHT CAROUSEL - Camera & UHF */}
+            <div className="hidden md:block h-96">
+              <SimpleCarousel category={['camera', 'uhf']} categoryTitle="" />
             </div>
           </div>
         </div>
       </div>
 
+      {/* Features Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -171,6 +259,7 @@ const ScrollingProductMenu = () => {
         </div>
       </section>
 
+      {/* Produits Phare Section - UNTOUCHED */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -230,6 +319,7 @@ const ScrollingProductMenu = () => {
         </div>
       </section>
 
+      {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-red-500 to-red-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
