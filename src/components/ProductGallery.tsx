@@ -15,7 +15,8 @@ const products = [
       'Enregistrement HD',
       'Notifications push'
     ],
-    description: 'Caméra de surveillance pour sécuriser votre maison, commerce ou bureau avec visualisation à distance.'
+    description: 'Caméra de surveillance pour sécuriser votre maison, commerce ou bureau avec visualisation à distance.',
+    reviews: 120
   },
   {
     id: 'camera-surveillance-2',
@@ -29,7 +30,8 @@ const products = [
       'Enregistrement HD',
       'Stockage cloud'
     ],
-    description: 'Solution de vidéosurveillance connectée avec image nette et contrôle facile depuis smartphone.'
+    description: 'Solution de vidéosurveillance connectée avec image nette et contrôle facile depuis smartphone.',
+    reviews: 85
   },
   {
     id: 'camera-surveillance-3',
@@ -43,7 +45,8 @@ const products = [
       'Enregistrement HD',
       'Notifications push'
     ],
-    description: 'Caméra adaptée à la surveillance quotidienne avec accès rapide aux alertes et au flux vidéo.'
+    description: 'Caméra adaptée à la surveillance quotidienne avec accès rapide aux alertes et au flux vidéo.',
+    reviews: 60
   },
   {
     id: 'camera-surveillance-4',
@@ -195,7 +198,8 @@ const products = [
       'ClÃ© traditionnelle',
       'Mot de passe'
     ],
-    description: 'Serrure premium avec écran tactile et reconnaissance faciale avancée'
+    description: 'Serrure premium avec écran tactile et reconnaissance faciale avancée',
+    reviews: 200
   },
   {
     id: 'i30',
@@ -210,7 +214,8 @@ const products = [
       'Clé traditionnelle',
       'Mot de passe'
     ],
-    description: 'Serrure intelligente I30 avec toutes les fonctionnalités avancées comme l\'I40'
+    description: 'Serrure intelligente I30 avec toutes les fonctionnalités avancées comme l\'I40',
+    reviews: 180
   },
   {
     id: 'k10',
@@ -225,7 +230,8 @@ const products = [
       'Clé traditionnelle',
       'Mot de passe'
     ],
-    description: 'Modèle robuste avec écran haute définition et mécanisme de sécurité avancé'
+    description: 'Modèle robuste avec écran haute définition et mécanisme de sécurité avancé',
+    reviews: 180
   },
   {
     id: 'x5',
@@ -239,7 +245,8 @@ const products = [
       'Clé traditionnelle',
       'Mot de passe'
     ],
-    description: 'Serrure poignée avec design minimaliste et technologie NFC intégrée'
+    description: 'Serrure poignée avec design minimaliste et technologie NFC intégrée',
+    reviews: 140
   },
   {
     id: 'i20',

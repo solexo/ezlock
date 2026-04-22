@@ -53,7 +53,8 @@ const ProductPage: React.FC = () => {
       image: '/images/k10.webp',
       url: '/product/k10',
       features: ['Application mobile', 'Empreinte digitale', 'Face ID', 'Carte NFC', 'Cle traditionnelle', 'Mot de passe'],
-      description: 'Modele robuste avec ecran haute definition et mecanisme de securite avance'
+      description: 'Modele robuste avec ecran haute definition et mecanisme de securite avance',
+      reviews: 180
     },
     {
       id: 'x5',
