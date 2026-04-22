@@ -555,6 +555,8 @@ const ProductPage: React.FC = () => {
     );
   }
 
+
+
   return (
     <>
       <Helmet>
@@ -574,7 +576,7 @@ const ProductPage: React.FC = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <ProductCard product={product} />
+            <ProductCard product={product} showVariants={product.id === 'x5'} />
           </div>
         </div>
       </div>

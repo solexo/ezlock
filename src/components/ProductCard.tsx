@@ -14,6 +14,7 @@ interface Product {
 
 interface ProductCardProps {
   product: Product;
+  showVariants?: boolean;
 }
 
 const getFeatureIcon = (feature: string) => {
@@ -71,7 +72,7 @@ const getFeatureIcon = (feature: string) => {
   }
 };
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, showVariants = false }) => {
   const [showImageGallery, setShowImageGallery] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -81,6 +82,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         return ['/images/ca1.webp', '/images/ca2.webp'];
       case 'inta-intb':
         return ['/images/inta.webp', '/images/intb.webp'];
+      case 'x5':
+        return ['/images/x5.webp', '/images/x5g.webp', '/images/x5s.webp'];
       default:
         return [product.image];
     }
@@ -136,6 +139,32 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           height="272"
         />
       </div>
+
+      {/* Variants for X5 */}
+      {showVariants && product.id === 'x5' && (
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 border-t border-slate-800/50">
+          <div className="flex justify-center space-x-6">
+            <img
+              src="/images/x5.webp"
+              alt="X5 Black"
+              className="w-20 h-20 object-contain cursor-pointer border-2 border-transparent hover:border-red-500 rounded transition-all"
+              onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(0); }}
+            />
+            <img
+              src="/images/x5g.webp"
+              alt="X5 Gold"
+              className="w-20 h-20 object-contain cursor-pointer border-2 border-transparent hover:border-red-500 rounded transition-all"
+              onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(1); }}
+            />
+            <img
+              src="/images/x5s.webp"
+              alt="X5 Silver"
+              className="w-20 h-20 object-contain cursor-pointer border-2 border-transparent hover:border-red-500 rounded transition-all"
+              onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(2); }}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Content */}
       <div className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col bg-gray-50 dark:bg-gray-800">
@@ -198,6 +227,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </Link>
         </div>
       </div>
+
+
 
       {/* Image Gallery Modal */}
       {showImageGallery && (

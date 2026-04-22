@@ -70,6 +70,22 @@ const SimpleCarousel = ({ category, categoryTitle }) => {
           </div>
         </div>
 
+        {/* Variants for X5 */}
+        {products[currentIndex]?.id === 'x5' && (
+          <div className="flex justify-center space-x-4 mb-4">
+            <img
+              src="/images/x5g.webp"
+              alt="X5 Gold"
+              className="w-12 h-12 object-contain"
+            />
+            <img
+              src="/images/x5s.webp"
+              alt="X5 Silver"
+              className="w-12 h-12 object-contain"
+            />
+          </div>
+        )}
+
         <div className="flex justify-center space-x-2 mb-4">
           {products.map((_, index) => (
             <button
